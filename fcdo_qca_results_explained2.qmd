@@ -1,0 +1,1877 @@
+---
+title: "What Makes FCDO Programmes Succeed?"
+subtitle: "A Configurational Analysis of 312 Programmes"
+author: "Lucas Sempé"
+date: "December 2025"
+format:
+  revealjs:
+    chalkboard: true
+    self-contained: false
+    theme: [default, custom.scss]
+    slide-number: true
+    preview-links: auto
+    footer: "International Initiative for Impact Evaluation (3ie)"
+    logo: logo_3ie.png
+    transition: slide
+    width: 1600
+    height: 900
+    margin: 0.1
+    incremental: false
+execute:
+  cache: true
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+library(knitr)
+library(kableExtra)
+library(ggplot2)
+```
+
+# Part 1: The Question
+
+------------------------------------------------------------------------
+
+## The Traditional Question {background-color="#f8f9fa"}
+
+::: {style="text-align: center; font-size: 2em; margin-top: .5em;"}
+"Which **factors** predict success?"
+:::
+
+::: {style="text-align: center; color: #666; margin-top: .5em;"}
+*Regression logic: each factor in isolation*
+:::
+
+::: {.fragment style="margin-top: 2em; padding: 1em; background: #fff3cd; border-radius: 8px; text-align: center;"}
+**Problem:** Assumes factors work independently — but in reality, success depends on *combinations*
+:::
+
+::: notes
+
+- Traditional programme evaluation uses regression analysis 
+
+- Each feature is examined separately, as if it works independently.
+
+:::
+
+
+## The Configurational Question {background-color="#012169"}
+
+:::::: {style="color: white;"}
+::: {style="text-align: center; font-size: 2em; margin-top: .5em;"}
+"What <strong style="color: #ABCAE9;">combinations</strong> of factors lead to success?"
+:::
+
+::: {style="text-align: center; opacity: 0.9; margin-top: 1em;"}
+*QCA logic: configurations, not individual effects*
+:::
+
+::: {.fragment style="margin-top: 2em; padding: 1em; background: rgba(255,255,255,0.15); border-radius: 8px; text-align: center;"}
+**Key insight:** Multiple pathways can lead to the same outcome (equifinality)
+:::
+::::::
+
+::: notes
+**What we're doing differently:**
+
+- Our approach (Qualitative Comparative Analysis or QCA) asks a different question: "What combinations of features do successful programmes have in common?" This matters because in real life, programme features interact - funding flexibility might only help when combined with strong monitoring systems.
+
+- Think of it like cooking: regression asks "does adding salt improve dishes on average?" QCA asks "what combinations of ingredients make a great dish?" Salt alone isn't enough - you need the right recipe.
+
+- "Equifinality" is a key concept: there can be multiple different recipes that lead to the same successful outcome. Not all good programmes look the same.
+:::
+
+
+## What We Want to Know
+
+::: r-fit-text
+Which programme features lead to **sucess**?
+:::
+
+But "success" means different things:
+
+| Outcome | What it measures | How common in FCDO reports? |
+|----|----|----|
+| Exceptional Performance | A++/A+ overall rating | Rare (16%) |
+| Impact Achievement | Achieved intended impact | Common (80%) |
+| Sustainability | Benefits will continue | Common (69%) |
+| Equity Outcomes | Reached marginalized groups | Moderate (34%) |
+
+::: notes
+**Why multiple outcomes matter:**
+
+- FCDO programmes are rated on a scale from A++ (exceptional) to C (poor). We're interested in what makes programmes land at the top.
+
+- "Exceptional Performance" (A++/A+) is rare - only 16% of programmes. 
+
+- "Impact Achievement" is common (80%) - most programmes achieve their stated goals.
+
+- "Sustainability" asks: will the benefits continue after FCDO funding ends? This is crucial for value-for-money.
+
+- "Equity Outcomes" is about reaching marginalized groups - women, disabled people, ethnic minorities, the very poor. Only 34% of programmes clearly demonstrate this.
+
+- Each outcome may require different ingredients, which is why we analyze them separately.
+:::
+
+## The Theoretical Debate {background-color="#012169"}
+
+:::::: {style="color: white;"}
+
+```{=html}
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em; margin-top: .3;">
+
+<div style="background: rgba(255,255,255,0.1); padding: 1.5em; border-radius: 15px; border-left: 5px solid #ff9800;">
+<div style="font-size: .8em; font-weight: bold; margin-bottom: 0.5em;">📋 Results-Based Management</div>
+<div style="font-size: .65em; line-height: 1.5;">
+• Clear logframes and theories of change<br>
+• Fixed targets set at baseline<br>
+• Implementation fidelity to approved plans<br>
+• Variance requires explanation<br>
+• <strong style="color: white;">Accountability through predetermined metrics</strong>
+</div>
+<div style="margin-top: .8em; padding: 0.8em; background: rgba(255,152,0,0.3); border-radius: 8px; font-style: italic;">
+"Plan well, then execute the plan"
+</div>
+</div>
+
+<div style="background: rgba(255,255,255,0.1); padding: 1.5em; border-radius: 15px; border-left: 5px solid #4caf50;">
+<div style="font-size: .8em; font-weight: bold; margin-bottom: 0.5em;">🔄 Adaptive Management</div>
+<div style="font-size: .65em; line-height: 1.5;">
+• Iterative adjustment to emerging evidence<br>
+• Learning from implementation<br>
+• Flexibility to respond to context<br>
+• Regular strategy revision<br>
+• <strong style="color: white;">Accountability through adaptation quality</strong>
+</div>
+<div style="margin-top: 1em; padding: 0.8em; background: rgba(76,175,80,0.3); border-radius: 8px; font-style: italic;">
+"Start, learn, adapt, improve"
+</div>
+</div>
+
+</div>
+```
+
+::: {.fragment style="margin-top: 1.5em; padding: 1em; background: rgba(255,255,255,0.15); border-radius: 8px; text-align: center;"}
+**The Question:** Which approach leads to better development outcomes? Or do they work together?
+:::
+::::::
+
+::: notes
+**I framed this analysis looking at two public management schools:**
+
+- Results-based management
+
+- Adaptive Management
+
+:::
+
+# Part 2: The Data
+
+------------------------------------------------------------------------
+
+## The Data we used {background-color="#f8f9fa"}
+
+```{=html}
+
+<div style="display: flex; justify-content: center; gap: .5em; margin-top: 2em;">
+
+<div style="text-align: center; padding: 1em 1em; background: white; border-radius: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+<div style="font-size: 3em; font-weight: bold; color: #012169;">312</div>
+<div style="font-size: 1.2em;">Programmes</div>
+</div>
+
+<div style="text-align: center; padding: 1em 1em; background: white; border-radius: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+<div style="font-size: 3em; font-weight: bold; color: #012169;">19</div>
+<div style="font-size: 1.2em;">Years (2006–2025)</div>
+</div>
+
+<div style="text-align: center; padding: 1em 1em; background: white; border-radius: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+<div style="font-size: 3em; font-weight: bold; color: #012169;">14</div>
+<div style="font-size: 1.2em;">Conditions Tested</div>
+</div>
+
+<div style="text-align: center; padding: 1em 1em; background: white; border-radius: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+<div style="font-size: 3em; font-weight: bold; color: #012169;">4</div>
+<div style="font-size: 1.2em;">Outcomes Analyzed</div>
+</div>
+
+</div>
+
+```
+
+::: {style="text-align: center; margin-top: .5em; color: #666;"}
+Sources: FCDO Business Cases (design) + <br>Annual Reviews (implementation)
+:::
+
+::: notes
+**About our dataset:**
+
+- We analyzed 312 FCDO (UK Foreign, Commonwealth and Development Office) programmes.
+
+- The programmes span 19 years (2006-2025), giving us a good range of different political contexts, funding environments, and global challenges (including COVID-19).
+
+- We tested 14 different programme features (called "conditions" in QCA) - things like whether they had flexible funding, local partnerships, gender focus, etc.
+
+- We looked at 4 different measures of success (outcomes) - ratings but also impact, sustainability, and equity.
+
+- This is a substantial dataset for QCA, which typically works with 15-50 cases. Having 312 cases means our patterns are based on many examples, not just a handful.
+:::
+
+## How We Analyzed 312 Programmes {background-color="#f8f9fa"}
+
+```{=html}
+
+<div style="text-align: center; margin-bottom: 0.8em;">
+<h3 style="color: #012169; margin: 0; font-size: 1.1em;">Traditional approach would take months...</h3>
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 1.5em;">
+
+<!-- Manual approach -->
+<div style="text-align: center; padding: 1em 2em; background: #ffebee; border-radius: 12px; width: 380px;">
+<div style="font-size: 1em; font-weight: bold; color: #c62828; margin-bottom: 0.3em;">Manual Coding</div>
+<div style="font-size: 0.85em; color: #555;">
+• Read each document <br>• Code conditions by hand<br>
+<strong>~1 hour × 2515 docs = 2500+ researcher hours</strong>
+</div>
+</div>
+
+<div style="font-size: 2em; color: #012169;">→</div>
+
+<!-- LLM approach -->
+<div style="text-align: center; padding: 1em 2em; background: #e8f5e9; border-radius: 12px; width: 380px;">
+<div style="font-size: 1em; font-weight: bold; color: #388e3c; margin-bottom: 0.3em;">LLM Extraction</div>
+<div style="font-size: 0.85em; color: #555;">
+• Structured prompts <br>• Consistent coding<br>
+<strong>~20 seconds × 2515 docs x 8 computers + human revision= 40 hours in total</strong>
+</div>
+</div>
+
+</div>
+
+```
+
+::: {.fragment style="text-align: center; margin-top: 0.8em; padding: 0.6em; background: #ABCAE9; border-radius: 10px;"}
+
+**60x faster** while maintaining analytical rigor
+
+:::
+
+::: notes
+**How we processed 312 programmes:**
+
+- Traditional approach: A researcher reads each Business Case (the proposal document) and Annual Review (the progress report), then manually codes whether each of our 14 features is present. At roughly 1 hours per document, that's 2500 hours of researcher time - about 2 years of full-time work.
+
+- Our approach: We used LLMs (AI systems like GPT-4) with carefully designed prompts to extract information systematically. This took about 20 seconds per document.
+
+- Key advantages: (1) Consistency - the AI applies the same criteria every time, unlike humans who might drift or get tired. (2) Speed - 60x faster. (3) Traceability - the AI provides quotes from the documents to support each score.
+
+- Important: This isn't fully automated. Humans designed the extraction criteria, validated the outputs, and made final decisions on edge cases. The AI is a research assistant, not a replacement for researcher judgment.
+:::
+
+---
+
+## The LLM Extraction Pipeline
+
+```{=html}
+<div style="display: flex; justify-content: center; align-items: stretch; gap: 0.8em; margin-top: 1em;">
+
+<!-- Step 1 -->
+<div style="flex: 1; text-align: center; padding: 1em; background: #ABCAE9; border-radius: 12px; border-top: 4px solid #0092BC;">
+<div style="font-size: 1.8em; margin-bottom: 0.3em;">📄</div>
+<div style="font-weight: bold; color: #0092BC; font-size: 0.95em;">1. Document Ingestion</div>
+<div style="font-size: 0.8em; color: #555; margin-top: 0.3em;">Business cases & annual reviews parsed</div>
+</div>
+
+<!-- Step 2 -->
+<div style="flex: 1; text-align: center; padding: 1em; background: #f3e5f5; border-radius: 12px; border-top: 4px solid #7b1fa2;">
+<div style="font-size: 1.8em; margin-bottom: 0.3em;">🎯</div>
+<div style="font-weight: bold; color: #7b1fa2; font-size: 0.95em;">2. Structured Prompts</div>
+<div style="font-size: 0.8em; color: #555; margin-top: 0.3em;">Theory-driven questions for each condition</div>
+</div>
+
+<!-- Step 3 -->
+<div style="flex: 1; text-align: center; padding: 1em; background: #fff3e0; border-radius: 12px; border-top: 4px solid #f57c00;">
+<div style="font-size: 1.8em; margin-bottom: 0.3em;">🔍</div>
+<div style="font-weight: bold; color: #f57c00; font-size: 0.95em;">3. Evidence Extraction</div>
+<div style="font-size: 0.8em; color: #555; margin-top: 0.3em;">LLM identifies & quotes relevant text</div>
+</div>
+
+<!-- Step 4 -->
+<div style="flex: 1; text-align: center; padding: 1em; background: #e8f5e9; border-radius: 12px; border-top: 4px solid #388e3c;">
+<div style="font-size: 1.8em; margin-bottom: 0.3em;">✅</div>
+<div style="font-weight: bold; color: #388e3c; font-size: 0.95em;">4. Validation</div>
+<div style="font-size: 0.8em; color: #555; margin-top: 0.3em;">Human review of edge cases & calibration</div>
+</div>
+
+</div>
+```
+
+::: {.fragment style="margin-top: 1em;"}
+```{=html}
+<div style="display: flex; justify-content: center; gap: 2em;">
+<div style="text-align: center; padding: 0.8em 1.5em; background: #f5f5f5; border-radius: 10px;">
+<div style="font-size: 1.5em; font-weight: bold; color: #012169;">GPT-4o</div>
+<div style="font-size: 0.85em; color: #666;">Primary extraction</div>
+</div>
+<div style="text-align: center; padding: 0.8em 1.5em; background: #f5f5f5; border-radius: 10px;">
+<div style="font-size: 1.5em; font-weight: bold; color: #012169;">JSON Schema</div>
+<div style="font-size: 0.85em; color: #666;">Structured outputs</div>
+</div>
+<div style="text-align: center; padding: 0.8em 1.5em; background: #f5f5f5; border-radius: 10px;">
+<div style="font-size: 1.5em; font-weight: bold; color: #012169;">Binary Coding</div>
+<div style="font-size: 0.85em; color: #666;">QCA-ready format</div>
+</div>
+</div>
+```
+:::
+
+
+------------------------------------------------------------------------
+
+## How We Extracted: Example {background-color="#f8f9fa"}
+
+```{=html}
+<div style="margin-top: 0.5em;">
+
+<div style="font-size: 1em; font-weight: bold; color: #012169; margin-bottom: 0.45em;">Strategic Clarity (IFFIm Programme)</div>
+
+<div style="display: flex; gap: 1em;">
+
+<div style="flex: 1; background: #012169; color: #a8e6cf; padding: 0.6em; border-radius: 8px; font-family: monospace; font-size: 0.7em; line-height: 1.4;">
+<span style="color: #ffc3d0; font-weight: bold;">PROMPT:</span><br>
+Definition: Clarity of programme purpose,<br>
+presence of Theory of Change, explicit<br>
+indicators and linked outputs.<br><br>
+Look for: ToC diagram, logical framework,<br>
+indicator matrix, output-outcome chains<br><br>
+<span style="color: #fff8e1;">Score:</span><br>
+&nbsp;1.00 = ToC fully detailed with indicators<br>
+&nbsp;0.67 = ToC present, some indicators<br>
+&nbsp;0.33 = Vague logic mentioned<br>
+&nbsp;0.00 = No ToC/indicators
+</div>
+
+<div style="flex: 1.3; background: #f5f5f5; padding: 0.6em; border-radius: 8px; font-size: 0.7em; line-height: 1.4;">
+<span style="font-weight: bold; color: #388e3c;">REAL OUTPUT:</span><br><br>
+<span style="color: #0092BC; font-weight: bold; font-size: 1.1em;">"score": 0.67</span><br><br>
+<span style="font-weight: bold;">"evidence":</span> <em>"Key performance measures in the 2021-25 strategic period are to: Vaccinate 300 million children; Save 7-8 million lives; Reduce the number of children who have never received a vaccine by 25%"</em><br><br>
+<span style="font-weight: bold;">"justification":</span> "Clear outcome-level indicators provided, but no detailed Theory of Change or output-outcome chains explicitly documented."
+</div>
+
+</div>
+
+<div style="margin-top: 1.5em; background: #e8f5e9; padding: 0.4em; border-radius: 6px; font-size: 0.8em; text-align: center;">
+<strong>Key:</strong> LLM provides score + evidence quote + justification → enables human audit
+</div>
+
+</div>
+```
+
+::: notes
+**How the extraction actually works:**
+
+- For each programme feature (like "Strategic Clarity"), we gave the AI a clear definition and examples of what to look for.
+
+- The AI reads the document and provides three things: (1) A score from 0 to 1, (2) A direct quote from the document supporting that score, (3) A justification explaining the reasoning.
+
+- In this example, the IFFIm programme (International Finance Facility for Immunisation) got a score of 0.67 for Strategic Clarity. The AI found clear outcome indicators ("vaccinate 300 million children") but noted there was no detailed Theory of Change diagram.
+
+- The quote-and-justification approach means we can audit every single score. If something looks wrong, we can go back to the source document and check. This transparency is crucial for credibility.
+
+- Scores are "fuzzy" (0, 0.33, 0.67, or 1.00) rather than just yes/no, which captures nuance. But for the main analysis, we convert to binary: 0.67 or above = feature present, below = feature absent.
+:::
+
+## The Scoring Rubric {background-color="#f8f9fa"}
+
+```{=html}
+<div style="margin-top: 0.4em;">
+
+<div style="font-size: 1em; font-weight: bold; color: #012169; margin-bottom: 0.4em;">Fuzzy-set calibration (0 to 1):</div>
+
+<table style="width: 100%; border-collapse: collapse; font-size: 0.85em;">
+<thead>
+<tr style="background: #012169; color: white;">
+<th style="padding: 0.4em; text-align: center; width: 12%;">Score</th>
+<th style="padding: 0.4em; text-align: left;">Business Case (Design Intent)</th>
+<th style="padding: 0.4em; text-align: left;">Annual Review (Implementation Reality)</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: #e8f5e9;">
+<td style="padding: 0.35em; text-align: center; font-weight: bold; color: #388e3c; font-size: 1.1em;">1.00</td>
+<td style="padding: 0.35em;">Fully embedded in design (ToC/contract/budgeted)</td>
+<td style="padding: 0.35em;">Demonstrated with evidence and indicators</td>
+</tr>
+<tr style="background: #fff8e1;">
+<td style="padding: 0.35em; text-align: center; font-weight: bold; color: #f57c00; font-size: 1.1em;">0.67</td>
+<td style="padding: 0.35em;">Clearly stated commitment, limited operational detail</td>
+<td style="padding: 0.35em;">Partially implemented or documented steps taken</td>
+</tr>
+<tr style="background: #fff3e0;">
+<td style="padding: 0.35em; text-align: center; font-weight: bold; color: #e65100; font-size: 1.1em;">0.33</td>
+<td style="padding: 0.35em;">Mentioned as aspiration without concrete mechanism</td>
+<td style="padding: 0.35em;">Discussed or recommended to be improved</td>
+</tr>
+<tr style="background: #ffebee;">
+<td style="padding: 0.35em; text-align: center; font-weight: bold; color: #c62828; font-size: 1.1em;">0.00</td>
+<td style="padding: 0.35em;">Not present in Business Case</td>
+<td style="padding: 0.35em;">No evidence in Annual Review</td>
+</tr>
+</tbody>
+</table>
+
+<div style="display: flex; gap: 0.8em; margin-top: 0.6em;">
+
+<div style="flex: 1; background: #ABCAE9; padding: 0.5em; border-radius: 8px; border-left: 4px solid #0092BC;">
+<div style="font-weight: bold; font-size: 0.85em; color: #0092BC;">Binary Threshold</div>
+<div style="font-size: 0.75em; color: #555;">Score ≥ 0.67 → Condition <strong>present</strong> (1)<br>Score < 0.67 → Condition <strong>absent</strong> (0)</div>
+</div>
+
+<div style="flex: 1; background: #f3e5f5; padding: 0.5em; border-radius: 8px; border-left: 4px solid #7b1fa2;">
+<div style="font-weight: bold; font-size: 0.85em; color: #7b1fa2;">Outcome Scoring</div>
+<div style="font-size: 0.75em; color: #555;">Performance: A++=1.0, A+=0.8, A=0.6...<br>Other outcomes: Same 4-point scale</div>
+</div>
+
+</div>
+
+</div>
+```
+
+## Our 14 Programme Features
+
+```{r}
+conditions_simple <- data.frame(
+  Category = c("Design Choices", "Design Choices", "Design Choices", "Design Choices",
+               "How It's Delivered", "How It's Delivered", "How It's Delivered", "How It's Delivered",
+               "Adaptations Made", "Adaptations Made", "Adaptations Made",
+               "Equity Focus", "Equity Focus", "Equity Focus"),
+  Feature = c("Strategic clarity", "Shared governance", "Flexible funding", "Rigorous partner selection",
+              "Accessible outputs", "Capacity building", "Local embedding", "Clear impact strategy",
+              "Extended funding timeline", "Strengthened M&E", "Crisis adaptation",
+              "Equitable partnerships", "Local ownership focus", "GESI integration"),
+  Code = c("StrategicAgendaClarity", "SharedGovernance", "FundingFlexibility", "SelectionProcedures",
+           "OutputsAccessible", "OutputsCapacity", "LocalEmbedded", "ImpactStrategy",
+           "FundingLongevity", "Mel_Strengthened", "InstabilityResponse",
+           "PartnershipEquity", "EquityLocalisation", "EquityGESI"),
+  `How Common` = c("97%", "42%", "70%", "47%",
+                   "35%", "75%", "57%", "86%",
+                   "58%", "84%", "69%",
+                   "36%", "34%", "33%")
+)
+
+kable(conditions_simple, format = "html", col.names = c("Category", "What it means", "Technical name", "How common?")) %>%
+  kable_styling(font_size = 24) %>%
+  pack_rows("Design Choices (at approval)", 1, 4, background = "#ABCAE9") %>%
+  pack_rows("How It's Delivered", 5, 8, background = "#f0f8e8") %>%
+  pack_rows("Adaptations Made", 9, 11, background = "#fff8e8") %>%
+  pack_rows("Equity Focus", 12, 14, background = "#f8e8f8")
+```
+
+::: notes
+**The 14 features we measured:**
+
+**Design Choices (decided at programme approval):**
+- Strategic clarity: Does the programme have a clear purpose and Theory of Change?
+- Shared governance: Are decisions made jointly with partners, not just dictated by FCDO?
+- Flexible funding: Can money be moved between budget lines as needs change?
+- Rigorous partner selection: Were implementing partners chosen through competitive processes?
+
+**How It's Delivered (implementation approach):**
+- Accessible outputs: Are the programme's products (research, tools, data) openly available?
+- Capacity building: Does the programme strengthen local institutions and skills?
+- Local embedding: Is the programme integrated into local systems rather than parallel to them?
+- Clear impact strategy: Is there a maintained Theory of Change guiding implementation?
+
+**Adaptations Made (changes during implementation):**
+- Extended funding: Was the programme timeline extended beyond original plans?
+- Strengthened M&E: Were monitoring and evaluation systems improved during implementation?
+- Crisis adaptation: Did the programme successfully respond to shocks (COVID, conflict, disasters)?
+
+**Equity Focus:**
+- Equitable partnerships: Are local partners treated as equals, not just contractors?
+- Local ownership: Is there genuine transfer of decision-making to local actors?
+- GESI integration: Is Gender Equality and Social Inclusion embedded throughout?
+
+Note the "How common?" column - Strategic clarity is near-universal (97%), while equity features are present in only about a third of programmes.
+:::
+
+# Part 3: The Method
+
+------------------------------------------------------------------------
+
+## What is QCA?
+
+**Qualitative Comparative Analysis** asks:
+
+> "What combinations of conditions are associated with an outcome?"
+
+<br/>
+
+::::: columns
+::: {.column width="50%"}
+### Traditional regression
+
+-   Effect of X on Y, controlling for Z
+-   Assumes variables work independently
+-   "On average, funding flexibility increases impact by 0.3 points"
+:::
+
+::: {.column width="50%"}
+### QCA approach
+
+-   What combinations lead to success?
+-   Conditions work together
+-   "Funding flexibility + local embedding + GESI focus → equity outcomes"
+:::
+:::::
+
+::: notes
+**QCA in plain English:**
+
+- Qualitative Comparative Analysis (QCA) was developed by sociologist Charles Ragin in the 1980s. It bridges the gap between qualitative case studies (deep but not generalizable) and quantitative analysis (generalizable but shallow).
+
+- **Regression says:** "On average, programmes with flexible funding score 0.3 points higher" - but this hides the fact that flexibility might only help in certain combinations.
+
+- **QCA says:** "Here are the specific recipes that work: Recipe 1 is flexibility + local embedding + GESI. Recipe 2 is rigorous selection + capacity building." These are actual combinations found in successful programmes.
+
+- QCA is particularly good for messy, complex social phenomena where:
+  - Multiple factors matter simultaneously
+  - The same outcome can be reached different ways (equifinality)
+  - Context matters - what works in one setting may not work elsewhere
+  - You have medium-sized datasets (15-300 cases)
+
+- Development programmes fit this perfectly - they're complex interventions in varied contexts where simple "X causes Y" claims rarely hold.
+:::
+
+## The Key Question {background-color="#f8f9fa"}
+
+```{=html}
+<div style="text-align: center; margin-bottom: 0.2em;">
+<h3 style="color: #012169; margin: 0; font-size: 1.3em;">Which conditions matter for success?</h3>
+</div>
+
+<div style="display: flex; justify-content: center; gap: 1.5em; align-items: flex-start;">
+
+<!-- Necessary Venn: Success is SUBSET of Condition -->
+<div style="text-align: center;">
+<svg width="380" height="280" viewBox="0 0 200 160">
+  <!-- Outer circle: Condition -->
+  <circle cx="100" cy="85" r="70" fill="#ABCAE9" stroke="#0092BC" stroke-width="3"/>
+  <!-- Inner circle: Success (inside condition) -->
+  <circle cx="100" cy="100" r="38" fill="#0092BC"/>
+  <!-- Labels -->
+  <text x="100" y="40" text-anchor="middle" fill="#0092BC" font-weight="bold" font-size="16">Condition</text>
+  <text x="100" y="105" text-anchor="middle" fill="white" font-weight="bold" font-size="14">Success</text>
+</svg>
+<div style="font-size: 1.3em; font-weight: bold; color: #0092BC; margin-top: 0.3em;">NECESSARY</div>
+<div style="font-size: 0.9em; color: #555;"><em>"Can't succeed without it"</em></div>
+</div>
+
+<!-- Sufficient Venn: Condition is SUBSET of Success -->
+<div style="text-align: center;">
+<svg width="380" height="280" viewBox="0 0 200 160">
+  <!-- Outer circle: Success -->
+  <circle cx="100" cy="85" r="70" fill="#c8e6c9" stroke="#388e3c" stroke-width="3"/>
+  <!-- Inner circle: Condition (inside success) -->
+  <circle cx="100" cy="100" r="38" fill="#388e3c"/>
+  <!-- Labels -->
+  <text x="100" y="40" text-anchor="middle" fill="#388e3c" font-weight="bold" font-size="16">Success</text>
+  <text x="100" y="105" text-anchor="middle" fill="white" font-weight="bold" font-size="14">Condition</text>
+</svg>
+<div style="font-size: 1.3em; font-weight: bold; color: #388e3c; margin-top: 0.3em;">SUFFICIENT</div>
+<div style="font-size: 0.9em; color: #555;"><em>"If present, always succeeds"</em></div>
+</div>
+
+<!-- Both: Overlapping Venn -->
+<div style="text-align: center;">
+<svg width="380" height="280" viewBox="0 0 200 160">
+  <!-- Circle A: Condition -->
+  <circle cx="70" cy="85" r="55" fill="#ABCAE9" fill-opacity="0.7" stroke="#0092BC" stroke-width="3"/>
+  <!-- Circle B: Success -->
+  <circle cx="130" cy="85" r="55" fill="#c8e6c9" fill-opacity="0.7" stroke="#388e3c" stroke-width="3"/>
+  <!-- Labels -->
+  <text x="45" y="88" text-anchor="middle" fill="#0092BC" font-weight="bold" font-size="13">Cond.</text>
+  <text x="151" y="88" text-anchor="middle" fill="#388e3c" font-weight="bold" font-size="13">Success</text>
+  <text x="100" y="88" text-anchor="middle" fill="#333" font-weight="bold" font-size="13">Both</text>
+</svg>
+<div style="font-size: 1.3em; font-weight: bold; color: #f57c00; margin-top: 0.3em;">QCA FINDS</div>
+<div style="font-size: 0.9em; color: #555;"><em>Both types</em></div>
+</div>
+
+</div>
+```
+
+::: {.fragment style="text-align: center; margin-top: 0.8em; padding: 0.6em; background: #fff3e0; border-radius: 10px; border-left: 4px solid #f57c00; font-size: 1em;"}
+**QCA finds both:** *necessary* (must-haves) AND *sufficient* (guarantees success)
+:::
+
+::: notes
+**Necessary vs Sufficient - the key distinction:**
+
+**Necessary conditions** = "You can't succeed without it, but having it doesn't guarantee success"
+- Example: A passport is necessary to travel internationally. Without one, you definitely can't go. But having a passport doesn't mean you will travel - you also need money, time, a destination, etc.
+- In our data: If 100% of successful programmes have a certain feature, that feature is necessary. It's a prerequisite.
+
+**Sufficient conditions** = "If you have it, success is guaranteed (or very likely)"
+- Example: A winning lottery ticket is sufficient for getting money. If you have one, you will get paid. But there are other ways to get money - you don't need a winning ticket.
+- In our data: If a certain combination of features leads to success 90%+ of the time, that combination is sufficient.
+
+**Why the Venn diagrams help:**
+- Necessary: Success (small circle) is inside the Condition (big circle) - you can't have success without the condition
+- Sufficient: Condition (small circle) is inside Success (big circle) - whenever you have the condition, you're in the success zone
+
+**In development:**
+- We want to find necessary conditions (minimum requirements for any programme)
+- AND sufficient "recipes" (combinations that reliably produce success)
+:::
+
+## Two Types of Relationships
+
+<br/>
+
+::::::: columns
+:::: {.column width="50%"}
+### Necessary Conditions
+
+
+**Must be present** for the outcome to occur
+
+<br/>
+
+
+::: callout-note
+## Example
+
+"You need a passport to travel internationally"
+
+No passport → Cannot travel Having passport → Doesn't guarantee travel
+:::
+
+<br/>
+
+
+**Test**: Of all successful cases, how many have this condition?
+::::
+
+:::: {.column width="50%"}
+### Sufficient Conditions
+
+
+**Guarantee** the outcome when present
+
+<br/>
+
+
+::: callout-tip
+## Example
+
+"A winning lottery ticket guarantees money"
+
+Winning ticket → Definitely get money No ticket → Could still get money other ways
+:::
+
+<br/>
+
+**Test**: Of all cases with this condition, how many succeed?
+::::
+:::::::
+
+------------------------------------------------------------------------
+
+
+
+## The Key Insight: Prevalence Shapes Our Analysis
+
+::::: columns
+::: {.column width="50%"}
+### When outcomes are RARE
+
+**Necessity analysis is informative**
+
+-   If 100% of successes have a feature, that's meaningful
+-   Finding "recipes" is hard (few successful cases)
+
+*Example: Exceptional Performance*
+:::
+
+::: {.column width="50%"}
+### When outcomes are COMMON
+
+**Sufficiency analysis is informative**
+
+-   Many conditions will seem "necessary" by chance
+-   Finding reliable "recipes" is easier
+
+*Example: Impact Achievement*
+:::
+:::::
+
+::: callout-note
+## Why this matters
+
+We use **different analytical strategies** for different outcomes based on how common they are.
+
+*See: Schneider & Wagemann (2012) on "trivialness"; Braumoeller & Goertz (2000) on necessary conditions methodology*
+:::
+
+::: notes
+**Why outcome prevalence changes our analysis strategy:**
+
+**When outcomes are RARE (like Exceptional Performance at 16%):**
+- Necessity analysis is very informative. If we look at the small group of exceptional programmes and find they ALL have a certain feature, that's a strong signal.
+- Sufficiency analysis is hard because we have few "positive" cases to analyze. With only 50 exceptional programmes out of 312, finding reliable patterns is statistically challenging.
+
+**When outcomes are COMMON (like Impact Achievement at 80%):**
+- Necessity analysis becomes less informative. If 80% of programmes achieve impact, then any common feature will appear "necessary" almost by chance. For example, if 90% of programmes have M&E systems, and 80% achieve impact, the overlap will be high even if M&E doesn't matter.
+- Sufficiency analysis works better because we have many successful cases to find patterns in.
+
+**Practical implication:**
+- For Exceptional Performance, we focus on "what do the elite have that others don't?" (necessity)
+- For Impact Achievement, we focus on "what combinations reliably produce success?" (sufficiency)
+
+This is a methodological subtlety that affects how we interpret our results.
+:::
+
+## Understanding QCA Metrics {background-color="#f0f4f8"}
+
+```{=html}
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8em; margin-top: 0.3em;">
+
+<div style="background: #e8f5e9; padding: 0.6em; border-radius: 8px; border-left: 4px solid #388e3c;">
+<div style="font-weight: bold; color: #388e3c; font-size: 1em; margin-bottom: 0.2em;">🎯 Necessity Consistency</div>
+<div style="font-size: 0.75em; color: #333; line-height: 1.4;">
+<strong>Question:</strong> When outcome is present, is the condition also present?
+<br><strong>Threshold:</strong> ≥0.90 (condition in 90%+ of successful cases)
+<br><em style="color: #666;">High = condition is a "must-have"</em>
+</div>
+</div>
+
+<div style="background: #ABCAE9; padding: 0.6em; border-radius: 8px; border-left: 4px solid #0092BC;">
+<div style="font-weight: bold; color: #0092BC; font-size: 1m; margin-bottom: 0.2em;">📏 Sufficiency Consistency (incl.cut)</div>
+<div style="font-size: 0.75em; color: #333; line-height: 1.4;">
+<strong>Question:</strong> When condition pattern is present, does outcome follow?
+<br><strong>Our threshold:</strong> incl.cut = 0.85 (85% of cases succeed)
+<br><em style="color: #666;">High = pathway reliably produces success</em>
+</div>
+</div>
+
+<div style="background: #fce4ec; padding: 0.6em; border-radius: 8px; border-left: 4px solid #c2185b;">
+<div style="font-weight: bold; color: #c2185b; font-size: 1em; margin-bottom: 0.2em;">📊 Coverage</div>
+<div style="font-size: 0.75em; color: #333; line-height: 1.4;">
+<strong>Question:</strong> What % of successful cases does this pathway explain?
+<br><strong>Our solutions:</strong> 65-75% coverage (3 valid outcomes)
+<br><em style="color: #666;">High = pathways capture most routes to success</em>
+</div>
+</div>
+
+<div style="background: #fff3e0; padding: 0.6em; border-radius: 8px; border-left: 4px solid #f57c00;">
+<div style="font-weight: bold; color: #f57c00; font-size: 1em; margin-bottom: 0.2em;">🔢 Frequency Threshold</div>
+<div style="font-size: 0.75em; color: #333; line-height: 1.4;">
+<strong>Question:</strong> Minimum cases to consider a pathway empirically grounded?
+<br><strong>Our thresholds:</strong> 2 (rare outcomes) or 3 (common outcomes)
+<br><em style="color: #666;">Balances pattern detection with empirical support</em>
+</div>
+</div>
+
+</div>
+```
+
+::: {.fragment style="margin-top: 0.3em; padding: 0.4em; background: #f5f5f5; border-radius: 6px; font-size: 0.95em; text-align: center;"}
+**Key thresholds:** Necessity ≥0.90 \| Sufficiency (incl.cut) ≥0.85 \| n.cut = 2-3 depending on outcome prevalence
+:::
+
+::: notes
+**Understanding the key numbers:**
+
+**Necessity Consistency (threshold ≥0.90):**
+- This asks: "Of all successful programmes, what percentage have this feature?"
+- If 90%+ of successful programmes have a feature, we call it necessary.
+- Why 90% not 100%? Real-world data is messy. A few exceptions don't disprove a general rule.
+
+**Sufficiency Consistency (threshold ≥0.85):**
+- This asks: "Of all programmes with this combination of features, what percentage succeed?"
+- If 85%+ succeed, we call that combination a reliable "recipe" for success.
+- We use 0.85, a standard threshold in QCA literature.
+
+**Coverage:**
+- This asks: "What percentage of all successful programmes does this recipe explain?"
+- A recipe might be 100% reliable but only apply to 5% of cases - useful but limited.
+- We want recipes that are both reliable (high consistency) AND broadly applicable (reasonable coverage).
+
+**Frequency threshold (n.cut):**
+- How many programmes must follow a pattern before we trust it?
+- We use 2 for rare outcomes (can't be too picky with limited data) and 3 for common outcomes.
+- This prevents us from drawing conclusions from one-off cases.
+:::
+
+## How QCA works (I)
+
+**Enhanced Standard Analysis (ESA)** is a structured 6-step QCA workflow that systematically tests necessity, builds truth tables, identifies contradictions, and derives the **Enhanced solution**—the recommended "recipes" that reliably explain success while excluding problematic configurations.
+
+<br>
+
+::: {.callout-note appearance="minimal"}
+**The Enhanced Solution** identifies the *minimal* combination of conditions that reliably produce the outcome, while explicitly excluding contradictory configurations (where the same condition profile leads to mixed outcomes).
+:::
+
+::: notes
+**The Enhanced Standard Analysis (ESA) - our analytical workflow:**
+
+- ESA is a systematic 6-step process developed by QCA methodologists to ensure rigorous, transparent analysis.
+
+- The key output is the "Enhanced Solution" - this is the set of reliable recipes for success.
+
+- Why "enhanced"? Because it explicitly handles contradictions. If two programmes have identical features but different outcomes (one succeeds, one fails), that tells us something is missing from our model. The enhanced solution excludes these problematic cases rather than pretending they don't exist.
+
+- Think of it like medical diagnosis: if two patients have identical symptoms but different diseases, a good diagnostic protocol flags this ambiguity rather than guessing.
+
+- The "minimal" aspect means we simplify recipes to their essential ingredients. If programmes succeed with features A+B+C, and also with features A+B (without C), then C isn't actually needed - the minimal recipe is just A+B.
+:::
+
+## How QCA works (II)
+
+
+
+| Step | What it does | What to look for |
+|:---------------|:-----------------------|:-------------------------------|
+| **Step 1: Necessity** | Tests if conditions are *prerequisites* | Consistency ≥90% means "almost always present when outcome occurs" |
+| **Step 2: Truth Table Construction** | Maps all observed configurations | How cases distribute across condition combinations |
+| **Step 3: Contradiction Analysis** | Identifies configs with mixed outcomes | How many configs show both success and failure |
+| **Step 4: Enhanced Solution** | Derives reliable pathways (excludes contradictions) | The "recipes" for success |
+| **Step 5: SUIN Check** | Tests for INUS conditions | Does any condition appear in ALL pathways? |
+| **Step 6: Summary** | Consolidates findings | Key necessary conditions + sufficient pathways |
+
+::: notes
+**Walking through the 6 steps:**
+
+**Step 1 - Necessity:** First, we check each feature individually. Is there any feature that's present in 90%+ of successful programmes? If yes, it's a necessary condition - a prerequisite for success.
+
+**Step 2 - Truth Table:** We create a table showing every observed combination of features. With 14 features, there are theoretically 16,384 possible combinations (2^14). In practice, we only observe 24-56 combinations in our data - most theoretical combinations don't exist in real programmes.
+
+**Step 3 - Contradictions:** We identify combinations that appear in both successful and unsuccessful programmes. If 10 programmes have features A+B+C and 7 succeed while 3 fail, that's a contradiction - something else we're not measuring must explain the difference.
+
+**Step 4 - Enhanced Solution:** We use Boolean logic to find the minimal combinations that reliably lead to success, explicitly excluding contradictory configurations.
+
+**Step 5 - SUIN Check:** We test for "INUS" conditions - features that appear in EVERY pathway to success. If every recipe contains ingredient X, then X is special (even if it's not sufficient by itself).
+
+**Step 6 - Summary:** We consolidate findings into actionable insights.
+:::
+
+------------------------------------------------------------------------
+
+## Understanding Truth Table Classifications {background-color="#f5f5f5"}
+
+::: {.callout-note appearance="minimal"}
+When building truth tables, each observed configuration of conditions is classified:
+:::
+
+```{=html}
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: .5em; margin-top: .5em;">
+
+<div style="background: #e8f5e9; padding: .5em; border-radius: 10px; border-left: 5px solid #388e3c;">
+<div style="font-weight: bold; color: #388e3c; font-size: .8em; margin-bottom: 0.5em;">✓ Sufficient (OUT=1)</div>
+<div style="font-size: 0.65em;">Configurations that <strong>reliably produce</strong> the outcome. When programmes have this combination of conditions, they consistently succeed.</div>
+<div style="font-size: 0.65em; color: #666; margin-top: 0.5em; font-style: italic;">Consistency ≥0.85</div>
+</div>
+
+<div style="background: #ffebee; padding: .5em; border-radius: 10px; border-left: 5px solid #c62828;">
+<div style="font-weight: bold; color: #c62828; font-size: .8em; margin-bottom: 0.5em;">✗ Insufficient (OUT=0)</div>
+<div style="font-size: 0.65em;">Configurations that <strong>do not reliably produce</strong> the outcome. Programmes with these condition combinations rarely or never succeed.</div>
+<div style="font-size: 0.65em; color: #666; margin-top: 0.5em; font-style: italic;">Consistency <0.85 with no positive cases, OR too few cases to evaluate</div>
+</div>
+
+<div style="background: #fff3e0; padding: .5em; border-radius: 10px; border-left: 5px solid #ff9800;">
+<div style="font-weight: bold; color: #e65100; font-size: .8em; margin-bottom: 0.5em;">⚠ Contradictory</div>
+<div style="font-size: 0.65em;">Configurations with <strong>mixed outcomes</strong>—some programmes succeed, others fail, despite having <em>identical</em> conditions. Signals unmeasured factors.</div>
+<div style="font-size: 0.65em; color: #666; margin-top: 0.5em; font-style: italic;">0 < Consistency < 0.85 with cases on both sides</div>
+</div>
+
+<div style="background: #ABCAE9; padding: .5em; border-radius: 10px; border-left: 5px solid #0092BC;">
+<div style="font-weight: bold; color: #0092BC; font-size: .8em; margin-bottom: 0.5em;">? Logical Remainders</div>
+<div style="font-size: 0.65em;">Configurations that are <strong>logically possible but never observed</strong>. With 14 conditions, 16,384 combinations exist but only ~24-56 appear in data.</div>
+<div style="font-size: 0.65em; color: #666; margin-top: 0.5em; font-style: italic;">n = 0 (no cases)</div>
+</div>
+
+</div>
+```
+
+::: {.fragment style="margin-top: 1em; padding: 0.8em; background: #f5f5f5; border-radius: 8px; font-size: 0.8em; text-align: center;"}
+**Why contradictions matter:** The Enhanced solution excludes contradictory configurations to avoid unreliable causal inferences. High contradiction rates suggest important unmeasured factors.
+:::
+
+::: notes
+**Reading truth table results:**
+
+- **Sufficient (OUT=1):** These are the "winning" combinations. Programmes with these feature profiles consistently succeed. This is what we're looking for.
+
+- **Insufficient (OUT=0):** These combinations don't work. Programmes with these features don't succeed - useful to know what to avoid.
+
+- **Contradictory:** Same features, different outcomes. This is actually valuable information - it tells us our 14 features don't capture everything. Maybe leadership quality, political timing, or luck matters but isn't in our data.
+
+- **Logical Remainders:** Combinations that are logically possible but never observed. With 14 binary features, there are 16,384 possible combinations. Real programmes only exhibit 24-56 of these. Most combinations simply don't occur in practice.
+
+**The contradiction rate is a quality indicator:**
+- Few contradictions = our features capture most of what matters
+- Many contradictions = important factors are missing from our model
+- Exceptional Performance has many contradictions (21 out of 56) - we're missing something important
+- Equity has few contradictions (7 out of 56) - our features capture what matters
+:::
+
+# Part 4: Results
+
+------------------------------------------------------------------------
+
+## Necessary Conditions Analysis {background-color="#012169"}
+
+::: {style="color: white;"}
+```{=html}
+<div style="text-align: center; margin-bottom: 0.5em;">
+<div style="font-size: 1em; opacity: 0.9;">Conditions present in ≥90% of successful programmes (necessity threshold)</div>
+</div>
+
+<table style="width: 100%; border-collapse: collapse; font-size: 0.8em; color: white; margin-top: 0.3em;">
+<thead>
+<tr style="background: rgba(255,255,255,0.2);">
+<th style="padding: 0.4em; text-align: left; border-bottom: 2px solid rgba(255,255,255,0.3);">Condition</th>
+<th style="padding: 0.4em; text-align: center; border-bottom: 2px solid rgba(255,255,255,0.3);">HIGH PERF</th>
+<th style="padding: 0.4em; text-align: center; border-bottom: 2px solid rgba(255,255,255,0.3);">IMPACT</th>
+<th style="padding: 0.4em; text-align: center; border-bottom: 2px solid rgba(255,255,255,0.3);">SUSTAIN</th>
+<th style="padding: 0.4em; text-align: center; border-bottom: 2px solid rgba(255,255,255,0.3);">EQUITY</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 0.35em;"><strong style="color: white;">ImpactStrategy</strong><br><span style="opacity: 0.7; font-size: 0.85em;">Clear ToC maintained</span></td>
+<td style="padding: 0.35em; text-align: center; color: #90EE90; font-weight: bold;">1.00 ✓</td>
+<td style="padding: 0.35em; text-align: center; color: #90EE90; font-weight: bold;">0.97 ✓</td>
+<td style="padding: 0.35em; text-align: center; color: #90EE90; font-weight: bold;">0.95 ✓</td>
+<td style="padding: 0.35em; text-align: center; color: #90EE90; font-weight: bold;">0.98 ✓</td>
+</tr>
+<tr style="background: rgba(255,255,255,0.05);">
+<td style="padding: 0.35em;"><strong style="color: white;">MelStrengthened</strong><br><span style="opacity: 0.7; font-size: 0.85em;">M&E systems improved</span></td>
+<td style="padding: 0.35em; text-align: center; color: #90EE90; font-weight: bold;">0.98 ✓</td>
+<td style="padding: 0.35em; text-align: center; color: #90EE90; font-weight: bold;">0.90 ✓</td>
+<td style="padding: 0.35em; text-align: center; color: #90EE90; font-weight: bold;">0.92 ✓</td>
+<td style="padding: 0.35em; text-align: center; color: #90EE90; font-weight: bold;">0.93 ✓</td>
+</tr>
+<tr>
+<td style="padding: 0.35em;"><strong style="color: white;">StrategicAgendaClarity</strong><br><span style="opacity: 0.7; font-size: 0.85em;">HMG strategic alignment</span></td>
+<td style="padding: 0.35em; text-align: center; color: #90EE90; font-weight: bold;">0.96 ✓</td>
+<td style="padding: 0.35em; text-align: center; color: #90EE90; font-weight: bold;">0.96 ✓</td>
+<td style="padding: 0.35em; text-align: center; color: #90EE90; font-weight: bold;">0.99 ✓</td>
+<td style="padding: 0.35em; text-align: center; color: #90EE90; font-weight: bold;">0.99 ✓</td>
+</tr>
+<tr style="background: rgba(255,255,255,0.05);">
+<td style="padding: 0.35em;"><strong style="color: white;">InstabilityResponse</strong><br><span style="opacity: 0.7; font-size: 0.85em;">Adapted to crises</span></td>
+<td style="padding: 0.35em; text-align: center; color: #FFB366;">0.88</td>
+<td style="padding: 0.35em; text-align: center; color: #90EE90; font-weight: bold;">0.93 ✓</td>
+<td style="padding: 0.35em; text-align: center; color: #90EE90; font-weight: bold;">0.91 ✓</td>
+<td style="padding: 0.35em; text-align: center; color: #90EE90; font-weight: bold;">0.97 ✓</td>
+</tr>
+<tr style="background: rgba(255,255,255,0.05);">
+<td style="padding: 0.35em;"><strong style="color: white;">OutputsCapacity</strong><br><span style="opacity: 0.7; font-size: 0.85em;">Capacity building delivered</span></td>
+<td style="padding: 0.35em; text-align: center; color: #FFB366;">0.88</td>
+<td style="padding: 0.35em; text-align: center; color: #FFB366;">0.82</td>
+<td style="padding: 0.35em; text-align: center; color: #FFB366;">0.84</td>
+<td style="padding: 0.35em; text-align: center; color: #90EE90; font-weight: bold;">0.93 ✓</td>
+</tr>
+<tr>
+<td style="padding: 0.35em;"><strong style="color: #FFD700;">EquityGESI</strong><br><span style="opacity: 0.7; font-size: 0.85em;">Gender & social inclusion</span></td>
+<td style="padding: 0.35em; text-align: center; color: #FF6B6B;">0.47</td>
+<td style="padding: 0.35em; text-align: center; color: #FF6B6B;">0.39</td>
+<td style="padding: 0.35em; text-align: center; color: #FF6B6B;">0.40</td>
+<td style="padding: 0.35em; text-align: center; color: #90EE90; font-weight: bold;">0.91 ✓</td>
+</tr>
+</tbody>
+</table>
+```
+:::
+
+::: notes
+**Reading the Necessary Conditions table:**
+
+- Each cell shows consistency - what percentage of successful programmes have that feature.
+- Green checkmarks (✓) indicate necessity: 90%+ of successful programmes have it.
+- Orange numbers are close but don't meet the threshold.
+- Red numbers are clearly not necessary.
+
+**Key patterns:**
+
+- **ImpactStrategy** (maintaining a clear Theory of Change) is necessary for ALL FOUR outcomes. Every successful programme, regardless of how we measure success, has a clear impact strategy. This is the closest thing to a universal requirement.
+
+- **MelStrengthened** (improved M&E systems during implementation) is necessary for all four. You need to strengthen your monitoring as you go.
+
+- **StrategicAgendaClarity** (alignment with government priorities) is necessary for all four. Programmes need to fit within broader strategic frameworks.
+
+- **InstabilityResponse** (crisis adaptation) is necessary for Impact, Sustainability, and Equity - but NOT for Exceptional Performance. You can be rated excellent even if you didn't face/respond to crises.
+
+- **EquityGESI** (Gender Equality and Social Inclusion) is ONLY necessary for Equity outcomes (91%). GESI is not required for general success - but you cannot achieve equity outcomes without it.
+
+This table shows what's non-negotiable for each type of success.
+:::
+
+## Outcome 1: Exceptional Performance (A++/A+)
+
+```{=html}
+<div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 1em; height: 85%; align-content: start;">
+
+<div style="background: #f8f9fa; padding: 1.2em; border-radius: 10px;">
+<div style="font-weight: bold; color: #012169; font-size: 1em; margin-bottom: 0.6em;">📋 Truth Table Summary</div>
+<table style="width: 100%; font-size: 0.8em; border-collapse: collapse;">
+<tr><td style="padding: 0.5em 0.3em;">Observed configs</td><td style="text-align: right; font-weight: bold;">56</td></tr>
+<tr><td style="padding: 0.5em 0.3em;">Sufficient (OUT=1)</td><td style="text-align: right; color: #388e3c; font-weight: bold;">2</td></tr>
+<tr><td style="padding: 0.5em 0.3em;">Insufficient (OUT=0)</td><td style="text-align: right; color: #c62828;">33</td></tr>
+<tr><td style="padding: 0.5em 0.3em;">Contradictory</td><td style="text-align: right; color: #ff9800; font-weight: bold;">21</td></tr>
+</table>
+<div style="font-size: 0.65em; color: #666; margin-top: 0.8em; font-style: italic;">Only 2 of 56 configs are sufficient; 21 show mixed outcomes</div>
+<div style="margin-top: 1em; padding: 0.8em; background: #fff3e0; border-radius: 8px; font-size: 0.65em;">
+<strong>SUIN Check:</strong> No INUS conditions. The 3 necessary conditions are <strong>prerequisites only</strong>.
+</div>
+</div>
+
+<div>
+<div style="font-weight: bold; color: #012169; font-size: 1em; margin-bottom: 0.6em;">🔬 Enhanced Solution</div>
+<table style="width: 100%; font-size: 0.8em; border-collapse: collapse; background: white; border-radius: 10px;">
+<tr style="background: #f0f0f0;"><th style="padding: 0.6em; text-align: left;">Metric</th><th style="padding: 0.6em; text-align: left;">Value</th><th style="padding: 0.6em; text-align: left;">Assessment</th></tr>
+<tr><td style="padding: 0.6em;">Consistency</td><td style="padding: 0.6em; font-weight: bold;">0.286</td><td style="padding: 0.6em; color: #c62828; font-weight: bold;">❌ FAILS (threshold: 0.85)</td></tr>
+<tr><td style="padding: 0.6em;">Coverage</td><td style="padding: 0.6em;">8.2%</td><td style="padding: 0.6em; color: #666;">Very low</td></tr>
+<tr><td style="padding: 0.6em;">Pathways</td><td style="padding: 0.6em;">2</td><td style="padding: 0.6em; color: #666;">Unreliable</td></tr>
+</table>
+<div style="margin-top: 1.2em; padding: 1em; background: #ffebee; border-left: 5px solid #c62828; border-radius: 8px;">
+<div style="font-weight: bold; color: #c62828; font-size: 1em; margin-bottom: 0.3em;">⚠️ No Valid Solution</div>
+<div style="font-size: 0.8em;">Exceptional performance cannot be reliably engineered—necessary conditions exist but no sufficient recipe found.</div>
+</div>
+<div style="font-size: 0.8em; color: #888; margin-top: 0.8em;">Note: 3 equivalent solutions exist; all fail consistency threshold</div>
+</div>
+
+</div>
+```
+
+::: notes
+**Exceptional Performance - the "no recipe" finding:**
+
+**What we found:**
+- Only 2 out of 56 observed feature combinations are sufficient for exceptional performance
+- But 21 combinations are contradictory - same features, different outcomes
+- The "enhanced solution" has a consistency of only 0.286 (29%) - way below our 0.85 threshold
+- Coverage is just 8.2% - even if reliable, it would only explain a tiny fraction of exceptional programmes
+
+**What this means:**
+- We identified three necessary conditions (ImpactStrategy, MelStrengthened, StrategicAgendaClarity) - these are prerequisites
+- BUT no combination of our 14 features reliably produces exceptional performance
+- This suggests exceptional performance depends on factors we didn't measure: leadership quality, team dynamics, political timing, luck, etc.
+
+**Policy implication:**
+- You can mandate the prerequisites (clear theory of change, strong M&E, strategic clarity)
+- But you cannot engineer exceptional performance through programme design alone
+- Excellence likely requires talent and circumstances that can't be standardized
+
+This is actually an important finding - it shows the limits of what design features can achieve.
+:::
+
+------------------------------------------------------------------------
+
+## Outcome 2: Impact Achievement (80% prevalence)
+
+```{=html}
+<div style="display: grid; grid-template-columns: 1fr 2fr; gap: 1em; height: 85%; align-content: start;">
+
+<div style="background: #f8f9fa; padding: 1.2em; border-radius: 10px;">
+<div style="font-weight: bold; color: #012169; font-size: 1em; margin-bottom: 0.6em;">📋 Truth Table</div>
+<table style="width: 100%; font-size: 0.8em; border-collapse: collapse;">
+<tr><td style="padding: 0.5em 0.3em;">Observed configs</td><td style="text-align: right; font-weight: bold;">24</td></tr>
+<tr><td style="padding: 0.5em 0.3em;">Sufficient (OUT=1)</td><td style="text-align: right; color: #388e3c; font-weight: bold;">16</td></tr>
+<tr><td style="padding: 0.5em 0.3em;">Insufficient (OUT=0)</td><td style="text-align: right; color: #c62828;">2</td></tr>
+<tr><td style="padding: 0.5em 0.3em;">Contradictory</td><td style="text-align: right; color: #ff9800; font-weight: bold;">6</td></tr>
+</table>
+<div style="font-size: 0.65em; color: #666; margin-top: 0.8em; font-style: italic;">16 of 24 configs are sufficient; 6 show mixed outcomes</div>
+<div style="margin-top: 1em; padding: 0.8em; background: #e8f5e9; border-radius: 8px; font-size: 0.65em;">
+<strong>SUIN Check:</strong> No INUS conditions. No single condition in all pathways.
+</div>
+</div>
+
+<div>
+<div style="font-weight: bold; color: #012169; font-size: 1.1em; margin-bottom: 0.6em;">🔬 Enhanced Solution <span style="font-weight: normal; font-size: 0.7em; color: #666;">(16 equivalent; pathways 1-2 stable)</span></div>
+<table style="width: 100%; font-size: 0.65em; border-collapse: collapse; background: white;">
+<tr style="background: #ABCAE9;"><th style="padding: 0.6em; text-align: left; width: 55%;">Pathway</th><th style="padding: 0.6em; text-align: left;">Interpretation</th></tr>
+<tr><td style="padding: 0.6em; font-family: monospace;">OutputsAccessible</td><td style="padding: 0.6em;">Accessible outputs alone</td></tr>
+<tr style="background: #f5f5f5;"><td style="padding: 0.6em; font-family: monospace;">PartnershipEquity * ~EquityGESI</td><td style="padding: 0.6em;">Equitable partnerships, no GESI focus</td></tr>
+<tr><td style="padding: 0.6em; font-family: monospace;">~SharedGovernance * OutputsCapacity * ~FundingLongevity</td><td style="padding: 0.6em;">Centralized + capacity + standard funding</td></tr>
+<tr style="background: #f5f5f5;"><td style="padding: 0.6em; font-family: monospace;">~SharedGovernance * ~LocalEmbedded * ImpactStrategy</td><td style="padding: 0.6em;">Centralized + not embedded + impact strategy</td></tr>
+</table>
+<div style="margin-top: 1em; display: flex; gap: 2em;">
+<div style="padding: 0.7em 1.4em; background: #e8f5e9; border-radius: 25px; font-weight: bold; font-size: .9em; color: #388e3c;">✓ Consistency: 0.881</div>
+<div style="padding: 0.7em 1.4em; background: #ABCAE9; border-radius: 25px; font-weight: bold; font-size: .9em; color: #0092BC;">Coverage: 74.6%</div>
+</div>
+</div>
+
+</div>
+```
+
+::: notes
+**Impact Achievement - multiple routes to success:**
+
+**What we found:**
+- 16 out of 24 configurations lead to impact (much better than Exceptional Performance)
+- Only 6 contradictory configurations - our features capture most of what matters
+- Consistency of 0.881 - exceeds our 0.85 threshold ✓
+- Coverage of 74.6% - these pathways explain 3/4 of successful programmes
+
+**The four pathways:**
+
+1. **"OutputsAccessible" alone** - Just making outputs openly accessible is sufficient! This is the simplest pathway. If your research, tools, or data are freely available, you're likely to achieve impact.
+
+2. **"PartnershipEquity * ~EquityGESI"** - Equitable partnerships WITHOUT a GESI focus. The "~" means "absence of". Interestingly, you can achieve general impact without emphasizing gender/social inclusion (though you won't achieve equity outcomes).
+
+3. **"~SharedGovernance * OutputsCapacity * ~FundingLongevity"** - Centralized decision-making + capacity building + standard (not extended) funding. A more traditional top-down model with skills transfer.
+
+4. **"~SharedGovernance * ~LocalEmbedded * ImpactStrategy"** - Centralized + not locally embedded + clear impact strategy. A directive model that works if you know exactly what you're doing.
+
+**Key insight:** Open access (OutputsAccessible) is the simplest lever. It's a single feature that alone is sufficient for impact.
+:::
+
+------------------------------------------------------------------------
+
+## Outcome 3: Sustainability (69% prevalence)
+
+```{=html}
+<div style="display: grid; grid-template-columns: 1fr 2fr; gap: 1em; height: 85%; align-content: start;">
+
+<div style="background: #f8f9fa; padding: 1.2em; border-radius: 10px;">
+<div style="font-weight: bold; color: #012169; font-size: 1em; margin-bottom: 0.6em;">📋 Truth Table</div>
+<table style="width: 100%; font-size: 0.8em; border-collapse: collapse;">
+<tr><td style="padding: 0.5em 0.3em;">Observed configs</td><td style="text-align: right; font-weight: bold;">24</td></tr>
+<tr><td style="padding: 0.5em 0.3em;">Sufficient (OUT=1)</td><td style="text-align: right; color: #388e3c; font-weight: bold;">11</td></tr>
+<tr><td style="padding: 0.5em 0.3em;">Insufficient (OUT=0)</td><td style="text-align: right; color: #c62828;">2</td></tr>
+<tr><td style="padding: 0.5em 0.3em;">Contradictory</td><td style="text-align: right; color: #ff9800; font-weight: bold;">11</td></tr>
+</table>
+<div style="font-size: 0.65em; color: #666; margin-top: 0.8em; font-style: italic;">11 of 24 configs are sufficient; 11 show mixed outcomes</div>
+<div style="margin-top: 1em; padding: 0.8em; background: #fff3e0; border-radius: 8px; font-size: 0.65em;">
+<strong>SUIN Check:</strong> No INUS. FundingLongevity in 2 of 3 pathways.
+</div>
+</div>
+
+<div>
+<div style="font-weight: bold; color: #012169; font-size: 1.1em; margin-bottom: 0.6em;">🔬 Enhanced Solution <span style="font-weight: normal; font-size: 0.7em; color: #666;">(2 equivalent; reporting first)</span></div>
+<table style="width: 100%; font-size: 0.65em; border-collapse: collapse; background: white;">
+<tr style="background: #ABCAE9;"><th style="padding: 0.6em; text-align: left; width: 55%;">Pathway</th><th style="padding: 0.6em; text-align: left;">Interpretation</th></tr>
+<tr><td style="padding: 0.6em; font-family: monospace;">OutputsAccessible * OutputsCapacity</td><td style="padding: 0.6em;">Accessible + capacity building</td></tr>
+<tr style="background: #f5f5f5;"><td style="padding: 0.6em; font-family: monospace;">SharedGovernance * LocalEmbedded * FundingLongevity</td><td style="padding: 0.6em;">Shared governance + local embedding + extended funding</td></tr>
+<tr><td style="padding: 0.6em; font-family: monospace;">~SelectionProcedures * ~OutputsCapacity * FundingLongevity</td><td style="padding: 0.6em;">Non-competitive + no capacity focus + extended funding</td></tr>
+</table>
+<div style="margin-top: 1em; display: flex; gap: 2em;">
+<div style="padding: 0.7em 1.4em; background: #e8f5e9; border-radius: 25px; font-weight: bold; font-size: .9em; color: #388e3c;">✓ Consistency: 0.870</div>
+<div style="padding: 0.7em 1.4em; background: #ABCAE9; border-radius: 25px; font-weight: bold; font-size: .9em; color: #0092BC;">Coverage: 64.8%</div>
+</div>
+</div>
+
+</div>
+```
+
+::: notes
+**Sustainability - time and embedding matter:**
+
+**What we found:**
+- 11 out of 24 configurations are sufficient (50%)
+- 11 are contradictory - sustainability is harder to predict than impact
+- Consistency of 0.870 - meets threshold ✓
+- Coverage of 64.8% - explains about 2/3 of sustainable programmes
+
+**The three pathways:**
+
+1. **"OutputsAccessible * OutputsCapacity"** - Accessible outputs + capacity building. If you share your work AND build local skills, benefits continue after funding ends. Makes intuitive sense.
+
+2. **"SharedGovernance * LocalEmbedded * FundingLongevity"** - Joint decision-making + integration with local systems + extended timelines. This is the "deep embedding" model - takes time but creates lasting change.
+
+3. **"~SelectionProcedures * ~OutputsCapacity * FundingLongevity"** - Non-competitive partner selection + no capacity focus + extended funding. Interesting: direct partnerships (perhaps with government) plus time, without capacity building, can still be sustainable - perhaps because you're working with already-capable institutions.
+
+**Key insight:** FundingLongevity appears in 2 of 3 pathways. Sustainability often requires extending beyond original timelines. Quick projects rarely create lasting change. This has implications for how FCDO structures contracts and expectations.
+
+The one pathway without extended time compensates with outputs that persist (accessible products + trained people).
+:::
+
+------------------------------------------------------------------------
+
+## Outcome 4: Equity Outcomes (34% prevalence)
+
+```{=html}
+<div style="display: grid; grid-template-columns: 1fr 2fr; gap: 1em; height: 85%; align-content: start;">
+
+<div style="background: #f8f9fa; padding: 1.2em; border-radius: 10px;">
+<div style="font-weight: bold; color: #012169; font-size: 1em; margin-bottom: 0.6em;">📋 Truth Table</div>
+<table style="width: 100%; font-size: 0.8em; border-collapse: collapse;">
+<tr><td style="padding: 0.5em 0.3em;">Observed configs</td><td style="text-align: right; font-weight: bold;">56</td></tr>
+<tr><td style="padding: 0.5em 0.3em;">Sufficient (OUT=1)</td><td style="text-align: right; color: #388e3c; font-weight: bold;">13</td></tr>
+<tr><td style="padding: 0.5em 0.3em;">Insufficient (OUT=0)</td><td style="text-align: right; color: #c62828;">36</td></tr>
+<tr><td style="padding: 0.5em 0.3em;">Contradictory</td><td style="text-align: right; color: #ff9800; font-weight: bold;">7</td></tr>
+</table>
+<div style="font-size: 0.65em; color: #666; margin-top: 0.8em; font-style: italic;">13 of 56 configs are sufficient; only 7 contradictory (lowest)</div>
+<div style="margin-top: 1em; padding: 0.8em; background: #e8f5e9; border-left: 4px solid #388e3c; border-radius: 8px; font-size: 0.65em;">
+<strong style="color: #388e3c;">✓ INUS Found!</strong><br>
+<strong>EquityGESI</strong> in ALL 3 pathways → non-negotiable
+</div>
+</div>
+
+<div>
+<div style="font-weight: bold; color: #012169; font-size: 1.1em; margin-bottom: 0.6em;">🔬 Enhanced Solution <span style="font-weight: normal; font-size: 0.7em; color: #388e3c;">✓ Unique solution - no model ambiguity</span></div>
+<table style="width: 100%; font-size: 0.8em; border-collapse: collapse; background: white;">
+<tr style="background: #ABCAE9;"><th style="padding: 0.6em; text-align: left; width: 55%;">Pathway</th><th style="padding: 0.6em; text-align: left;">Interpretation</th></tr>
+<tr><td style="padding: 0.6em; font-family: monospace;">SelectionProcedures * <strong style="color: #7b1fa2;">EquityGESI</strong></td><td style="padding: 0.6em;">Competitive selection + GESI</td></tr>
+<tr style="background: #f5f5f5;"><td style="padding: 0.6em; font-family: monospace;">~LocalEmbedded * <strong style="color: #7b1fa2;">EquityGESI</strong></td><td style="padding: 0.6em;">Not locally embedded + GESI</td></tr>
+<tr><td style="padding: 0.6em; font-family: monospace;">OutputsAccessible * <strong style="color: #7b1fa2;">EquityGESI</strong> * InstabilityResponse</td><td style="padding: 0.6em;">Accessible + crisis adaptation + GESI</td></tr>
+</table>
+<div style="margin-top: 1em; display: flex; gap: 2em;">
+<div style="padding: 0.7em 1.4em; background: #e8f5e9; border-radius: 25px; font-weight: bold; font-size: .9em; color: #388e3c;">✓ Consistency: 0.987 (highest!)</div>
+<div style="padding: 0.7em 1.4em; background: #ABCAE9; border-radius: 25px; font-weight: bold; font-size: .9em; color: #0092BC;">Coverage: 74.3%</div>
+</div>
+</div>
+
+</div>
+```
+
+::: notes
+**Equity Outcomes - GESI is non-negotiable:**
+
+**What we found:**
+- This is our cleanest result: unique solution with no model ambiguity
+- 13 out of 56 configurations are sufficient, only 7 contradictory (lowest rate)
+- Consistency of 0.987 - highest of all outcomes (nearly every programme with these features achieves equity)
+- Coverage of 74.3% - explains 3/4 of equity-achieving programmes
+
+**The critical finding - INUS condition:**
+- "INUS" stands for "Insufficient but Necessary part of an Unnecessary but Sufficient" condition
+- In plain English: EquityGESI appears in ALL THREE pathways
+- You literally cannot achieve equity outcomes without explicit GESI integration
+- This is the only feature across all our analyses that is truly indispensable for its outcome
+
+**The three pathways (all contain GESI):**
+
+1. **"SelectionProcedures * EquityGESI"** - Competitive partner selection + GESI focus. Rigorous procurement that prioritizes equity-capable partners.
+
+2. **"~LocalEmbedded * EquityGESI"** - NOT locally embedded + GESI. Interesting finding: sometimes external pressure is needed for equity. Local systems may perpetuate existing inequalities.
+
+3. **"OutputsAccessible * EquityGESI * InstabilityResponse"** - Open access + GESI + crisis adaptation. Responding to crises through an equity lens with open outputs.
+
+**Policy implication:** If FCDO cares about equity outcomes, GESI must be mandatory and meaningful - not a checkbox. It's the one feature where box-ticking is demonstrably insufficient and genuine integration is required.
+:::
+
+# Part 5: Putting It All Together
+
+------------------------------------------------------------------------
+
+## Resolving the Theoretical Debate {background-color="#012169"}
+
+:::::: {style="color: white;"}
+
+```{=html}
+<div style="text-align: center; font-size: 1em; margin-bottom: 1em;">
+Do the results support <span style="color: #ff9800; font-weight: bold;">Results-Based Management</span> or <span style="color: #4caf50; font-weight: bold;">Adaptive Management</span>?
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2em;">
+
+<div style="background: rgba(255,152,0,0.2); padding: 1.2em; border-radius: 12px; border: 2px solid rgba(255,152,0,0.5);">
+<div style="font-size: .9em; font-weight: bold; color: #ffb74d; margin-bottom: 0.8em;">📋 Evidence FOR RBM</div>
+<div style="font-size: 0.75em; line-height: 1.6;">
+• <strong>IMPACT_STRATEGY (100%)</strong> necessary for excellence<br>
+• <strong>MEL_STRENGTHENED (98%)</strong> necessary for excellence<br>
+• <strong>STRATEGIC_AGENDA_CLARITY (96%)</strong> necessary for excellence<br>
+• <strong>SELECTION_PROCEDURES</strong> in 2 Enhanced pathways<br><br>
+<em style="opacity: 0.8;">Good baseline design creates foundation for success</em>
+</div>
+</div>
+
+<div style="background: rgba(76,175,80,0.2); padding: 1.2em; border-radius: 12px; border: 2px solid rgba(76,175,80,0.5);">
+<div style="font-size: .9em; font-weight: bold; color: #81c784; margin-bottom: 0.8em;">🔄 Evidence FOR Adaptive</div>
+<div style="font-size: 0.75em; line-height: 1.6;">
+• <strong>INSTABILITY_RESPONSE</strong> necessary for 3/4 outcomes<br>
+• <strong>FUNDING_LONGEVITY_ADAPTED</strong> in 2/3 sustainability paths<br>
+• <strong>4 different pathways</strong> to impact (equifinality)<br>
+• No single "right way" — multiple routes work<br><br>
+<em style="opacity: 0.8;">Flexibility and adaptation enable success</em>
+</div>
+</div>
+
+</div>
+```
+
+::::::
+
+------------------------------------------------------------------------
+
+## The Verdict: Sequenced Complementarity {background-color="#f5f5f5"}
+
+```{=html}
+<div style="text-align: center; margin-bottom: .5em;">
+<div style="font-size: 1em; font-weight: bold; color: #012169;">Neither paradigm wins alone — they work <span style="color: #7b1fa2;">together in sequence</span></div>
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center; gap: .5em; margin: .5em 0;">
+
+<div style="background: #fff3e0; padding: 0.6em; border-radius: 15px; text-align: center; width: 260px; border: 3px solid #ff9800;">
+<div style="font-size: 1.2em; margin-bottom: 0.2em;">📋</div>
+<div style="font-weight: bold; color: #e65100; font-size: 0.9em;">Step 1: RBM Foundation</div>
+<div style="font-size: 0.7em; margin-top: 0.3em; color: #666;">
+Clear theory of change<br>
+Strong M&E systems<br>
+Strategic clarity
+</div>
+</div>
+
+<div style="font-size: 2.5em; color: #9e9e9e;">→</div>
+
+<div style="background: #e8f5e9; padding: 0.6em; border-radius: 15px; text-align: center; width: 260px; border: 3px solid #4caf50;">
+<div style="font-size: 1.2em; margin-bottom: 0.2em;">🔄</div>
+<div style="font-weight: bold; color: #2e7d32; font-size: 0.9em;">Step 2: Adaptive Execution</div>
+<div style="font-size: 0.7em; margin-top: 0.3em; color: #666;">
+Respond to crises<br>
+Adjust funding duration<br>
+Multiple pathways
+</div>
+</div>
+
+<div style="font-size: 2.5em; color: #9e9e9e;">→</div>
+
+<div style="background: #ABCAE9; padding: 0.6em; border-radius: 15px; text-align: center; width: 260px; border: 3px solid #0092BC;">
+<div style="font-size: 1.2em; margin-bottom: 0.2em;">🎯</div>
+<div style="font-weight: bold; color: #1565c0; font-size: 0.9em;">Outcome: Success</div>
+<div style="font-size: 0.7em; margin-top: 0.3em; color: #666;">
+Know where you're going<br>
+Adjust how you get there<br>
+Achieve results
+</div>
+</div>
+
+</div>
+
+<div style="margin-top: .4em; padding: 1em; background: #f3e5f5; border-radius: 10px; text-align: center; border-left: 5px solid #7b1fa2;">
+<div style="font-size: 0.9em;">
+<strong style="color: #7b1fa2;">Key insight:</strong> Strategic clarity (<em>RBM</em>) provides the reference point for knowing <em>what</em> to adapt toward. Without it, adaptation becomes drift.
+</div>
+</div>
+```
+
+::: notes
+**Sequenced Complementarity - the key insight:**
+
+**Step 1: RBM Foundation (at design and early implementation)**
+- Start with a clear Theory of Change - know what you're trying to achieve and why
+- Build strong M&E systems - you need data to know if you're on track
+- Ensure strategic clarity - understand how you fit in the bigger picture
+
+These aren't optional or "nice to have" - 96-100% of successful programmes have them.
+
+**Step 2: Adaptive Execution (during implementation)**
+- Respond to crises and changing contexts
+- Extend timelines when the work requires it
+- Choose from multiple possible approaches based on what's working
+
+The pathways show that flexibility matters, but it builds on the RBM foundation.
+
+**Why sequence matters:**
+- Adaptation without strategy is drift - you're responding to stimuli but not moving toward anything
+- Strategy without adaptation is rigidity - you're following a plan that no longer fits reality
+- The Theory of Change provides the "North Star" - you adapt HOW you get there, but you know WHERE you're going
+
+**Practical implication for FCDO:**
+- Don't relax Business Case requirements (RBM foundation)
+- DO allow and encourage adaptation during implementation
+- Design review processes that distinguish purposeful adaptation from plan failure
+:::
+
+------------------------------------------------------------------------
+
+## Summary: Four Different Stories
+
+```{r}
+summary_df <- data.frame(
+  Outcome = c("Exceptional\nPerformance", "Impact\nAchievement", "Sustainability", "Equity\nOutcomes"),
+  Pattern = c("Prerequisites exist,\nbut no recipe works", 
+              "4 different recipes,\n1 is very simple",
+              "3 recipes,\ntime matters",
+              "1 ingredient is\nnon-negotiable"),
+  Key_Finding = c("3 necessary conditions\n(100%, 98%, 96%)",
+                  "Accessible outputs\nalone is enough",
+                  "Extended funding in\n2 of 3 recipes",
+                  "GESI focus in\nALL 3 recipes")
+)
+
+kable(summary_df, format = "html", 
+      col.names = c("Outcome", "The pattern", "Key finding")) %>%
+  kable_styling(font_size = 50) %>%
+  row_spec(1, background = "#fadbd8") %>%
+  row_spec(2, background = "#d5f5e3") %>%
+  row_spec(3, background = "#d6eaf8") %>%
+  row_spec(4, background = "#e8daef")
+```
+
+
+
+## Visual Summary
+
+```{r}
+#| fig-height: 6
+#| fig-width: 14
+
+results_df <- data.frame(
+  Outcome = rep(c("Exceptional", "Impact", "Sustainability", "Equity"), 2),
+  Metric = c(rep("Consistency", 4), rep("Coverage", 4)),
+  Value = c(0.286, 0.881, 0.870, 0.987, 0.082, 0.746, 0.648, 0.743),
+  Pass = c("Fail", "Pass", "Pass", "Pass", "Fail", "Pass", "Pass", "Pass")
+)
+
+results_df$Outcome <- factor(results_df$Outcome, 
+                              levels = c("Exceptional", "Impact", "Sustainability", "Equity"))
+
+ggplot(results_df, aes(x = Outcome, y = Value, fill = Metric, alpha = Pass)) +
+  geom_hline(yintercept = 0.85, linetype = "dashed", color = "red", linewidth = 1.5) +
+    geom_col(position = "dodge", width = 0.7) +
+
+  annotate("text", x = 0.5, y = 0.89, label = "Reliability threshold (0.85)", 
+           color = "red", hjust = 0, size = 5) +
+  scale_fill_manual(values = c("Consistency" = "#3498db", "Coverage" = "#e67e22")) +
+  scale_alpha_manual(values = c("Fail" = 0.4, "Pass" = 1), guide = "none") +
+  scale_y_continuous(labels = scales::percent_format(), limits = c(0, 1.05)) +
+  labs(y = "", x = "", fill = "") +
+  theme_minimal(base_size = 18) +
+  theme(legend.position = "bottom")
+```
+
+::: fragment
+**Only Exceptional Performance fails** — we can find reliable recipes for the other three outcomes
+:::
+
+::: notes
+**Visual summary - reading the chart:**
+
+- Blue bars show consistency (reliability) - does this recipe work?
+- Orange bars show coverage (breadth) - how much does it explain?
+- The red dashed line at 0.85 is our reliability threshold
+
+**What we see:**
+
+- **Exceptional Performance** (first set): Both bars are very short and semi-transparent (indicating failure). Consistency is only 29% - the "recipes" we found don't actually work reliably. This outcome cannot be engineered with our features.
+
+- **Impact Achievement** (second set): Both bars clear the threshold. Consistency of 88% means the recipes are reliable. Coverage of 75% means they explain most successes. This is a valid, useful result.
+
+- **Sustainability** (third set): Both bars clear the threshold. Similar pattern to Impact - reliable recipes that explain most cases.
+
+- **Equity Outcomes** (fourth set): Consistency is highest at 99% - nearly perfect reliability. Coverage is good at 74%. This is our strongest result.
+
+**The bottom line:**
+- We CAN tell you how to achieve Impact, Sustainability, and Equity
+- We CANNOT tell you how to achieve Exceptional Performance through design alone
+- Excellence requires something beyond what we measured (probably leadership, talent, timing)
+:::
+
+# Part 6: What Should FCDO Do?
+
+------------------------------------------------------------------------
+
+## Recommendation 1: Mandate the Prerequisites
+
+For **ALL programmes**, require:
+
+<br>
+
+:::::: columns
+::: {.column width="33%"}
+### ✅ Impact Strategy
+
+Document clear, evidence-based impact pathways
+
+*100% of exceptional programmes had this*
+:::
+
+::: {.column width="33%"}
+### ✅ M&E Systems
+
+Strengthen monitoring and evaluation over time
+
+*98% of exceptional programmes did this*
+:::
+
+::: {.column width="33%"}
+### ✅ Strategic Clarity
+
+Articulate contribution to broader goals
+
+*96% of exceptional programmes had this*
+:::
+::::::
+
+<br>
+
+::: callout-note
+These won't guarantee excellence, but you almost certainly won't achieve it without them
+:::
+
+::: notes
+**Recommendation 1 - The prerequisites:**
+
+**Why mandate these three?**
+- They're necessary for exceptional performance (96-100% of top programmes have them)
+- They're also necessary for the other three outcomes
+- They're foundational RBM elements that enable adaptation
+
+**Impact Strategy (Theory of Change):**
+- Not just a diagram at approval, but a living document
+- Should show the causal chain from activities → outputs → outcomes → impact
+- Should include assumptions and risks
+- Must be maintained and updated during implementation
+
+**M&E Systems:**
+- Not just reporting to FCDO, but genuine learning
+- Should strengthen over time as you learn what matters
+- Should feed back into decision-making
+
+**Strategic Clarity:**
+- How does this programme fit UK government priorities?
+- How does it contribute to broader development goals?
+- What's the unique contribution vs. other actors?
+
+**The caveat is important:**
+- These are necessary but not sufficient
+- Having all three doesn't guarantee excellence
+- But NOT having them almost guarantees you won't achieve excellence
+- Think of them as the price of entry, not the winning ticket
+:::
+
+------------------------------------------------------------------------
+
+## Recommendation 2: Design for Your Outcome
+
+```{=html}
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5em; margin-top: 0.5em;">
+
+<div style="background: #ABCAE9; padding: 1em; border-radius: 10px; border-top: 4px solid #0092BC;">
+<div style="font-weight: bold; color: #0092BC; font-size: 1em; margin-bottom: 0.5em;">For Impact</div>
+<div style="font-weight: bold; font-size: 0.8em; margin-bottom: 0.4em;">4 pathways available:</div>
+<ol style="margin: 0; padding-left: 1.2em; font-size: 0.7em; line-height: 1.5;">
+<li>OutputsAccessible alone</li>
+<li>PartnershipEquity + ~EquityGESI</li>
+<li>~SharedGovernance + OutputsCapacity + ~FundingLongevity</li>
+<li>~SharedGovernance + ~LocalEmbedded + ImpactStrategy</li>
+</ol>
+<div style="margin-top: 0.6em; font-style: italic; color: #1565c0; font-size: 0.7em;">Accessibility is simplest lever</div>
+</div>
+
+<div style="background: #e8f5e9; padding: 1em; border-radius: 10px; border-top: 4px solid #388e3c;">
+<div style="font-weight: bold; color: #388e3c; font-size: 1em; margin-bottom: 0.5em;">For Sustainability</div>
+<div style="font-weight: bold; font-size: 0.8em; margin-bottom: 0.4em;">3 pathways available:</div>
+<ol style="margin: 0; padding-left: 1.2em; font-size: 0.7em; line-height: 1.5;">
+<li>OutputsAccessible + OutputsCapacity</li>
+<li>SharedGovernance + LocalEmbedded + FundingLongevity</li>
+<li>~SelectionProcedures + ~OutputsCapacity + FundingLongevity</li>
+</ol>
+<div style="margin-top: 0.6em; font-style: italic; color: #2e7d32; font-size: 0.7em;">FundingLongevity in 2/3 pathways</div>
+</div>
+
+<div style="background: #f3e5f5; padding: 1em; border-radius: 10px; border-top: 4px solid #7b1fa2;">
+<div style="font-weight: bold; color: #7b1fa2; font-size: 1em; margin-bottom: 0.5em;">For Equity</div>
+<div style="font-weight: bold; font-size: 0.8em; margin-bottom: 0.4em;">3 pathways, all require GESI:</div>
+<ol style="margin: 0; padding-left: 1.2em; font-size: 0.7em; line-height: 1.5;">
+<li>SelectionProcedures + EquityGESI</li>
+<li>~LocalEmbedded + EquityGESI</li>
+<li>OutputsAccessible + InstabilityResponse + EquityGESI</li>
+</ol>
+<div style="margin-top: 0.6em; font-style: italic; color: #6a1b9a; font-size: 0.7em;">EquityGESI is the only INUS condition</div>
+</div>
+
+</div>
+
+<div style="margin-top: 1em; padding: 0.8em; background: #fff3e0; border-left: 5px solid #f57c00; border-radius: 8px;">
+<strong style="color: #e65100;">Cross-cutting finding:</strong> <strong>InstabilityResponse</strong> (crisis adaptation) is necessary for 3 of 4 outcomes: Impact (93%), Sustainability (91%), Equity (97%)
+</div>
+```
+
+::: notes
+**Recommendation 2 - Designing for specific outcomes:**
+
+**For Impact (achieving intended results):**
+- The simplest lever is OutputsAccessible - making outputs openly available
+- This alone is sufficient - you don't need complex combinations
+- Policy implication: Default to open access for all programme outputs
+- Four pathways exist, giving flexibility in approach
+
+**For Sustainability (benefits continue after funding):**
+- Time matters - FundingLongevity appears in 2 of 3 pathways
+- Policy implication: Don't expect sustainable change from short projects
+- Either invest in lasting outputs (accessible + capacity) OR embed deeply over time
+- The "quick project" model rarely produces sustainability
+
+**For Equity (reaching marginalized groups):**
+- GESI is the only INUS condition in our entire analysis
+- It appears in ALL THREE equity pathways - no exceptions
+- Policy implication: GESI cannot be optional or cosmetic
+- Genuine integration (not box-ticking) is required
+- This is the one area where you cannot substitute or work around a requirement
+
+**Crisis Adaptation (InstabilityResponse):**
+- Necessary for 3 of 4 outcomes (93%, 91%, 97%)
+- Programmes must demonstrate ability to respond to shocks
+- This became especially visible during COVID-19
+- Should be built into programme design, not treated as exceptional
+:::
+
+## Caveats & Limitations {background-color="#f8f9fa"}
+
+```{=html}
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.3em; margin-top: 0.3em;">
+
+<div style="background: #fff; padding: 0.6em; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+<div style="font-size: 1.4em; margin-bottom: 0.2em;">📝</div>
+<div style="font-weight: bold; margin-bottom: 0.2em; font-size: 1em;">Rhetorical Adaptation?</div>
+<div style="font-size: 1em; color: #666;">
+90% claim crisis response. Are they <em>actually</em> adapting, or just <em>saying</em> they adapted?
+</div>
+</div>
+
+<div style="background: #fff; padding: 0.6em; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+<div style="font-size: 1.4em; margin-bottom: 0.2em;">🔄</div>
+<div style="font-weight: bold; margin-bottom: 0.2em; font-size:1em;">System Circularity</div>
+<div style="font-size: 1em; color: #666;">
+FCDO rewards ToC & MEL. Programmes with these score highly. Finding or tautology?
+</div>
+</div>
+
+<div style="background: #fff; padding: 0.6em; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+<div style="font-size: 1.4em; margin-bottom: 0.2em;">🎲</div>
+<div style="font-weight: bold; margin-bottom: 0.2em; font-size: 1em;">Unmeasured Factors</div>
+<div style="font-size: 1em; color: #666;">
+Leadership, luck, political windows — we can't capture these in the data.
+</div>
+</div>
+
+<div style="background: #fff; padding: 0.6em; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+<div style="font-size: 1.4em; margin-bottom: 0.2em;">📊</div>
+<div style="font-weight: bold; margin-bottom: 0.2em; font-size: 1em;">Self-Reported Data</div>
+<div style="font-size:1em; color: #666;">
+Business Cases & ARs are self-reported. Incentives to present favourably.
+</div>
+</div>
+
+</div>
+```
+
+::: notes
+**Important caveats to acknowledge:**
+
+**Rhetorical Adaptation:**
+- 90% of programmes claim to have adapted to crises
+- But are they actually adapting, or just writing that they did in their reports?
+- Self-reported data has obvious incentive problems
+- We're measuring what programmes SAY, not what they DO
+
+**System Circularity:**
+- FCDO's scoring system rewards Theories of Change and M&E systems
+- Programmes that have these get rated higher
+- We then find that high-rated programmes have these features
+- Is this a finding or a tautology?
+- Partly genuine (ToC matters), partly an artifact of how scoring works
+
+**Unmeasured Factors:**
+- Leadership quality, team chemistry, luck, political windows
+- These matter enormously but aren't in programme documents
+- Our 14 features don't capture everything (obviously)
+- The high contradiction rate for Exceptional Performance shows this
+
+**Self-Reported Data:**
+- Business Cases are proposals - they present plans optimistically
+- Annual Reviews are progress reports - programmes want to look good
+- Both have incentives to present favourably
+- Independent evaluations would be more reliable but aren't available at scale
+
+**These caveats don't invalidate the findings, but they inform how we interpret them.**
+:::
+
+# Appendix
+
+## Key Messages for Policy Makers {background-color="#012169"}
+
+::: {style="color: white;"}
+```{=html}
+<div style="display: flex; flex-direction: column; gap: 0.4em; margin-top: 0.2em;">
+
+<div class="fragment" style="background: rgba(168,230,207,0.2); padding: 0.4em; border-radius: 8px; border-left: 4px solid #a8e6cf; display: flex; align-items: center; gap: 0.6em;">
+<div style="font-size: 1.2em; width: 30px; text-align: center;">📦</div>
+<div>
+<div style="font-weight: bold; font-size: 0.8em;">Impact: "Accessibility is the simplest lever"</div>
+<div style="opacity: 0.9; font-size: 0.55em;">OutputsAccessible <em>alone</em> is sufficient. 4 pathways exist, but open access is the easiest to implement.</div>
+</div>
+</div>
+
+<div class="fragment" style="background: rgba(214,234,248,0.2); padding: 0.4em; border-radius: 8px; border-left: 4px solid #85c1e9; display: flex; align-items: center; gap: 0.6em;">
+<div style="font-size: 1.2em; width: 30px; text-align: center;">⏳</div>
+<div>
+<div style="font-weight: bold; font-size: 0.8em;">Sustainability: "Time and embedding matter"</div>
+<div style="opacity: 0.9; font-size: 0.55em;">FundingLongevity appears in 2 of 3 pathways. Either invest in quality outputs OR embed institutionally with extended timelines.</div>
+</div>
+</div>
+
+<div class="fragment" style="background: rgba(232,218,239,0.2); padding: 0.4em; border-radius: 8px; border-left: 4px solid #af7ac5; display: flex; align-items: center; gap: 0.6em;">
+<div style="font-size: 1.2em; width: 30px; text-align: center;">♀️</div>
+<div>
+<div style="font-weight: bold; font-size: 0.8em;">Equity: "GESI is the only INUS condition"</div>
+<div style="opacity: 0.9; font-size: 0.55em;">Gender & Social Inclusion appears in ALL 3 equity pathways. The only condition that is truly non-negotiable for its outcome.</div>
+</div>
+</div>
+
+<div class="fragment" style="background: rgba(255,229,180,0.2); padding: 0.4em; border-radius: 8px; border-left: 4px solid #f5b041; display: flex; align-items: center; gap: 0.6em;">
+<div style="font-size: 1.2em; width: 30px; text-align: center;">🔄</div>
+<div>
+<div style="font-weight: bold; font-size: 0.8em;">Cross-cutting: "Crisis adaptation is essential"</div>
+<div style="opacity: 0.9; font-size: 0.55em;">InstabilityResponse is necessary for 3 of 4 outcomes (93%, 91%, 97%). Programmes must demonstrate adaptive capacity.</div>
+</div>
+</div>
+
+<div class="fragment" style="background: rgba(250,219,216,0.2); padding: 0.4em; border-radius: 8px; border-left: 4px solid #e74c3c; display: flex; align-items: center; gap: 0.6em;">
+<div style="font-size: 1.2em; width: 30px; text-align: center;">⚠️</div>
+<div>
+<div style="font-weight: bold; font-size: 0.8em;">Exceptional Performance: "No recipe exists"</div>
+<div style="opacity: 0.9; font-size: 0.55em;">3 necessary conditions (ToC, M&E, Strategy) but no sufficient combination. Excellence cannot be reliably engineered.</div>
+</div>
+</div>
+
+</div>
+```
+
+::: notes
+**Key messages summary:**
+
+- **Impact:** Open access to outputs is the simplest, most direct lever. If you do nothing else, make your programme outputs freely available.
+
+- **Sustainability:** Benefits don't last without investment in time or capacity. Quick projects rarely create lasting change. Plan for extended timelines or invest in skills/products that persist.
+
+- **Equity:** This is the most demanding outcome. GESI integration is the only truly non-negotiable condition we found. It must be genuine, not a checkbox exercise.
+
+- **Crisis adaptation:** COVID-19 showed which programmes could adapt and which couldn't. This capacity should be built in from the start.
+
+- **Excellence:** The uncomfortable finding - you can set up the prerequisites (ToC, M&E, strategy) but exceptional performance requires something more that we can't specify or mandate. Probably talent and timing.
+
+**For a non-technical audience, emphasize:**
+- There are multiple valid ways to succeed (equifinality)
+- Some things are non-negotiable (necessary conditions)
+- Some things are sufficient on their own (like open access for impact)
+- Excellence is partly beyond design control
+:::
+
+
+
+## Discussion Questions {background-color="#f8f9fa"}
+
+```{=html}
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.6em; margin-top: 0.3em;">
+
+<div style="background: linear-gradient(135deg, #a8b5e6 0%, #b8a4c9 100%); color: #333; padding: 0.6em; border-radius: 10px;">
+<div style="font-size: 0.8em; font-weight: bold; margin-bottom: 0.3em;">🔍 Weaknesses</div>
+<ul style="font-size: 0.55em; margin: 0; padding-left: 1em;">
+<li>Where might findings be challenged?</li>
+<li>How could we strengthen the analysis?</li>
+<li>What external validation is needed?</li>
+</ul>
+</div>
+
+<div style="background: linear-gradient(135deg, #a8e6cf 0%, #88d8b0 100%); color: #333; padding: 0.6em; border-radius: 10px;">
+<div style="font-size: 0.8em; font-weight: bold; margin-bottom: 0.3em;">📢 Sharing</div>
+<ul style="font-size: 0.55em; margin: 0; padding-left: 1em;">
+<li>How should we communicate to FCDO?</li>
+<li>Paper vs. brief vs. workshop?</li>
+<li>Who is the right internal audience?</li>
+</ul>
+</div>
+
+<div style="background: linear-gradient(135deg, #ffc3d0 0%, #ffb3ba 100%); color: #333; padding: 0.6em; border-radius: 10px;">
+<div style="font-size: 0.8em; font-weight: bold; margin-bottom: 0.3em;">⚙️ Ways of Working</div>
+<ul style="font-size: 0.55em; margin: 0; padding-left: 1em;">
+<li>How might this inform programme design?</li>
+<li>Should FCDO allow "pathway diversity"?</li>
+<li>Implications for Business Case review?</li>
+</ul>
+</div>
+
+<div style="background: linear-gradient(135deg, #ffe5b4 0%, #ffd699 100%); color: #333; padding: 0.6em; border-radius: 10px;">
+<div style="font-size: 0.8em; font-weight: bold; margin-bottom: 0.3em;">⚖️ Equity</div>
+<ul style="font-size: 0.55em; margin: 0; padding-left: 1em;">
+<li>Why is equity the hardest outcome?</li>
+<li>How should it be resourced differently?</li>
+<li>Is the current assessment fit for purpose?</li>
+</ul>
+</div>
+
+</div>
+```
+
+::: notes
+**Discussion questions for your audience:**
+
+**On weaknesses:**
+- Our data comes from self-reported documents - how reliable is this?
+- We're measuring what programmes SAY, not what they DO
+- Leadership quality, luck, and timing aren't in our model
+
+**On sharing:**
+- Different formats for different audiences: technical paper for researchers, policy brief for decision-makers, interactive workshop for practitioners
+- Consider pilot testing with a programme team before wider rollout
+
+**On ways of working:**
+- Should FCDO mandate specific pathways, or allow diversity?
+- How do we balance accountability (RBM) with adaptation (flexibility)?
+- What changes to Business Case templates might this suggest?
+
+**On equity:**
+- Why is only 34% of programmes achieving equity outcomes?
+- Is the 6-point GESI score adequate, or do we need richer measurement?
+- Should equity outcomes be weighted differently in overall assessments?
+
+These questions help facilitate productive discussion with stakeholders who may challenge or want to apply the findings.
+:::
+
+
+
+## The Metrics Explained
+
+### Consistency: "How reliable is this pattern?"
+
+$$\text{Consistency} = \frac{\text{Cases with condition AND outcome}}{\text{Cases with condition}}$$
+
+-   **0.85+ = Reliable** (85%+ of cases with this pattern succeed)
+-   Below 0.85 = Too many exceptions to trust
+
+### Coverage: "How much does this explain?"
+
+$$\text{Coverage} = \frac{\text{Cases with condition AND outcome}}{\text{All successful cases}}$$
+
+-   High coverage = This pattern explains many successes
+-   Low coverage = This is just one of many routes to success
+
+::: notes
+**Technical appendix for those who want the details:**
+
+**Consistency formula:**
+- Numerator: Programmes that have both the condition AND the successful outcome
+- Denominator: All programmes that have the condition
+- If this ratio is high (85%+), the condition reliably leads to success
+
+**Example:** If 100 programmes have "OutputsAccessible" and 88 of them achieved impact, consistency = 88/100 = 0.88. This means 88% of the time, having accessible outputs led to impact. That's reliable enough to recommend.
+
+**Coverage formula:**
+- Numerator: Same as above (programmes with condition AND outcome)
+- Denominator: All successful programmes
+- If this ratio is high, this pathway explains a large share of successes
+
+**Example:** If 250 programmes achieved impact and 88 of them had accessible outputs, coverage = 88/250 = 35.2%. This means accessible outputs explains about a third of impact successes. Other pathways explain the rest.
+
+**Why both matter:**
+- High consistency, low coverage = reliable but niche (works but only for some)
+- Low consistency, high coverage = common but unreliable (many programmes have it but it doesn't guarantee success)
+- We want high consistency (reliable) AND reasonable coverage (explains enough cases to be useful)
+
+**The trade-off:** Very specific recipes have higher consistency but lower coverage. Very broad recipes have higher coverage but lower consistency. We aim for the "sweet spot" of both being good enough.
+:::
+
+

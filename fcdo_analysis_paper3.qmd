@@ -1,0 +1,1092 @@
+---
+title: "Does How You Deliver Matter? Linking Programme Design to Development Outcomes"
+subtitle: "An Enhanced Standard Analysis (ESA) of 312 FCDO Programmes"
+author: 
+  - name: "Lucas Néstor Sempé"
+    affiliation: "International Initiative for Impact Evaluation (3ie)"
+date: "`r Sys.Date()`"
+format:
+  pdf:
+    toc: false
+    toc-depth: 2
+    number-sections: true
+    colorlinks: true
+    geometry: margin=1in
+    documentclass: article
+    include-in-header:
+      text: |
+        \usepackage{xcolor}
+        \usepackage{colortbl}
+        \usepackage{lscape}
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-fold: show
+    theme: cosmo
+    fig-width: 10
+    fig-height: 6
+execute:
+  echo: true
+  warning: false
+  message: false
+  cache: true
+bibliography: references.bib
+editor_options: 
+  chunk_output_type: console
+---
+
+# Abstract {.unnumbered}
+
+**Background:** The UK's Foreign, Commonwealth and Development Office (FCDO) manages one of the world's largest development portfolios, investing billions annually across hundreds of programmes. FCDO's standard practice requires detailed business cases at approval and annual reviews during implementation, generating rich documentation that has not been systematically analyzed to identify what programme configurations lead to success.
+
+**Objective:** This study uses Qualitative Comparative Analysis (QCA) to identify sufficient configurations of conditions that lead to four dimensions of FCDO programme success: high performance (HIGH_PERFORMANCE: A++/A+ ratings), impact achievement, sustainability, and equity outcomes. We analyze 312 programmes with complete documentation to identify reliable "recipes" for success.
+
+**Methods:** We analyzed 312 FCDO programmes (62.3% of 501 with complete documentation, spanning 2006-2025) using crisp-set QCA with the Enhanced Standard Analysis (ESA) protocol. ESA systematically examines both necessary and sufficient conditions through seven analytical steps: necessity analysis, truth table construction, contradiction identification, and solution derivation. Following ESA best practice, we report the **Enhanced solution** as our primary finding—this excludes contradictory configurations from simplifying assumptions, providing more reliable causal inference than the Parsimonious solution. We extracted 14 conditions from programme documentation: 4 baseline design conditions from business cases, 7 implementation conditions from annual reviews, and 3 adaptation conditions. QCA parameters: sufficiency consistency threshold = 0.85; necessity threshold = 0.90; frequency threshold = 2 for rare outcomes and 3 for common outcomes.
+
+**Results:** ESA reveals different causal structures across outcomes:
+
+*HIGH_PERFORMANCE (A++/A+ ratings, 15.7% prevalence, N=49):* Sufficiency analysis fails (consistency < 0.85), but the **necessity analysis identifies three indispensable prerequisites**: IMPACT_STRATEGY (100% necessity), MEL_STRENGTHENED (98%), and STRATEGIC_AGENDA_CLARITY (96%). High performance operates through necessary conditions rather than sufficient configurations.
+
+*IMPACT_ACHIEVEMENT (79.5%, N=248):* Four sufficient pathways identified with 0.881 consistency and 74.6% solution coverage: (1) OUTPUTS_ACCESSIBLE alone; (2) PARTNERSHIP_EQUITY combined with absence of EQUITY_GESI; (3) OUTPUTS_CAPACITY with absence of SHARED_GOVERNANCE and FUNDING_LONGEVITY; (4) IMPACT_STRATEGY with absence of SHARED_GOVERNANCE and LOCAL_EMBEDDED.
+
+*SUSTAINABILITY (69.2%, N=216):* Three sufficient pathways with 0.870 consistency and 64.8% coverage: (1) OUTPUTS_ACCESSIBLE combined with OUTPUTS_CAPACITY; (2) SHARED_GOVERNANCE with LOCAL_EMBEDDED and FUNDING_LONGEVITY; (3) FUNDING_LONGEVITY with absence of SELECTION_PROCEDURES and OUTPUTS_CAPACITY.
+
+*EQUITY_OUTCOMES (33.7%, N=105):* Three sufficient pathways with highest consistency (0.987) and 74.3% coverage: (1) SELECTION_PROCEDURES with EQUITY_GESI; (2) EQUITY_GESI with absence of LOCAL_EMBEDDED; (3) OUTPUTS_ACCESSIBLE with EQUITY_GESI and INSTABILITY_RESPONSE. **EQUITY_GESI appears in all three pathways as an INUS condition (0.914 necessity), making it effectively both necessary and core to equity success.**
+
+**Conclusions:** The ESA reveals that FCDO outcomes operate through fundamentally different causal architectures: HIGH_PERFORMANCE requires necessary conditions only (no sufficient configurations exist), while IMPACT, SUSTAINABILITY, and EQUITY show reliable sufficient pathways covering 65-75% of successful cases. Key findings: (1) **For HIGH_PERFORMANCE**: mandate three necessary conditions (IMPACT_STRATEGY, MEL_STRENGTHENED, STRATEGIC_AGENDA_CLARITY) as non-waivable requirements; (2) **For IMPACT**: OUTPUTS_ACCESSIBLE alone is sufficient—prioritize output accessibility; (3) **For EQUITY**: EQUITY_GESI is an INUS condition appearing in all pathways—explicit GESI focus is non-negotiable; (4) **For SUSTAINABILITY**: FUNDING_LONGEVITY appears in 2/3 pathways—multi-year commitment matters; (5) **Cross-cutting**: INSTABILITY_RESPONSE is necessary for 3 of 4 outcomes (Impact 93%, Sustainability 91%, Equity 97%)—crisis adaptation capacity is essential. The ESA demonstrates that high performance cannot be engineered, but broader development outcomes can be systematically achieved through identified configurational pathways.
+
+**Keywords:** development effectiveness, qualitative comparative analysis, programme performance, equifinality, sufficient conditions, FCDO
+
+::: {.callout-note}
+## A Brief Guide to QCA Terminology
+
+This paper uses **Qualitative Comparative Analysis (QCA)**, a set-theoretic method for identifying causal patterns. Readers unfamiliar with QCA may find the following definitions helpful.
+
+### Core Concepts {.unnumbered}
+
+**Necessary condition:** A condition that *must* be present for an outcome to occur, though its presence alone doesn't guarantee the outcome. Example: oxygen is necessary for fire, but oxygen alone doesn't cause fire. In QCA, we identify necessity by checking whether a condition is present in nearly all cases achieving the outcome (consistency ≥0.90).
+
+**Sufficient condition:** A condition (or combination of conditions) whose presence *reliably produces* the outcome. Example: striking a match in the presence of oxygen and fuel is sufficient for fire. In QCA, sufficiency means whenever the configuration appears, the outcome consistently follows (consistency ≥0.85).
+
+**Equifinality:** The principle that multiple different pathways can lead to the same outcome. Unlike regression (which estimates average effects), QCA identifies *alternative routes* to success—different programmes may achieve impact through entirely different condition combinations.
+
+**Configuration:** A specific combination of conditions present and absent. QCA analyzes how conditions *combine* rather than examining each in isolation. A condition may have no effect alone but become crucial when combined with others.
+
+**INUS condition:** *Insufficient but Necessary part of an Unnecessary but Sufficient* configuration. An INUS condition appears in *all* sufficient pathways for an outcome, making it effectively necessary within the sufficiency framework. When a condition is INUS with high individual necessity (≥0.90), it functions as both necessary AND as a core component of all sufficient pathways—a particularly powerful causal role.
+
+**SUIN condition:** *Sufficient but Unnecessary part of an Insufficient but Necessary* disjunction. SUIN conditions are alternative ways to satisfy a necessary requirement—any one of them suffices, but at least one must be present.
+
+### Key Metrics {.unnumbered}
+
+```{r}
+#| echo: false
+#| output: true
+
+key_metrics <- data.frame(
+  Metric = c("\\textbf{Consistency}", "\\textbf{Coverage}", "\\textbf{Solution coverage}"),
+  Meaning = c(
+    "Proportion of cases with the condition/configuration that show the outcome",
+    "Proportion of outcome cases explained by the condition/configuration",
+    "Total proportion of outcome cases explained by all pathways combined"
+  ),
+  Threshold = c("≥0.85 (sufficiency), ≥0.90 (necessity)", "Higher = more empirically important", "Indicates explanatory power")
+)
+
+kable(key_metrics, booktabs = TRUE, escape = FALSE) %>%
+  kable_styling(latex_options = c("hold_position", "scale_down")) %>%
+  column_spec(1, width = "2.5cm") %>%
+  column_spec(2, width = "7cm") %>%
+  column_spec(3, width = "3.5cm")
+```
+
+### Truth Table Classifications {.unnumbered}
+
+When building truth tables, each observed configuration is classified based on its consistency score:
+
+```{r}
+#| echo: false
+#| output: true
+
+tt_class <- data.frame(
+  Classification = c("\\textbf{Sufficient (OUT=1)}", "\\textbf{Insufficient (OUT=0)}", "\\textbf{Contradictory}", "\\textbf{Logical remainders}"),
+  Meaning = c(
+    "Configurations that reliably produce the outcome. When programmes have this combination of conditions, they consistently succeed.",
+    "Configurations that do not reliably produce the outcome. Programmes with these condition combinations rarely or never succeed.",
+    "Configurations with mixed outcomes—some programmes succeed, others fail, despite having identical conditions. These signal unmeasured factors or measurement error.",
+    "Configurations that are logically possible but never observed in the data. With 14 conditions, 16,384 configurations are possible but only ~24-56 are observed."
+  ),
+  Criteria = c("Consistency ≥0.85", "Consistency <0.85 AND not contradictory", "0 < Consistency < 0.85 with cases on both sides", "n = 0")
+)
+
+kable(tt_class, booktabs = TRUE, escape = FALSE) %>%
+  kable_styling(latex_options = c("hold_position", "scale_down")) %>%
+  column_spec(1, width = "2.5cm") %>%
+  column_spec(2, width = "7cm") %>%
+  column_spec(3, width = "3.5cm")
+```
+
+### The Enhanced Standard Analysis (ESA) Protocol {.unnumbered}
+
+This study follows ESA [@schneider2012set], the systematic best-practice approach comprising:
+
+1. **Necessity analysis:** Identify conditions present in ≥90% of successful cases
+2. **Truth table construction:** Map all observed condition configurations
+3. **Contradiction identification:** Flag configurations with mixed outcomes for exclusion
+4. **Solution derivation:** Generate conservative (no assumptions), enhanced (excludes contradictions), and parsimonious (all remainders) solutions—with the **Enhanced solution** as the primary reported finding
+
+The key insight: **necessary conditions establish prerequisites** (what programmes *must have*), while **sufficient configurations provide recipes** (what combinations *reliably work*). Some outcomes operate primarily through necessity (prerequisites required but no guaranteed formula), others through sufficiency (multiple reliable pathways exist).
+
+:::
+
+```{r}
+#| label: setup
+#| include: false
+#| echo: false
+
+# Load required libraries
+library(knitr)
+library(kableExtra)
+
+# Set global chunk options
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  fig.align = "center"
+)
+```
+
+# Introduction
+
+The UK's Foreign, Commonwealth and Development Office (FCDO) manages one of the world's largest development portfolios, investing over £12 billion annually across hundreds of programmes in health, education, governance, economic development, and humanitarian response. Each programme begins with a detailed business case specifying delivery mechanisms—how funding will be structured, which partners will implement, what governance arrangements will ensure accountability, and how implementation will be managed. These design choices profoundly shape programme autonomy, transaction costs, and capacity for contextual adaptation. 
+
+FCDO's standard practice requires rigorous business cases at approval ($T_0$) and annual reviews during implementation ($T_1$ to $T_{end}$), generating rich longitudinal data documenting both what programmes planned and what they actually did. These 2,515 documents spanning 501 programmes (2006-2025) represent an underutilized resource for understanding programme effectiveness. If certain conditions are indispensable for high performance, this knowledge could inform non-waivable programme requirements. If implementation reality matters more than baseline plans, FCDO should shift monitoring emphasis from plan adherence to implementation quality documentation. If necessary conditions dominate over sufficient pathways, FCDO should focus on cultivating prerequisites while recognizing these alone don't guarantee excellence.
+
+Two competing paradigms shape the current FCDO's programme management analysis. **Results-based management** emphasizes predetermined plans, fixed logframes, and adherence to approved business case designs [@mayne2007challenges]. **Adaptive management** prioritizes flexibility, learning, and iterative adjustment to emerging conditions [@booth2016politically; @wild2015theory]. Yet FCDO lacks large-scale empirical evidence on which approach—or which delivery mechanisms—actually predict success across its diverse portfolio. Most existing studies examine single mechanisms in isolation (e.g., competitive vs. non-competitive partner selection) rather than analyzing configurations, and few establish temporal ordering between baseline design and subsequent outcomes.
+
+This study systematically analyzes 312 FCDO programmes with complete business case and annual review documentation spanning 2006-2025, addressing three questions:
+
+1. **What conditions are necessary for FCDO programme success across different outcome dimensions?** Necessity analysis identifies conditions present in nearly all successful programmes for each of four outcomes (high performance, impact achievement, sustainability, and equity), revealing prerequisites that cannot be substituted.
+
+2. **What sufficient configurations reliably produce each outcome, and do different outcomes require different causal pathways?** QCA tests whether configurations reliably produce outcomes through equifinal pathways, and whether the causal architecture differs across outcome types.
+
+3. **Does FCDO's baseline design quality or implementation reality matter more for outcomes?** Comparing baseline conditions from business cases against implementation conditions from annual reviews tests temporal causality.
+
+We extracted 14 conditions from FCDO's own documentation: 4 baseline design conditions from business cases (STRATEGIC_AGENDA_CLARITY, SHARED_GOVERNANCE, FUNDING_FLEXIBILITY, SELECTION_PROCEDURES), 7 implementation reality conditions from annual reviews (OUTPUTS_ACCESSIBLE, OUTPUTS_CAPACITY, LOCAL_EMBEDDED, IMPACT_STRATEGY, PARTNERSHIP_EQUITY, EQUITY_LOCALISATION, EQUITY_GESI), and 3 adaptation variables tracking implementation changes (FUNDING_LONGEVITY_ADAPTED, INSTABILITY_RESPONSE, MEL_STRENGTHENED). We analyze four FCDO outcomes: HIGH_PERFORMANCE (A++/A+ ratings only, 15.7% prevalence), IMPACT_ACHIEVEMENT (79.5%), SUSTAINABILITY (69.2%), and EQUITY_OUTCOMES (33.7%).
+
+Our central finding reveals that high FCDO performance (A++/A+ ratings) **cannot be systematically achieved** through any identified configuration of delivery mechanisms. The Enhanced solution with standard thresholds (consistency ≥0.85) yields only 0.286 overall consistency for HIGH_PERFORMANCE—far below acceptable levels. The two identified pathways are unreliable (high error rates) with minimal coverage (8.2%), indicating that high ratings emerge from factors beyond our 14-condition framework. In contrast, broader outcomes exhibit robust equifinality: IMPACT_ACHIEVEMENT shows 0.881 consistency with 74.6% coverage through four pathways, SUSTAINABILITY achieves 0.870 consistency with 64.8% coverage through three pathways, and EQUITY_OUTCOMES demonstrates high 0.987 consistency with 74.3% coverage through three pathways—all of which include EQUITY_GESI, suggesting this condition is effectively necessary for equity outcomes.
+
+## FCDO's Delivery Mechanism Challenge
+
+FCDO's business case approval process requires programme teams to specify delivery mechanisms across multiple dimensions: funding instruments (grants, contracts, pooled funds), governance structures (steering committees, partnership boards, light-touch oversight), partner selection methods (competitive procurement, direct awards, restricted competition), management arrangements (single implementers, consortium partnerships, multi-tiered structures), and planned implementation flexibility (rigid logframes, adaptive frameworks, iterative learning approaches). These choices profoundly shape programme autonomy, transaction costs, accountability relationships, and capacity for contextual adaptation.
+
+Existing literature offers limited guidance for FCDO's delivery choices. Early development management emphasized technical efficiency—minimizing transaction costs and maximizing value for money [@oecd2019dac]. More recent scholarship emphasizes political economy—recognizing that delivery mechanisms structure power relationships and shape organizational behavior in ways transcending technical efficiency [@booth2016politically; @andrews2017building]. For example, intensive FCDO monitoring may improve compliance but undermine partner ownership, while flexible funding may enhance adaptation but weaken accountability. These trade-offs suggest no universally optimal delivery model exists; effectiveness depends on contextual fit.
+
+However, systematic empirical evidence remains sparse. Most studies examine single delivery mechanisms in isolation rather than analyzing configurations. Few establish clear temporal ordering between FCDO's baseline design (business case at $T_0$) and subsequent performance (annual review outcomes at $T_1$-$T_{end-1}$), limiting causal inference. Comparative analysis across large FCDO programme portfolios remains rare, with most evidence from case studies or small samples.
+
+FCDO's institutional advantage lies in systematic documentation: business cases specify baseline delivery design, annual reviews document implementation reality and adaptations, and performance ratings assess outcomes using consistent A++/A+/A/B+/B/C-D scales. This creates natural experiments across 312 programmes where we can test which conditions are indispensable while establishing temporal precedence ($T_0$ design → $T_1$ implementation → $T_{end}$ outcomes). The analysis identifies necessary conditions (indispensable prerequisites that cannot be substituted) and tests for sufficient configurations (reliable pathways that guarantee outcomes) to understand whether high performance operates through equifinality or necessary-but-not-sufficient logic.
+
+## Theoretical Framework: Adaptive Management versus Results-Based Management
+
+FCDO's programme management operates within tension between two paradigms. **Results-based management (RBM)** emphasizes predetermined plans, fixed logframes specified in business cases, and implementation fidelity to approved designs [@mayne2007challenges]. Annual reviews assess progress against baseline plans, with "variance" from logframe targets requiring explanation. This approach assumes stable contexts where causal pathways specified at $T_0$ remain valid through implementation.
+
+**Adaptive management** treats programmes as learning experiments, emphasizing iterative adjustment to emerging evidence and changing conditions [@korten1980community; @andrews2017building]. Key principles include regular strategy revision based on monitoring data, systematic course correction through feedback loops, implementation flexibility to adjust delivery mechanisms, and learning orientation valuing discovery over compliance [@ramalingam2013aid]. This approach assumes complex development contexts require responsive implementation rather than predetermined blueprints.
+
+The tension concerns whether FCDO programmes should prioritize plan adherence (RBM) or adaptive flexibility (learning approaches). Critics of rigid RBM argue that in complex, volatile environments—which characterize much of FCDO's portfolio—predetermined logframes become constraints rather than guides, creating perverse incentives to achieve outdated targets rather than respond to emerging opportunities or risks [@valters2015theories; @pritchett2013forever]. Conversely, critics of unconstrained adaptation argue it can justify poor planning, lack of accountability, and mission creep without delivering better results.
+
+This study empirically tests these competing claims using FCDO's own data. If adaptation improves outcomes, we should observe that programmes with high adaptation variable scores (FUNDING_LONGEVITY_ADAPTED, INSTABILITY_RESPONSE, MEL_STRENGTHENED) show better performance. If baseline design quality matters, we should observe that strong business case features (STRATEGIC_AGENDA_CLARITY, SHARED_GOVERNANCE, FUNDING_FLEXIBILITY, SELECTION_PROCEDURES) predict success. If both matter, QCA reveals how baseline design and implementation conditions combine—whether they form sufficient configurations (reliable pathways) or whether outcomes require specific prerequisite conditions.
+
+### How FCDO's Baseline Design Shapes Implementation Capacity
+
+Our central theoretical claim is that FCDO's baseline delivery mechanisms specified in business cases shape programmes' subsequent capacity to adapt during implementation—and that this adaptation capacity drives performance outcomes. This framework proposes that delivery mechanisms act as **enabling or constraining conditions** rather than direct determinants of success.
+
+FCDO's funding modalities illustrate the mechanism. Flexible funding instruments (core grants, partnership agreements) provide implementing organizations with discretion over resource allocation, enabling them to shift funds between activities or geographies as conditions warrant. Restrictive contracts with tight deliverable specifications create rigidities: budget reallocations require formal amendments, triggering bureaucratic delays that can prevent timely adaptation [@honig2019navigation]. The funding modality does not guarantee adaptation—organizations still need capable leadership and learning systems—but it removes structural barriers.
+
+Similarly, FCDO's governance structures shape adaptation feasibility. Light-touch oversight (milestone-based reviews, annual reporting cycles) reduces transaction costs of adjustment, enabling implementers to respond to emerging opportunities without seeking approval for every tactical shift [@booth2016politically]. Heavy-touch governance (quarterly deliverable reviews, detailed activity approvals) raises the cost of deviation from approved plans, creating inertia even when adaptation is clearly needed.
+
+FCDO's partner selection mechanisms matter through ensuring organizational capacity. Competitive processes that assess track records, technical capabilities, and organizational systems select for partners with proven adaptive management capacity [@wild2015theory]. Direct awards may prioritize other criteria (existing relationships, speed of mobilization) that correlate less strongly with adaptation capability.
+
+The causal model posits a three-stage temporal sequence that FCDO's documentation enables us to test: **baseline business case design** ($T_0$) → **implementation reality and adaptation** ($T_1$ to $T_{end-1}$)) → **performance outcomes** ($T_2$). We measure delivery mechanisms at programme approval from business cases, track implementation conditions and adaptations from annual reviews, and assess performance from annual review ratings. This temporal ordering enables causal inference about whether FCDO's initial delivery choices predict subsequent adaptation and outcomes, avoiding reverse causality.
+
+
+# Methods
+
+## Study Sample
+
+### Programme Selection and Matching: Building the Analytical Sample
+
+Constructing a valid analytical sample for QCA requires careful attention to data completeness—we need both baseline design data (business cases) and implementation/outcome data (annual reviews) for the same programmes.
+
+**Inclusion criteria:** Programmes required: (1) business case documents accessible and extractable; (2) annual review documents accessible and extractable; (3) successful AI processing yielding complete data for all variables.
+
+**Sample construction:** From 501 programmes identified through IATI:
+
+- 487 (97.2%) had business cases successfully processed
+- 459 (91.6%) had annual reviews successfully processed
+- 423 (84.4%) had BOTH document types
+- **312 (62.3%)** passed all quality filters with complete extraction
+
+**Sample characteristics:** The 312-programme sample exhibits substantial diversity: 94 countries across all world regions; business cases spanning 2006-2024 (18 years); budgets from £100,000 to £2.5 billion (median £8.2 million); full sectoral portfolio coverage; and performance distribution matching FCDO's portfolio-wide patterns (15.7% A++/A+, 63.8% A/B+, 20.5% B/C-D).
+
+This multi-timepoint structure ($T_0$ design → $T_1$-$T_{end}$ implementation → $T_{end}$ outcomes) provides methodological rigor for causal inference that most development programme analyses lack.
+
+
+## Data Collection
+
+This study analyzes FCDO programme documentation systematically collected from publicly available sources to understand what delivery mechanisms and implementation approaches lead to high development performance.
+
+**Identifying programmes through IATI:** We identified FCDO programmes through the International Aid Transparency Initiative (IATI) database, querying for all FCDO-attributed programmes with "active" or "completed" status as of January 2024. This yielded an initial universe of 501 programmes spanning 2006-2025, providing sufficient temporal range to analyze programmes across different strategic periods, geographic contexts, and sectoral priorities.
+
+**Document types collected:** For each programme, we collected two document types:
+
+**(1) Business cases** document baseline programme design at approval ($T_0$). These formal documents specify strategic rationale, theory of change, delivery mechanisms, partnership arrangements, governance structures, funding instruments, and monitoring frameworks. Business cases establish **what programmes planned to do** and provide $T_0$ baseline measures of design features measured years before outcomes manifest.
+
+**(2) Annual reviews** document implementation and performance during execution ($T_1$ to $T_{end-1}$). These mandatory reports assess progress, document adaptations, evaluate performance across multiple dimensions, and provide formal ratings using FCDO's standardized scales. Annual reviews establish **what programmes actually did during implementation** and provide measures of implementation reality, outcomes (performance assessments), and adaptation (changes from baseline plans).
+
+**Data scope and coverage:** From 501 programmes identified through IATI, we obtained business cases for 487 programmes (97.2%) and annual reviews for 459 programmes (91.6%). After quality filtering, our final analytical sample comprises **312 programmes** (62.3% of the 501 identified) with complete, high-quality data for both business case baseline design AND annual review implementation reality, enabling full 14-condition QCA analysis.
+
+### AI-Enhanced Extraction: Systematic Data Extraction from Programme Documents
+
+Traditional document analysis faces a validity-scalability tradeoff: manual coding ensures comprehension but requires prohibitive time (3,000-5,000 person-hours for our corpus), while keyword search scales but lacks contextual understanding [@honig2019navigation]. We developed an **AI-enhanced extraction system** using Mistral AI's large language model, combining machine comprehension with systematic coding protocols to achieve near-human validity at scale.
+
+The 312 programmes generated 2,515 documents totaling approximately 50 gigabytes (roughly 25 million words). Business cases run 40-100 pages; annual reviews 15-40 pages. **Manual coding** would require 3,000-5,000 person-hours while introducing coder fatigue, inter-coder reliability issues, and inconsistent judgment calls.
+
+We developed an extraction system using **Mistral AI large language model** (Mistral-Large) with detailed extraction prompts. We chose Mistral AI for: (1) strong document comprehension performance, (2) large context window (32,000 tokens) enabling complete document processing, and (3) cost-effectiveness (10x cheaper than GPT-4).
+
+#### Addressing Extraction Asymmetry: Ensuring Comparable Measurement Across Document Types
+
+A critical challenge emerged regarding **measurement asymmetry** between business case and annual review documents. Business cases follow standardized templates explicitly requiring detailed description of delivery mechanisms (funding modality, governance arrangements, partner selection, management structure, implementation flexibility). These structured sections make baseline design features straightforward to extract.
+
+Annual reviews follow a **performance assessment structure** emphasizing outputs achieved, challenges encountered, and adaptations made, rather than systematically describing implementation arrangements. They answer "Did the programme achieve targets?" not "What governance arrangements are being used?"
+
+To enable valid $T_0$→$T_{1-end}$ comparison, we developed a **comprehensive two-stage extraction framework** that identifies implementation reality through **inference from performance narratives** and **comparison against baseline plans**. This two-document approach establishes clear **temporal ordering**: business case conditions at $T_0$ (approval, 2006-2024) → annual review implementation at $T_{1-end}$ (during implementation, 2014-2025, averaging 4.2 years after BC) → annual review outcomes at $T_{end-1}$. This sequence enables testing whether baseline design predicts implementation patterns and outcomes—impossible with cross-sectional data.
+
+Extraction details can be found in Appendix B.1.
+
+#### Managing document length through intelligent content prioritization
+
+While Mistral AI's 32,000-token context window is large, many FCDO documents exceed this limit—business cases can run 40,000-60,000 tokens. To avoid systematically losing information from later sections, the system employs **intelligent content prioritization** that identifies and preserves the most relevant sections while summarizing or excluding less critical content.
+
+The algorithm scans documents for section headings and content patterns signaling relevance to our 14 conditions, then constructs an optimally prioritized version within token limits:
+
+```{r}
+#| eval: false
+#| echo: true
+
+# Python extraction code example
+# class SmartAnnualReviewExtractor:
+#    """AI-enhanced extraction with intelligent content prioritization."""
+#    
+#    def prioritize_content(self, full_text):
+#        """Preserve key sections while managing token limits."""
+#        
+#        # Priority patterns for delivery analysis
+#        priority_patterns = [
+#            r'(?i)(delivery.*?model|implementation.*?approach)',
+#            r'(?i)(performance.*?table|summary.*?table)',
+#            r'(?i)(challenge|risk|issue|problem)',
+#            r'(?i)(adaptation|change|modification|adjustment)',
+#            r'(?i)(lesson.*?learn|recommendation)'
+#        ]
+#        
+#        # Extract and preserve critical sections
+#        prioritized_content = self.extract_key_sections(
+#            full_text, priority_patterns
+#        )
+#        
+#        return prioritized_content
+```
+
+For business cases, the algorithm prioritizes: Strategic Case (objectives, theory of change), Management Case (delivery mechanisms, governance), Risk sections, and Financial Case (funding arrangements). For annual reviews, it prioritizes: performance ratings, output narratives, implementation challenges, adaptations, and lessons learned. Lower-priority content (context descriptions, annexes, boilerplate) is summarized or excluded. This approach achieved **46% average content preservation** while maintaining **100% coverage of critical sections**, validated through manual spot-checks.
+
+#### Validation of extraction quality
+
+We validated the AI extraction system through multiple approaches:
+
+**(1) Human-AI comparison:** One researcher independently coded 20 randomly selected documents (10 business cases, 10 annual reviews) using the same framework. **Inter-rater agreement** between human and AI reached 87% for binary conditions and 0.91 Spearman correlation  for ordinal ratings —comparable to typical inter-human reliability [@landis1977measurement].
+
+**(2) Disagreement analysis:** The 13% disagreement cases predominantly involved **ambiguous documents** with contradictory information, incomplete sections, or unclear language. An iteration 
+
+**(3) Cross-validation against evaluations:** For 50 programmes with independent FCDO evaluations, AI-extracted ratings showed 96% concordance with evaluation conclusions. Only 2 discrepancies occurred where ratings were subsequently revised.
+
+**(4) Completeness checks:** All 312 programmes had complete data for all 14 conditions and 4 outcomes. Documents with incomplete extractions were manually reviewed—information was genuinely absent rather than extraction errors.
+
+
+## Variables Construction
+
+### Outcome Variables: Four Dimensions of Development Success
+
+FCDO's annual review system assesses programme performance across multiple dimensions using standardized rating scales. We extract four binary-calibrated outcome variables (1=success, 0=not success) representing different facets of development effectiveness: high overall performance, impact achievement, sustainability of benefits, and equity in outcomes.
+
+We analyze four separate outcomes rather than combining them for both theoretical and methodological reasons. **Theoretically**, development success is multidimensional—programmes can excel at delivering impacts while struggling with sustainability, or achieve strong equity despite moderate overall performance. **Methodologically**, QCA analyzes outcomes independently, and different outcomes may have different causal structures—impact might operate through sufficient pathways while high performance operates through necessary conditions only.
+
+### Conditions: A 14-Condition Framework
+
+We developed a comprehensive 14-condition framework grounded in development management theory, capturing: baseline design features (strategic clarity, governance arrangements, funding flexibility, partner selection), implementation realities (output accessibility, capacity building, local embedding, impact strategy, partnership equity), equity-focused dimensions (localization, GESI), and adaptation indicators (funding longevity, crisis response, monitoring strengthening). This structure enables testing which combinations of programme features—spanning design, implementation, and adaptation—produce different development outcomes.
+
+### The 14 Conditions
+
+**1. STRATEGIC_AGENDA_CLARITY (96.8% prevalence)**
+Measures strategic clarity of objectives and theory of change documented at approval. Assesses how clearly the programme articulates what it aims to achieve and the causal pathways through which change will occur.
+
+**2. SHARED_GOVERNANCE (41.7% prevalence)**
+Reflects inclusive governance structures that involve partner-country stakeholders in decision-making. Measures whether governance arrangements genuinely share power with local partners.
+
+**3. FUNDING_FLEXIBILITY (87.2% prevalence)**
+Captures flexible funding instruments that provide implementer discretion over resource allocation. Measures whether funding arrangements allow adaptation without lengthy approval processes.
+
+**4. SELECTION_PROCEDURES (47.4% prevalence)**
+Measures whether programmes used competitive partner selection processes to ensure quality implementers. Captures whether partners were selected through competitive procurement or direct awards.
+
+**5. OUTPUTS_ACCESSIBLE (34.6% prevalence)**
+Measures whether programme outputs are accessible, affordable, and usable by intended beneficiaries in practice. Assesses whether benefits actually reach target populations.
+
+**6. OUTPUTS_CAPACITY (75.0% prevalence)**
+Captures whether outputs strengthen local capacity, institutions, or systems. Measures whether the programme builds sustainable capabilities beyond donor funding.
+
+**7. LOCAL_EMBEDDED (56.7% prevalence)**
+Reflects whether the programme is embedded in local systems, institutions, and decision-making processes. Measures integration with existing structures rather than parallel implementation.
+
+**8. IMPACT_STRATEGY (85.6% prevalence)**
+Measures whether programmes maintain clear, evidence-based strategies for achieving development impact with credible causal pathways during implementation.
+
+**9. PARTNERSHIP_EQUITY (35.9% prevalence)**
+Captures whether partnerships are equitable, with balanced power, shared decision-making, and mutual accountability.
+
+**10. EQUITY_LOCALISATION (33.7% prevalence)**
+Measures whether programmes localize resources, decision-making, and capacity to marginalized communities.
+
+**11. EQUITY_GESI (33.0% prevalence)**
+Captures whether programmes address gender equality and social inclusion through targeted actions.
+
+**12. FUNDING_LONGEVITY_ADAPTED (73.4% prevalence)**
+Measures whether funding duration was extended or adapted to enable longer-term engagement.
+
+**13. INSTABILITY_RESPONSE (90.4% prevalence)**
+Reflects whether programmes adapted to instability, conflict, or crisis events during implementation.
+
+**14. MEL_STRENGTHENED (84.0% prevalence)**
+Measures whether monitoring, evaluation, and learning systems were strengthened during implementation.
+
+Detailed variable definitions and measurement procedures are provided in Appendix B.2.
+
+
+## Analytical Approach
+
+### Qualitative Comparative Analysis (QCA): A Set-Theoretic Method for Complex Causation
+
+**Qualitative Comparative Analysis (QCA)** is a set-theoretic method for identifying **necessary** and **sufficient** conditions for outcomes [@ragin2008redesigning; @schneider2012set]. Unlike regression approaches estimating average effects, QCA identifies configurations of conditions consistently associated with outcomes, treating cases as combinations of attributes rather than data points.
+
+QCA addresses **equifinality**—the phenomenon where different condition combinations produce the same outcome. In development contexts, this reflects how multiple implementation approaches may succeed depending on context, rather than universal "best practices." QCA identifies alternative pathways that work under specific conditions [@ramalingam2013aid].
+
+The distinction between **necessary** and **sufficient** conditions is central. A condition is **necessary** if the outcome cannot occur without it—the condition must be present, though its presence alone doesn't guarantee the outcome. For example, if 98% of high-performing programmes have strengthened monitoring, MEL_STRENGTHENED is (nearly) necessary: high programmes virtually always possess this condition, but many programmes with strengthened M&E still don't achieve exceptional ratings. Necessary conditions establish **prerequisites** that programmes must satisfy [@schneider2012set, p. 75].
+
+A condition or configuration is **sufficient** if its presence reliably produces the outcome—whenever the condition appears, the outcome follows with high consistency. Sufficient configurations function as **recipes**: if a programme possesses these combinations, success is highly likely [@ragin2008redesigning, p. 124]. Multiple sufficient configurations can exist (equifinality).
+
+QCA analyzes **configurations** rather than isolated variables, capturing how conditions combine. A condition might be neither necessary nor sufficient alone but become crucial in combination with others. This configurational logic matches development reality without requiring exponential interaction terms [@ragin2014comparative, p. 98].
+
+The method's **causal asymmetry** principle recognizes that conditions producing success may differ from conditions preventing failure. QCA analyzes presence and absence of outcomes separately, avoiding regression's symmetric causation assumption [@schneider2012set, p. 80-85].
+
+### Enhanced Standard Analysis (ESA) Methodology
+
+We employ the **Enhanced Standard Analysis (ESA)** protocol [@schneider2012set], the systematic best-practice approach for QCA that examines both necessary and sufficient conditions. For each outcome, we conduct the complete ESA sequence:
+
+**Step 1: Necessity Analysis.** Test each of the 14 conditions for necessity using a 0.90 consistency threshold. Conditions present in ≥90% of positive cases are identified as necessary prerequisites. We also test for **SUIN conditions** (disjunctions forming necessary pathways).
+
+**Step 2: Truth Table Construction.** Construct the truth table to reveal the full configuration space (2^14 = 16,384 possible configurations), identifying observed configurations, logical remainders, and sufficient/insufficient configurations.
+
+**Step 3: Contradiction Identification.** Identify contradictory configurations where identical condition profiles show divergent outcomes, signaling measurement error or causal heterogeneity.
+
+**Step 4: Conservative Solution.** Derive the solution using only observed sufficient configurations, making no assumptions about logical remainders.
+
+**Step 5: Enhanced Solution (Primary).** Derive the solution using logical remainders BUT excluding contradictory configurations. This is the recommended primary solution in ESA methodology, as it balances parsimony with protection against logical hazards from contradictions.
+
+**Step 6: Parsimonious Solution.** Derive the most simplified solution by incorporating ALL logical remainders (including contradictory ones). More parsimonious but potentially less reliable.
+
+**Step 7: Intermediate Solution.** Derive solutions between conservative and parsimonious complexity, incorporating substantive knowledge about condition contributions.
+
+### Understanding INUS and SUIN Conditions
+
+Beyond simple necessity and sufficiency, QCA identifies conditions with more nuanced causal roles. Two concepts are central to this analysis:
+
+**INUS Conditions** (*Insufficient but Necessary part of a factor that is Unnecessary but Sufficient*) [@mackie1965causes; @schneider2012set]. An INUS condition is a component that appears in *every* sufficient pathway for an outcome, making it effectively necessary within the sufficiency framework—even if it does not reach the formal 0.90 necessity threshold on its own. The logic: while each sufficient pathway is itself unnecessary (alternative pathways exist), an INUS condition is a necessary ingredient within each of these pathways. 
+
+*Example:* If EQUITY_GESI appears in all three sufficient pathways for EQUITY_OUTCOMES, it is an INUS condition. No pathway achieves equity without it, even though other conditions combine with EQUITY_GESI to complete each recipe. INUS conditions represent the strongest form of causal importance in QCA: they are indispensable across all routes to success.
+
+*Identifying INUS:* We check whether any condition appears in 100% of Enhanced solution pathways. When such a condition also shows high individual necessity (≥0.90), it functions as both *necessary* (in the traditional sense) and *INUS* (within sufficiency)—a particularly powerful causal role indicating the condition is essential regardless of analytical perspective.
+
+**SUIN Conditions** (*Sufficient but Unnecessary part of a factor that is Insufficient but Necessary*). SUIN conditions are the dual of INUS. They represent alternative ways to satisfy a necessary requirement—each SUIN condition is sufficient to "unlock" the necessary factor, but none is individually required because alternatives exist.
+
+*Example:* If achieving sustainability *requires* either (OUTPUTS_ACCESSIBLE OR SHARED_GOVERNANCE)—meaning at least one must be present—then OUTPUTS_ACCESSIBLE and SHARED_GOVERNANCE are each SUIN conditions. Either one suffices, but neither alone is necessary because the other can substitute.
+
+*Identifying SUIN:* We use the `superSubset()` function with `depth > 1` to test whether disjunctions of conditions form necessary pathways that individual conditions do not.
+
+The INUS/SUIN framework extends QCA beyond binary necessity/sufficiency classifications, revealing conditions that occupy intermediate causal positions—neither fully necessary nor merely contributory, but essential within configurational pathways.
+
+**Thresholds and Parameters:**
+
+- **Sufficiency consistency threshold:** 0.85 - Configurations must show at least 85% consistency
+- **Necessity consistency threshold:** 0.90 - Conditions must be present in at least 90% of positive cases
+- **Frequency threshold:** Adaptive based on outcome prevalence
+  - n.cut = 2 for rare outcomes (HIGH_PERFORMANCE 15.7%, EQUITY_OUTCOMES 33.7%)
+  - n.cut = 3 for common outcomes (IMPACT_ACHIEVEMENT 79.5%, SUSTAINABILITY 69.2%)
+
+The ESA protocol ensures we distinguish between **necessary conditions** (prerequisites that must be present but don't guarantee success) and **sufficient configurations** (combinations that reliably produce outcomes). This distinction is critical for policy: necessary conditions establish minimum standards, while sufficient configurations provide actionable recipes.
+
+# Results
+
+This section presents the Enhanced Standard Analysis (ESA) findings for each of the four outcome variables, following Schneider and Wagemann's [-@schneider2012set] systematic protocol. We begin with descriptive statistics documenting the prevalence of outcomes and conditions in our 312-programme sample. We then conduct separate ESA analyses for each outcome—HIGH_PERFORMANCE, IMPACT_ACHIEVEMENT, SUSTAINABILITY, and EQUITY_OUTCOMES—following the same seven-step sequence: (1) necessity analysis identifying prerequisite conditions, (2) truth table construction mapping the configuration space, (3) contradiction assessment, (4-6) derivation of conservative, parsimonious, and intermediate solutions, and (7) SUIN/INUS analysis examining whether conditions function as necessary components within sufficient pathways.
+
+The ESA protocol enables us to distinguish outcomes operating through necessary conditions (prerequisites that must be present but don't guarantee success) from those operating through sufficient configurations (reliable recipes for achieving outcomes). This distinction proves critical: HIGH_PERFORMANCE exhibits strong necessary conditions but no reliable sufficient pathways, while IMPACT_ACHIEVEMENT, SUSTAINABILITY, and EQUITY_OUTCOMES all demonstrate robust equifinal routes to success. For each outcome, we report consistency and coverage metrics following QCA conventions, interpret the substantive meaning of identified pathways, and assess whether findings reflect genuine causal patterns or statistical artifacts arising from outcome prevalence.
+
+## Descriptive Statistics
+
+### Outcome Variable Prevalence
+
+The analysis examines four distinct outcome variables that capture different dimensions of project performance. Each outcome is measured using a binary classification based on predetermined thresholds, allowing us to assess the prevalence of positive outcomes across the project portfolio.
+
+**HIGH_PERFORMANCE** represents the most stringent criterion, requiring projects to achieve ratings of A++ or A+ (≥0.80 on the normalized scale). This measure captures high performance across all evaluation dimensions. **IMPACT_ACHIEVEMENT**, **SUSTAINABILITY**, and **EQUITY_OUTCOMES** use a more moderate threshold of ≥0.67 on their respective 4-point scales, identifying projects that demonstrate substantial achievement in these specific domains.
+
+```{r}
+#| echo: false
+#| output: true
+#| label: tbl-outcome-prevalence
+#| tbl-cap: "Four Outcome Variables: Prevalence and Scoring"
+
+# Outcome prevalence
+outcome_prev <- data.frame(
+  Outcome = c("HIGH_PERFORMANCE", "IMPACT_ACHIEVEMENT", "SUSTAINABILITY", "EQUITY_OUTCOMES"),
+  Definition = c("≥0.80 (A++ or A+ only)", "≥0.67 (4-point scale)", "≥0.67 (4-point scale)", "≥0.67 (4-point scale)"),
+  N_Positive = c(49, 248, 216, 105),
+  Prevalence = c("15.7%", "79.5%", "69.2%", "33.7%")
+)
+
+kable(outcome_prev, booktabs = TRUE, align = c("l", "l", "r", "r")) %>%
+  kable_styling(latex_options = c("hold_position", "striped", "scale_down")) %>%
+  row_spec(1, background = "#FFF0F0")  # Highlight HIGH_PERFORMANCE low prevalence
+```
+
+As shown in Table @tbl-outcome-prevalence, the prevalence rates vary considerably across the four outcomes. **IMPACT_ACHIEVEMENT** shows the highest prevalence at 79.5% (n=248), indicating that the majority of projects successfully meet or exceed expectations for delivering intended impacts. **SUSTAINABILITY** follows at 69.2% (n=216), suggesting that approximately two-thirds of projects demonstrate lasting effects beyond the intervention period.
+
+**EQUITY_OUTCOMES** exhibits a notably lower prevalence of 33.7% (n=105), revealing that only about one-third of projects achieve strong performance in addressing equity considerations. This finding highlights a significant gap in equity-focused programming that warrants further investigation.
+
+Most striking is the **HIGH_PERFORMANCE** outcome, with only 15.7% (n=49) of projects achieving the elite A++ or A+ ratings. This low prevalence is expected given the stringent threshold, but it provides a valuable metric for identifying truly exceptional projects. The substantial difference between HIGH_PERFORMANCE and other outcomes (highlighted in the table) underscores the distinction between meeting satisfactory standards and achieving excellence across all evaluation dimensions.
+
+These prevalence patterns inform our subsequent analysis by establishing the base rates for each outcome and highlighting which dimensions of project performance may be more challenging to achieve.
+
+### Condition Prevalence
+
+```{r}
+#| echo: false
+#| output: true
+#| label: tbl-condition-prevalence
+#| tbl-cap: "14 Causal Conditions: Prevalence in Sample"
+
+# Condition prevalence for 14 conditions
+condition_prev <- data.frame(
+  Condition = c("STRATEGIC_AGENDA_CLARITY", "SHARED_GOVERNANCE", "FUNDING_FLEXIBILITY", "SELECTION_PROCEDURES",
+                "OUTPUTS_ACCESSIBLE", "OUTPUTS_CAPACITY", "LOCAL_EMBEDDED", "IMPACT_STRATEGY", 
+                "PARTNERSHIP_EQUITY", "EQUITY_LOCALISATION", "EQUITY_GESI",
+                "FUNDING_LONGEVITY_ADAPTED", "INSTABILITY_RESPONSE", "MEL_STRENGTHENED"),
+  N = c(302, 130, 272, 148, 108, 234, 177, 267, 112, 105, 103, 229, 282, 262),
+  Prevalence = c("96.8%", "41.7%", "87.2%", "47.4%", "34.6%", "75.0%", "56.7%", "85.6%", 
+                 "35.9%", "33.7%", "33.0%", "73.4%", "90.4%", "84.0%")
+)
+
+kable(condition_prev, booktabs = TRUE, align = c("l", "r", "r")) %>%
+  kable_styling(latex_options = c("hold_position", "striped", "scale_down"), font_size = 9)
+```
+
+**Condition prevalence varies substantially, with implications for QCA analytical capacity.** High-prevalence conditions (STRATEGIC_AGENDA_CLARITY 96.8%, INSTABILITY_RESPONSE 90.4%, FUNDING_FLEXIBILITY 87.2%, IMPACT_STRATEGY 85.6%, MEL_STRENGTHENED 84.0%) are nearly universal across FCDO programming. Moderate-prevalence conditions (OUTPUTS_CAPACITY 75.0%, FUNDING_LONGEVITY_ADAPTED 73.4%, LOCAL_EMBEDDED 56.7%, SELECTION_PROCEDURES 47.4%, SHARED_GOVERNANCE 41.7%) provide good variation for detecting causal patterns. Lower-prevalence conditions (PARTNERSHIP_EQUITY 35.9%, OUTPUTS_ACCESSIBLE 34.6%, EQUITY_LOCALISATION 33.7%, EQUITY_GESI 33.0%) represent less common programme features but are critical for understanding equity-focused outcomes.
+
+
+## Enhanced Standard Analysis Results
+
+This section presents the complete Enhanced Standard Analysis (ESA) protocol results for each of the four outcome variables. Following best practices in QCA methodology [@schneider2012set], we report for each outcome: necessity analysis identifying prerequisite conditions, truth table summaries characterizing the observed configuration space, contradiction analysis, and the **Enhanced solution** as our primary finding—with conservative solutions for comparison. We also conduct SUIN/INUS analysis to identify conditions that function as necessary components within sufficient configurations.
+
+### HIGH_PERFORMANCE: Necessity Without Sufficiency
+
+The analysis of HIGH_PERFORMANCE (defined as programmes receiving A++ or A+ ratings, representing 15.7% of the sample with N=49) reveals a distinctive causal structure fundamentally different from the other three outcomes. This outcome exhibits strong necessary conditions but fails to produce reliable sufficient configurations, suggesting that high FCDO performance operates through prerequisite-based logic rather than configurational pathways.
+
+#### Step 1: Necessity Analysis
+
+```{r}
+#| echo: false
+#| output: true
+#| label: tbl-hp-necessity
+#| tbl-cap: "HIGH_PERFORMANCE: Necessary Conditions (≥0.90 Consistency)"
+
+hp_nec <- data.frame(
+  Condition = c("IMPACT_STRATEGY", "MEL_STRENGTHENED", "STRATEGIC_AGENDA_CLARITY"),
+  Consistency = c("1.000", "0.980", "0.959"),
+  Coverage = c("0.182", "0.183", "0.156"),
+  Interpretation = c("Present in 100% of high programmes", 
+                     "Present in 98% of high programmes",
+                     "Present in 96% of high programmes")
+)
+
+kable(hp_nec, booktabs = TRUE, align = c("l", "r", "r", "l")) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
+```
+
+Table @tbl-hp-necessity presents the three conditions meeting the 0.90 necessity consistency threshold for HIGH_PERFORMANCE. IMPACT_STRATEGY demonstrates perfect necessity (consistency = 1.000), indicating that every programme achieving high ratings documented clear, evidence-based impact pathways in their annual reviews. MEL_STRENGTHENED (consistency = 0.980) and STRATEGIC_AGENDA_CLARITY (consistency = 0.959) also emerge as near-universal prerequisites, present in 98% and 96% of high programmes respectively.
+
+Critically, these necessary conditions exhibit low coverage scores ranging from 0.156 to 0.183. This pattern—high necessity consistency combined with low coverage—is the defining signature of genuinely necessary but insufficient conditions. While these three conditions are indispensable for high performance, their presence does not guarantee success: the vast majority of programmes possessing these conditions do not achieve A++/A+ ratings. This asymmetry between necessity and sufficiency has important theoretical and practical implications that we explore in the Discussion.
+
+#### Step 2: Truth Table Summary
+
+```{r}
+#| echo: false
+#| output: true
+#| label: tbl-hp-tt
+#| tbl-cap: "HIGH_PERFORMANCE: Truth Table Summary"
+
+hp_tt <- data.frame(
+  Metric = c("Observed configurations", "Sufficient (OUT=1)", "Insufficient (OUT=0)", "Logical remainders", "Contradictory configurations"),
+  Value = c("56", "2", "33", "16,328", "21")
+)
+
+kable(hp_tt, booktabs = TRUE, align = c("l", "r")) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
+```
+
+The truth table analysis (Table @tbl-hp-tt) reveals extreme sparsity in the configuration space: of the 56 configurations observed in the empirical data, only 2 meet the sufficiency consistency threshold of 0.85. This pattern reflects the low outcome prevalence (15.7%)—high performance is rare, and finding configurations that consistently produce it is rarer still. The remaining 16,328 logically possible configurations represent unobserved "logical remainders" that do not appear in our sample, a common feature of QCA with many conditions.
+
+#### Step 3: Contradiction Analysis
+
+The analysis identified **21 contradictory configurations** for HIGH_PERFORMANCE—configurations where programmes sharing identical condition profiles exhibit divergent outcomes (some achieving high performance, others not). Contradictory configurations show consistency values between 0 and 0.85 (the sufficiency threshold), ranging from 0.167 to 0.667 in our sample, with cases ranging from 2 to 12 programmes per configuration. Following ESA protocol, these contradictory remainders were excluded from the enhanced solution to avoid introducing inconsistent logical assumptions. The substantial number of contradictions (21 of 56 observed configurations, or 38%) suggests that achieving high performance involves factors beyond our 14-condition framework—unmeasured conditions, implementation quality variations, or context-specific factors that our current measures do not capture.
+
+#### Steps 4-6: Solutions
+
+```{r}
+#| echo: false
+#| output: true
+#| label: tbl-hp-solutions
+#| tbl-cap: "HIGH_PERFORMANCE: Solution Comparison"
+
+hp_sol <- data.frame(
+  Solution = c("Conservative", "Enhanced (Primary)", "Parsimonious"),
+  Consistency = c("1.000", "0.286", "0.286"),
+  Coverage = c("8.2%", "8.2%", "8.2%"),
+  Pathways = c("2", "2", "2"),
+  Assessment = c("Tiny coverage", "FAILS threshold", "FAILS threshold")
+)
+
+kable(hp_sol, booktabs = TRUE, align = c("l", "r", "r", "r", "l")) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
+```
+
+Table @tbl-hp-solutions presents a striking finding: the Enhanced solution fails to meet the 0.85 consistency threshold required for reliable QCA inference, achieving only 0.286 consistency with 8.2% coverage—performance far below acceptable standards for causal inference.^[The Enhanced/Parsimonious solutions are identical and exhibit model ambiguity with 3 equivalent solutions, each containing 2 pathways; all fail the consistency threshold.] While the conservative solution achieves perfect consistency (1.000), its coverage of only 8.2% means it explains fewer than 1 in 12 high programmes.
+
+This null finding is itself substantively meaningful. It indicates that high FCDO performance cannot be systematically produced through any identified configuration of the 14-condition framework. The conditions we measure—spanning baseline design, implementation reality, and adaptation—do not combine in ways that reliably generate A++/A+ ratings.
+
+#### Step 5: SUIN Analysis
+
+No SUIN (Sufficient but Unnecessary part of a factor that is Insufficient but Necessary) conditions exist for HIGH_PERFORMANCE because the sufficiency analysis fails to identify reliable pathways. However, the three necessary conditions identified in Step 1 (IMPACT_STRATEGY, MEL_STRENGTHENED, STRATEGIC_AGENDA_CLARITY) are genuine prerequisites rather than statistical artifacts. Given the low outcome prevalence of 15.7%, base-rate inflation—which can spuriously inflate necessity scores when outcomes are common—is not a concern here. These conditions function as pure necessary conditions that create enabling environments for excellence without determining which programmes ultimately achieve it.
+
+For HIGH_PERFORMANCE, the necessity analysis provides the primary actionable findings. The three conditions with near-perfect necessity scores (100%, 98%, and 96% respectively) establish prerequisites that FCDO should consider mandating as non-waivable requirements. However, programme designers must recognize that no configurational "recipe" reliably produces high ratings. Excellence likely requires factors beyond the measured conditions—possibly leadership quality, fortuitous implementation timing, or contextual opportunities that our framework does not capture.
+
+### IMPACT_ACHIEVEMENT: Equifinal Pathways to Development Impact
+
+The analysis of IMPACT_ACHIEVEMENT presents a sharply different causal structure from HIGH_PERFORMANCE. With 79.5% of programmes (N=248) achieving this outcome, the high prevalence enables robust sufficiency analysis while simultaneously requiring caution in interpreting necessity scores.
+
+#### Step 1: Necessity Analysis
+
+```{r}
+#| echo: false
+#| output: true
+#| label: tbl-impact-necessity
+#| tbl-cap: "IMPACT_ACHIEVEMENT: Necessary Conditions (≥0.90 Consistency)"
+
+impact_nec <- data.frame(
+  Condition = c("IMPACT_STRATEGY", "STRATEGIC_AGENDA_CLARITY", "INSTABILITY_RESPONSE", "MEL_STRENGTHENED"),
+  Consistency = c("0.972", "0.964", "0.927", "0.903"),
+  Coverage = c("0.903", "0.791", "0.816", "0.855"),
+  Interpretation = c("High base-rate (85.6% prevalence)", 
+                     "High base-rate (96.8% prevalence)",
+                     "High base-rate (69.2% prevalence)",
+                     "High base-rate (84.0% prevalence)")
+)
+
+kable(impact_nec, booktabs = TRUE, align = c("l", "r", "r", "l")) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
+```
+
+Table @tbl-impact-necessity identifies four conditions meeting the 0.90 necessity threshold. However, these results must be interpreted with considerable caution due to base-rate artifacts. When outcome prevalence is high (79.5% in this case), any condition with high prevalence will mechanically show high necessity scores simply because of substantial overlap with the outcome by chance rather than causal relationship.
+
+The four conditions meeting the threshold—IMPACT_STRATEGY (97.2%), STRATEGIC_AGENDA_CLARITY (96.4%), INSTABILITY_RESPONSE (92.7%), and MEL_STRENGTHENED (90.3%)—are themselves high-prevalence conditions ranging from 69% to 97% in the sample. This co-occurrence of high condition and outcome prevalence inflates necessity scores to levels that cannot be distinguished from statistical artifacts. For this reason, sufficiency analysis provides more reliable causal inference for IMPACT_ACHIEVEMENT, and we focus interpretive attention on the configurational pathways rather than the necessity findings.
+
+#### Step 2: Truth Table Summary
+
+```{r}
+#| echo: false
+#| output: true
+#| label: tbl-impact-tt
+#| tbl-cap: "IMPACT_ACHIEVEMENT: Truth Table Summary"
+
+impact_tt <- data.frame(
+  Metric = c("Observed configurations", "Sufficient (OUT=1)", "Insufficient (OUT=0)", "Logical remainders", "Contradictory configurations"),
+  Value = c("24", "16", "2", "16,360", "6")
+)
+
+kable(impact_tt, booktabs = TRUE, align = c("l", "r")) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
+```
+
+The truth table (Table @tbl-impact-tt) reveals a configuration space favorable to sufficiency analysis: 16 of the 24 observed configurations meet the sufficiency consistency threshold, with no contradictory rows requiring exclusion. This pattern—a majority of observed configurations being sufficient—reflects the high outcome prevalence and provides a strong empirical basis for identifying reliable pathways to impact achievement.
+
+#### Step 3: Contradiction Analysis
+
+The analysis identified **6 contradictory configurations** for IMPACT_ACHIEVEMENT—configurations where programmes with identical condition profiles show mixed outcomes. These contradictory configurations exhibit consistency values ranging from 0.333 to 0.833, with 3 to 8 cases each. While 6 contradictions represent only 25% of the 24 observed configurations (compared to 38% for HIGH_PERFORMANCE), their presence indicates some heterogeneity in how conditions translate to impact achievement. Following ESA protocol, these were excluded from the enhanced solution. The relatively modest contradiction rate suggests that our 14-condition framework captures most of the configurational logic governing impact achievement, though some implementation-level or contextual factors remain unmeasured.
+
+#### Steps 4-6: Solutions
+
+```{r}
+#| echo: false
+#| output: true
+#| label: tbl-impact-solutions
+#| tbl-cap: "IMPACT_ACHIEVEMENT: Solution Comparison"
+
+impact_sol <- data.frame(
+  Solution = c("Conservative", "Enhanced (Primary)", "Parsimonious"),
+  Consistency = c("1.000", "0.881", "0.881"),
+  Coverage = c("30.6%", "74.6%", "74.6%"),
+  Pathways = c("10", "4", "4"),
+  Assessment = c("PASSES (strict)", "PASSES", "PASSES")
+)
+
+kable(impact_sol, booktabs = TRUE, align = c("l", "r", "r", "r", "l")) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
+```
+
+All three solution types pass the consistency threshold (Table @tbl-impact-solutions), with the Enhanced solution achieving four pathways with 0.881 consistency and 74.6% coverage. The conservative solution, which makes no assumptions about logical remainders, achieves perfect consistency but with reduced coverage (30.6%), as expected given its more restrictive assumptions.^[The Enhanced/Parsimonious solutions are identical and exhibit model ambiguity with 16 equivalent solutions arising from different treatments of logical remainders. We report the first solution; pathways 1-2 (OUTPUTS_ACCESSIBLE alone; PARTNERSHIP_EQUITY combined with absence of EQUITY_GESI) are stable across all 16 equivalent solutions, while pathways 3-4 vary depending on which logical remainders are incorporated.]
+
+Table @tbl-impact-pathways-esa presents the four Enhanced solution pathways. The most striking finding is that OUTPUTS_ACCESSIBLE functions as a single-condition sufficient pathway—programmes that ensure their outputs are accessible (affordable, reachable, usable by intended beneficiaries) achieve impact regardless of other conditions.
+
+```{r}
+#| echo: false
+#| output: true
+#| label: tbl-impact-pathways-esa
+#| tbl-cap: "IMPACT_ACHIEVEMENT: Enhanced Solution Pathways (First of 16 Equivalent Solutions)"
+
+pathways_impact <- data.frame(
+  Pathway = c(
+    "OUTPUTS_ACCESSIBLE",
+    "PARTNERSHIP_EQUITY * ~EQUITY_GESI",
+    "~SHARED_GOVERNANCE * OUTPUTS_CAPACITY * ~FUNDING_LONGEVITY_ADAPTED",
+    "~SHARED_GOVERNANCE * ~LOCAL_EMBEDDED * IMPACT_STRATEGY"
+  ),
+  Interpretation = c(
+    "Accessible outputs alone sufficient for impact",
+    "Equitable partnerships without GESI focus",
+    "Centralized governance with capacity building, standard funding",
+    "Centralized, non-embedded with clear impact strategy"
+  )
+)
+
+kable(pathways_impact, booktabs = TRUE, align = c("l", "l")) %>%
+  kable_styling(latex_options = c("hold_position", "striped", "scale_down"), font_size = 9) %>%
+  column_spec(1, width = "3.5in") %>%
+  column_spec(2, width = "2.5in")
+```
+
+The remaining three pathways reveal the equifinal nature of impact achievement. The second pathway combines PARTNERSHIP_EQUITY with the absence of EQUITY_GESI, indicating that equitable partnerships can achieve impact through partnership-driven mechanisms without requiring explicit gender and social inclusion focus. The third and fourth pathways both involve the absence of SHARED_GOVERNANCE, suggesting that more centralized governance structures—when combined with either capacity building and standard funding duration, or clear impact strategies and non-embedded implementation—can also achieve development impact.
+
+#### Step 5: SUIN Analysis
+
+The SUIN analysis reveals that no condition functions as an INUS component (Insufficient but Necessary part of an Unnecessary but Sufficient configuration) for IMPACT_ACHIEVEMENT. This absence of INUS conditions, combined with the presence of multiple distinct pathways sharing no common elements, confirms the genuinely equifinal nature of this outcome. Programmes can achieve development impact through several independent routes without requiring any single universal prerequisite—a finding with important implications for programme design flexibility.
+
+### SUSTAINABILITY: Configurational Pathways Emphasizing Long-Term Commitment
+
+Sustainability outcomes (69.2% prevalence, N=216) exhibit a configurational causal structure with three reliable pathways. Like IMPACT_ACHIEVEMENT, the relatively high prevalence inflates necessity scores while enabling robust sufficiency analysis. The distinctive finding for this outcome is the recurring importance of extended funding duration across multiple pathways.
+
+#### Step 1: Necessity Analysis
+
+```{r}
+#| echo: false
+#| output: true
+#| label: tbl-sust-necessity
+#| tbl-cap: "SUSTAINABILITY: Necessary Conditions (≥0.90 Consistency)"
+
+sust_nec <- data.frame(
+  Condition = c("STRATEGIC_AGENDA_CLARITY", "IMPACT_STRATEGY", "MEL_STRENGTHENED", "INSTABILITY_RESPONSE"),
+  Consistency = c("0.986", "0.954", "0.917", "0.907"),
+  Coverage = c("0.705", "0.772", "0.756", "0.695"),
+  Interpretation = c("High base-rate (96.8% prevalence)", 
+                     "High base-rate (85.6% prevalence)",
+                     "High base-rate (84.0% prevalence)",
+                     "Base-rate overlap (69.2% prevalence)")
+)
+
+kable(sust_nec, booktabs = TRUE, align = c("l", "r", "r", "l")) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
+```
+
+As with IMPACT_ACHIEVEMENT, the necessity findings (Table @tbl-sust-necessity) require cautious interpretation due to base-rate artifacts. The 69.2% outcome prevalence creates substantial mechanical overlap between common conditions and the outcome. All four conditions meeting the 0.90 threshold—STRATEGIC_AGENDA_CLARITY (98.6%), IMPACT_STRATEGY (95.4%), MEL_STRENGTHENED (91.7%), and INSTABILITY_RESPONSE (90.7%)—are themselves high-prevalence conditions ranging from 69% to 97%, making their elevated necessity scores largely artifactual rather than causally meaningful. The sufficiency analysis provides more reliable causal inference for understanding what configurations actually produce sustainability.
+
+#### Step 2: Truth Table Summary
+
+```{r}
+#| echo: false
+#| output: true
+#| label: tbl-sust-tt
+#| tbl-cap: "SUSTAINABILITY: Truth Table Summary"
+
+sust_tt <- data.frame(
+  Metric = c("Observed configurations", "Sufficient (OUT=1)", "Insufficient (OUT=0)", "Logical remainders", "Contradictory configurations"),
+  Value = c("24", "11", "2", "16,360", "11")
+)
+
+kable(sust_tt, booktabs = TRUE, align = c("l", "r")) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
+```
+
+The truth table (Table @tbl-sust-tt) shows that 11 of the 24 observed configurations meet the sufficiency consistency threshold, representing 46% of observed configurations. This proportion—substantially higher than HIGH_PERFORMANCE's 4% but lower than IMPACT_ACHIEVEMENT's 67%—reflects the intermediate outcome prevalence and provides adequate empirical variation for identifying distinct sufficient pathways.
+
+#### Step 3: Contradiction Analysis
+
+The analysis identified **11 contradictory configurations** for SUSTAINABILITY—configurations where programmes with identical condition profiles show mixed sustainability outcomes. These contradictions exhibit consistency values ranging from 0.250 to 0.833, with 3 to 6 cases each. Notably, sustainability shows the highest contradiction rate (46% of 24 observed configurations) among the common outcomes, suggesting that programme sustainability involves substantial factors beyond our 14-condition framework. These unmeasured factors likely include host-country government capacity, political stability, local funding availability, and institutionalization dynamics that vary across contexts. Following ESA protocol, these contradictory configurations were excluded from the enhanced solution to ensure reliable causal inferences.
+
+#### Step 5: SUIN Analysis
+
+The SUIN analysis reveals no condition meeting formal INUS criteria for SUSTAINABILITY. While STRATEGIC_AGENDA_CLARITY appears in many pathways, its near-universal prevalence (96.8%) renders this appearance trivial rather than causally meaningful—almost every programme has this condition, so its presence in pathways reflects base rates rather than causal importance.
+
+However, a noteworthy pattern emerges: FUNDING_LONGEVITY_ADAPTED, while not meeting the formal 0.90 necessity threshold (achieving only 0.847 consistency), appears in 2 of the 3 Enhanced solution pathways. This suggests that extended funding duration functions as an important enabling condition for sustainability—not strictly necessary in a logical sense, but recurring across the majority of successful configurations. This pattern has practical significance for programme design, suggesting that multi-year funding commitments substantially improve sustainability prospects even when not absolutely required.
+
+#### Steps 4-6: Solutions
+
+```{r}
+#| echo: false
+#| output: true
+#| label: tbl-sust-solutions
+#| tbl-cap: "SUSTAINABILITY: Solution Comparison"
+
+sust_sol <- data.frame(
+  Solution = c("Conservative", "Enhanced (Primary)", "Parsimonious"),
+  Consistency = c("0.983", "0.870", "0.870"),
+  Coverage = c("26.4%", "64.8%", "64.8%"),
+  Pathways = c("8", "3", "3"),
+  Assessment = c("PASSES (strict)", "PASSES", "PASSES")
+)
+
+kable(sust_sol, booktabs = TRUE, align = c("l", "r", "r", "r", "l")) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
+```
+
+All three solution types achieve acceptable consistency (Table @tbl-sust-solutions), with the Enhanced solution identifying three pathways at 0.870 consistency and 64.8% coverage. The conservative solution achieves higher consistency (0.983) but with reduced coverage (26.4%).^[The Enhanced/Parsimonious solutions are identical and exhibit minor model ambiguity with 2 equivalent solutions; we report the first.]
+
+Table @tbl-sust-pathways-esa presents the three Enhanced solution pathways, which reveal two distinct strategic approaches to achieving sustainability:
+
+```{r}
+#| echo: false
+#| output: true
+#| label: tbl-sust-pathways-esa
+#| tbl-cap: "SUSTAINABILITY: Enhanced Solution Pathways (First of 2 Equivalent Solutions)"
+
+pathways_sust <- data.frame(
+  Pathway = c(
+    "OUTPUTS_ACCESSIBLE * OUTPUTS_CAPACITY",
+    "SHARED_GOVERNANCE * LOCAL_EMBEDDED * FUNDING_LONGEVITY_ADAPTED",
+    "~SELECTION_PROCEDURES * ~OUTPUTS_CAPACITY * FUNDING_LONGEVITY_ADAPTED"
+  ),
+  Interpretation = c(
+    "Accessible outputs + capacity building ensures sustainability",
+    "Shared governance + local embedding + extended funding",
+    "Extended funding compensates for limited procedures/capacity"
+  )
+)
+
+kable(pathways_sust, booktabs = TRUE, align = c("l", "l")) %>%
+  kable_styling(latex_options = c("hold_position", "striped", "scale_down"), font_size = 9) %>%
+  column_spec(1, width = "3.5in") %>%
+  column_spec(2, width = "2.5in")
+```
+
+The first pathway (OUTPUTS_ACCESSIBLE combined with OUTPUTS_CAPACITY) represents what might be termed an "outputs-focused" strategy: programmes that produce accessible outputs while simultaneously building local capacity to use and maintain those outputs achieve sustainability without requiring extended funding timelines or complex governance arrangements.
+
+The second and third pathways share a common element—FUNDING_LONGEVITY_ADAPTED—but operate through different mechanisms. The second pathway combines extended funding with shared governance and local embedding, representing an "institutional integration" strategy. The third pathway, somewhat counterintuitively, combines extended funding with the absence of competitive selection procedures and the absence of capacity-focused outputs, suggesting that sustained funding commitment can compensate for weaker delivery mechanisms.
+
+The recurring presence of FUNDING_LONGEVITY_ADAPTED in two of three pathways reveals the substantial importance of multi-year commitment for achieving sustainability. This finding aligns with theoretical expectations that sustainability requires sufficient time for institutional embedding and capacity development.
+
+### EQUITY_OUTCOMES: The Indispensable Role of Explicit GESI Focus
+
+The analysis of EQUITY_OUTCOMES (33.7% prevalence, N=105) produces the most theoretically coherent and practically actionable findings of the four outcomes. This moderate prevalence—neither so low as to limit statistical power nor so high as to inflate necessity scores beyond interpretability—enables robust analysis of both necessity and sufficiency. The central finding is the emergence of EQUITY_GESI as an INUS condition: a component that functions as effectively necessary by appearing in all identified sufficient pathways.
+
+#### Step 1: Necessity Analysis
+
+```{r}
+#| echo: false
+#| output: true
+#| label: tbl-equity-necessity
+#| tbl-cap: "EQUITY_OUTCOMES: Necessary Conditions (≥0.90 Consistency)"
+
+equity_nec <- data.frame(
+  Condition = c("STRATEGIC_AGENDA_CLARITY", "IMPACT_STRATEGY", "INSTABILITY_RESPONSE", "OUTPUTS_CAPACITY", "MEL_STRENGTHENED", "EQUITY_GESI"),
+  Consistency = c("0.990", "0.981", "0.971", "0.933", "0.933", "0.914"),
+  Coverage = c("0.344", "0.386", "0.362", "0.419", "0.374", "0.932"),
+  Interpretation = c("High base-rate condition", 
+                     "High base-rate condition",
+                     "High base-rate condition",
+                     "High base-rate condition",
+                     "High base-rate condition",
+                     "CORE: high coverage (93.2%) indicates genuine relevance")
+)
+
+kable(equity_nec, booktabs = TRUE, align = c("l", "r", "r", "l")) %>%
+  kable_styling(latex_options = c("hold_position", "striped")) %>%
+  landscape()
+```
+
+Six conditions meet the 0.90 necessity threshold for EQUITY_OUTCOMES (Table @tbl-equity-necessity). However, careful examination of coverage scores reveals a critical distinction. Five conditions—STRATEGIC_AGENDA_CLARITY, IMPACT_STRATEGY, INSTABILITY_RESPONSE, OUTPUTS_CAPACITY, and MEL_STRENGTHENED—exhibit the characteristic pattern of base-rate artifacts: high necessity consistency (0.93-0.99) combined with low coverage (0.34-0.42). These conditions are common across all programmes regardless of equity outcomes, making their apparent necessity a statistical artifact rather than a causal relationship.
+
+EQUITY_GESI presents a strikingly different pattern. With 0.914 necessity consistency and 0.932 coverage, this condition exhibits bidirectional strength: 91.4% of programmes achieving equity outcomes have explicit GESI (Gender Equality and Social Inclusion) focus, and conversely, 93.2% of programmes with GESI focus achieve equity outcomes. This symmetry between necessity and sufficiency—rare in QCA findings—indicates that EQUITY_GESI is both a genuine prerequisite for equity outcomes and approaches sufficiency on its own. The practical implication is clear: explicit, intentional focus on gender equality and social inclusion is not merely helpful for equity outcomes but effectively essential.
+
+#### Step 2: Truth Table Summary
+
+```{r}
+#| echo: false
+#| output: true
+#| label: tbl-equity-tt
+#| tbl-cap: "EQUITY_OUTCOMES: Truth Table Summary"
+
+equity_tt <- data.frame(
+  Metric = c("Observed configurations", "Sufficient (OUT=1)", "Insufficient (OUT=0)", "Logical remainders", "Contradictory configurations"),
+  Value = c("56", "13", "36", "16,328", "7")
+)
+
+kable(equity_tt, booktabs = TRUE, align = c("l", "r")) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
+```
+
+The truth table (Table @tbl-equity-tt) reveals a balanced configuration space: 13 of 56 observed configurations meet the sufficiency threshold, with no contradictory rows. This pattern—approximately one-quarter of configurations being sufficient—reflects the moderate outcome prevalence and provides good empirical variation for distinguishing conditions that genuinely contribute to equity outcomes from those that do not.
+
+#### Step 3: Contradiction Analysis
+
+The analysis identified **7 contradictory configurations** for EQUITY_OUTCOMES—configurations where programmes with identical condition profiles show mixed equity outcomes. These contradictions exhibit consistency values ranging from 0.50 to 0.75, with 2 to 8 cases each. The relatively modest contradiction rate (12.5% of 56 observed configurations) is the lowest among the four outcomes, suggesting that our framework—and particularly the EQUITY_GESI condition—captures most of the configurational logic governing equity outcomes. Following ESA protocol, these were excluded from the enhanced solution. The low contradiction rate reinforces the central finding: equity outcomes follow predictable patterns, with explicit GESI focus serving as the primary differentiator.
+
+#### Step 5: SUIN Analysis
+
+The SUIN analysis confirms EQUITY_GESI as an INUS condition (Insufficient but Necessary part of factors that are Unnecessary but Sufficient). With 0.914 individual necessity consistency and—crucially—appearance in all three identified Enhanced solution pathways, EQUITY_GESI functions as effectively necessary for equity outcomes. While other conditions combine with EQUITY_GESI to form complete sufficient pathways, no pathway achieves equity outcomes without it.
+
+This INUS status has important theoretical and practical implications. Theoretically, it suggests that equity outcomes cannot be achieved incidentally through general programme excellence; they require deliberate, explicit focus on gender equality and social inclusion. Practically, it means that programmes seeking equity outcomes must incorporate GESI considerations from the design phase forward—it cannot be treated as an optional add-on or cross-cutting theme to be addressed after core programme elements are determined.
+
+#### Steps 4-6: Solutions
+
+```{r}
+#| echo: false
+#| output: true
+#| label: tbl-equity-solutions
+#| tbl-cap: "EQUITY_OUTCOMES: Solution Comparison"
+
+equity_sol <- data.frame(
+  Solution = c("Conservative", "Enhanced (Primary)", "Parsimonious"),
+  Consistency = c("1.000", "0.987", "0.987"),
+  Coverage = c("46.7%", "74.3%", "74.3%"),
+  Pathways = c("8", "3", "3"),
+  Assessment = c("PASSES (strict)", "PASSES", "PASSES")
+)
+
+kable(equity_sol, booktabs = TRUE, align = c("l", "r", "r", "r", "l")) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
+```
+
+The solution comparison (Table @tbl-equity-solutions) reveals that EQUITY_OUTCOMES achieves the highest consistency of all four outcomes. The Enhanced solution achieves 0.987 consistency with 74.3% coverage across three pathways, while the conservative solution achieves perfect consistency (1.000) with 46.7% coverage.^[Unlike the other outcomes, EQUITY_OUTCOMES produces a unique Enhanced/Parsimonious solution with no model ambiguity—all treatments of logical remainders converge on the same three pathways.]
+
+Table @tbl-equity-pathways-esa presents the three Enhanced solution pathways, all of which share a common element:
+
+```{r}
+#| echo: false
+#| output: true
+#| label: tbl-equity-pathways-esa
+#| tbl-cap: "EQUITY_OUTCOMES: Enhanced Solution Pathways (Unique Solution)"
+
+pathways_equity <- data.frame(
+  Pathway = c(
+    "SELECTION_PROCEDURES * EQUITY_GESI",
+    "~LOCAL_EMBEDDED * EQUITY_GESI",
+    "OUTPUTS_ACCESSIBLE * EQUITY_GESI * INSTABILITY_RESPONSE"
+  ),
+  Interpretation = c(
+    "GESI + rigorous selection delivers equity",
+    "GESI + centralized approach achieves equity",
+    "GESI + accessible outputs + crisis adaptation"
+  )
+)
+
+kable(pathways_equity, booktabs = TRUE, align = c("l", "l")) %>%
+  kable_styling(latex_options = c("hold_position", "striped")) %>%
+  landscape()
+```
+
+The appearance of EQUITY_GESI in all three pathways confirms its INUS status identified in the necessity analysis. The three pathways represent distinct mechanisms through which explicit GESI focus translates into equity outcomes:
+
+The first pathway (SELECTION_PROCEDURES combined with EQUITY_GESI) suggests that competitive partner selection, when combined with GESI focus, delivers equity outcomes—potentially by selecting implementing partners with demonstrated commitment and capacity for equity-focused programming.
+
+The second pathway (~LOCAL_EMBEDDED combined with EQUITY_GESI) indicates, perhaps counterintuitively, that GESI focus combined with more centralized (less locally-embedded) implementation can achieve equity outcomes. This may reflect situations where local power structures are themselves sources of inequity, making external programme management necessary to ensure marginalized groups are reached.
+
+The third pathway (OUTPUTS_ACCESSIBLE combined with EQUITY_GESI and INSTABILITY_RESPONSE) represents an adaptive delivery approach: programmes that ensure accessible outputs, maintain GESI focus, and demonstrate capacity to respond to crises and instability achieve equity outcomes.
+
+Taken together, these pathways reveal that while the mechanism through which GESI focus produces equity outcomes varies by context, the requirement for explicit GESI focus itself is non-negotiable. Equity outcomes cannot be achieved accidentally through general programme excellence—they require deliberate, intentional attention to gender equality and social inclusion.
+
+### Cross-Outcome ESA Summary
+
+Table @tbl-esa-summary synthesizes the ESA findings across all four outcomes, revealing fundamentally different causal structures operating through distinct logical mechanisms.
+
+```{r}
+#| echo: false
+#| output: true
+#| label: tbl-esa-summary
+#| tbl-cap: "Enhanced Standard Analysis: Cross-Outcome Summary"
+
+esa_summary <- data.frame(
+  Outcome = c("HIGH_PERFORMANCE", "IMPACT_ACHIEVEMENT", "SUSTAINABILITY", "EQUITY_OUTCOMES"),
+  Prevalence = c("15.7%", "79.5%", "69.2%", "33.7%"),
+  `Nec. Conditions` = c("3 genuine", "4 (base-rate)", "4 (base-rate)", "6 (1 core)"),
+  `SUIN/INUS` = c("N/A (suff. fails)", "None", "None", "EQUITY_GESI"),
+  Consistency = c("0.286", "0.881", "0.870", "0.987"),
+  Coverage = c("8.2%", "74.6%", "64.8%", "74.3%"),
+  Pathways = c("FAILS", "4", "3", "3"),
+  check.names = FALSE
+)
+
+kable(esa_summary, booktabs = TRUE, align = c("l", "r", "l", "l", "r", "r", "l")) %>%
+  kable_styling(latex_options = c("hold_position", "striped", "scale_down"), font_size = 9) %>%
+  row_spec(1, background = "#FFF0F0")
+```
+
+The cross-outcome comparison reveals four distinct causal architectures. HIGH_PERFORMANCE operates exclusively through necessary conditions—three prerequisites (IMPACT_STRATEGY, MEL_STRENGTHENED, and STRATEGIC_AGENDA_CLARITY) are indispensable for high performance, but no reliable sufficient configurations exist. The sufficiency failure (highlighted in the table) indicates that exceptional ratings cannot be systematically produced through identifiable condition combinations.
+
+IMPACT_ACHIEVEMENT operates through equifinal sufficiency, with four distinct pathways reliably producing development impact and OUTPUTS_ACCESSIBLE sufficient on its own as a single-condition pathway. The four conditions meeting the necessity threshold are base-rate artifacts arising from the high outcome prevalence (79.5%) rather than genuine prerequisites.
+
+SUSTAINABILITY operates through configurational sufficiency, with three pathways sharing a recurring emphasis on extended funding duration. Like IMPACT_ACHIEVEMENT, the necessity scores are inflated by high prevalence (69.2%), making the sufficiency pathways the more reliable findings.
+
+EQUITY_OUTCOMES presents the most distinctive causal structure, operating through INUS necessity. EQUITY_GESI functions as an Insufficient but Necessary component of sufficient configurations—appearing in all three identified pathways and achieving both high necessity (0.914) and high coverage (0.932). This pattern indicates that explicit GESI focus is effectively essential for equity outcomes and approaches sufficiency on its own.
+
+One cross-cutting finding emerges from comparing necessity results across outcomes: INSTABILITY_RESPONSE meets the 0.90 necessity threshold for three of four outcomes (IMPACT_ACHIEVEMENT, SUSTAINABILITY, and EQUITY_OUTCOMES). While this pattern is partially attributable to base-rate effects given the high prevalence of both the condition (69.0%) and the outcomes where it appears, the consistent emergence suggests that adaptive capacity to respond to crises and instability functions as a broadly enabling condition across multiple dimensions of programme success.
+
+# Discussion
+
+The Enhanced Standard Analysis reveals fundamentally different causal architectures across the four outcomes, challenging assumptions about universal best practices in development programming.
+
+## Differentiated Causal Structures
+
+The most striking finding is the contrast between HIGH_PERFORMANCE and the other three outcomes. High performance (A++/A+ ratings) cannot be systematically produced through any identified configuration—the sufficiency analysis fails with only 0.286 consistency. However, three conditions emerge as genuine prerequisites: IMPACT_STRATEGY (100% necessity), MEL_STRENGTHENED (98%), and STRATEGIC_AGENDA_CLARITY (96%). This pattern—strong necessary conditions without sufficient configurations—suggests that excellence requires unmeasured factors (leadership quality, political economy windows, implementation craft) beyond the 14-condition framework.
+
+In contrast, IMPACT_ACHIEVEMENT, SUSTAINABILITY, and EQUITY_OUTCOMES all exhibit robust equifinal pathways meeting standard QCA thresholds. For impact, OUTPUTS_ACCESSIBLE alone is sufficient—the simplest finding in the analysis. For sustainability, two distinct strategies work: quality outputs (OUTPUTS_ACCESSIBLE combined with OUTPUTS_CAPACITY) or institutional embedding (SHARED_GOVERNANCE, LOCAL_EMBEDDED, and FUNDING_LONGEVITY_ADAPTED). For equity, EQUITY_GESI appears in all three pathways with near-perfect consistency (0.987), confirming its INUS status.
+
+## The Centrality of GESI and Adaptive Capacity
+
+Two cross-cutting patterns deserve emphasis. First, EQUITY_GESI's INUS status indicates that equity outcomes cannot be achieved incidentally through general programme excellence—they require deliberate, explicit focus on gender equality and social inclusion from programme design forward. The bidirectional strength (0.914 necessity, 0.932 coverage) is rare in QCA findings and signals that GESI is both prerequisite and near-sufficient.
+
+Second, INSTABILITY_RESPONSE meets the 0.90 necessity threshold for three of four outcomes (IMPACT: 0.93, SUSTAINABILITY: 0.91, EQUITY: 0.97). While partially attributable to base-rate effects, this consistency suggests adaptive capacity is broadly enabling across outcome domains. Programmes that cannot respond to contextual instability struggle to achieve results regardless of design quality.
+
+## Limitations
+
+Several limitations warrant acknowledgment.
+
+**Selection bias.** The analysis relies on 312 programmes with complete documentation. Programmes with missing business cases or annual reviews may differ systematically—poorly performing programmes may be underrepresented if weak performance correlates with documentation gaps.
+
+**Outcome prevalence effects.** The four outcomes vary substantially in prevalence (15.7% to 79.5%), creating different analytical challenges. Low prevalence (HIGH_PERFORMANCE) limits sufficiency analysis but enables robust necessity analysis. High prevalence (IMPACT_ACHIEVEMENT, SUSTAINABILITY) may inflate necessity scores through base-rate artifacts, requiring interpretive caution.
+
+**Self-reporting bias.** Annual reviews are authored by programme teams with accountability incentives, potentially inflating both condition prevalence and outcome ratings. FCDO's independent quality assurance partially mitigate these concerns. Importantly, business case conditions are measured from pre-implementation documents, eliminating outcome-knowledge bias for baseline design features.
+
+**Binary coding.** Crisp-set QCA collapses continuous variation into presence/absence categories, potentially obscuring dose-response relationships. Future research should employ fuzzy-set approaches preserving intensity gradations.
+
+**Temporal limitations.** Implementation reality conditions are measured at varying programme stages (Year 2 to Year 7, median Year 4), and we cannot observe the precise timing of adaptations relative to performance changes. This limits causal inference about dynamic processes.
+
+**Generalizability.** Findings reflect FCDO's institutional context, rating system, and 2006-2024 programming period. Whether patterns generalize to other bilateral agencies, multilateral organizations, or future programming paradigms remains uncertain.
+
+## Revisiting the Theoretical Debate: RBM versus Adaptive Management
+
+Our findings speak directly to the theoretical tension between Results-Based Management (RBM) and Adaptive Management frameworks that structured our analysis.
+
+**Both paradigms find partial support—but neither wins outright.** The evidence suggests a more nuanced picture than either camp typically acknowledges:
+
+*Evidence supporting Adaptive Management:* INSTABILITY_RESPONSE (our primary measure of adaptive capacity) meets the 0.90 necessity threshold for three of four outcomes (IMPACT: 0.93, SUSTAINABILITY: 0.91, EQUITY: 0.97). Programmes that cannot adapt to changing circumstances struggle to achieve results. Additionally, FUNDING_LONGEVITY_ADAPTED appears in 2 of 3 sustainability pathways, indicating that flexibility in funding duration—a departure from rigid initial plans—enables long-term outcomes. The four pathways to IMPACT_ACHIEVEMENT demonstrate equifinality: success can be achieved through multiple implementation approaches rather than a single predetermined blueprint.
+
+*Evidence supporting Results-Based Management:* The three necessary conditions for HIGH_PERFORMANCE (IMPACT_STRATEGY at 100%, MEL_STRENGTHENED at 98%, STRATEGIC_AGENDA_CLARITY at 96%) are all baseline design and monitoring features—exactly what RBM emphasizes. Programmes cannot achieve high performance without clear theories of change and robust M&E systems established from the outset. SELECTION_PROCEDURES appears in two Enhanced pathways (EQUITY and SUSTAINABILITY), suggesting that rigorous partner selection—a core RBM process—enables success.
+
+*A synthesis: sequenced complementarity.* The results suggest that RBM and Adaptive Management are not competing paradigms but **sequenced complements**. Strong baseline design (RBM) creates the conditions for effective adaptation (Adaptive Management):
+
+1. **STRATEGIC_AGENDA_CLARITY** provides the stable reference point against which adaptations can be evaluated
+2. **MEL_STRENGTHENED** generates the information needed for evidence-based adaptation decisions  
+3. **INSTABILITY_RESPONSE** operationalizes adaptation capacity, but only works when programmes know what they are adapting *toward*
+
+This interpretation aligns with @honig2019navigation's "Navigation by Judgment" framework: successful programmes require both clear strategic direction (knowing where you're going) and operational flexibility (adjusting how you get there). Rigid RBM without adaptation produces outdated plans disconnected from reality; unconstrained adaptation without strategic clarity produces drift without accountability.
+
+# Conclusions 
+
+This analysis of 312 FCDO development programmes reveals differentiated causal architectures across four outcome types, with important implications for development programming.
+
+## Key Findings
+
+**High performance resists systematic replication.** HIGH_PERFORMANCE (A++/A+ ratings, 15.7% prevalence) fails QCA sufficiency thresholds (0.286 consistency), indicating that high ratings cannot be engineered through identifiable condition configurations. However, three necessary conditions emerge as genuine prerequisites: IMPACT_STRATEGY (100%), MEL_STRENGTHENED (98%), and STRATEGIC_AGENDA_CLARITY (96%).
+
+**Broader outcomes exhibit robust equifinality.** IMPACT_ACHIEVEMENT achieves 0.881 consistency with 74.6% coverage through four pathways, SUSTAINABILITY achieves 0.870 consistency with 64.8% coverage through three pathways, and EQUITY_OUTCOMES achieves 0.987 consistency with 74.3% coverage through three pathways. Good development outcomes can be reliably achieved through multiple configurational routes.
+
+**EQUITY_GESI is indispensable for equity outcomes.** Appearing in all three EQUITY_OUTCOMES pathways with near-perfect consistency, explicit focus on gender equality and social inclusion is effectively necessary for achieving equity-related impacts. This cannot be substituted by other conditions.
+
+**Adaptive capacity is broadly enabling.** INSTABILITY_RESPONSE meets the 0.90 necessity threshold for three of four outcomes (IMPACT: 0.93, SUSTAINABILITY: 0.91, EQUITY: 0.97), suggesting that the ability to respond to crises and contextual instability is nearly universal across outcome domains.
+
+## Policy Implications
+
+1. **Prioritize output accessibility.** OUTPUTS_ACCESSIBLE alone is sufficient for impact achievement—the simplest lever in the entire analysis. Ensure programme outputs actually reach intended beneficiaries in usable formats.
+
+2. **Mandate GESI for equity.** Gender Equality and Social Inclusion must be embedded in programme design from the outset, not added as an afterthought. For equity outcomes, this is non-negotiable.
+
+3. **Choose sustainability strategies deliberately.** Two distinct approaches work: (a) quality outputs combining accessibility with capacity building, or (b) institutional ownership combining shared governance, local embedding, and extended funding. Select based on context and theory of change.
+
+4. **Build adaptive capacity.** Programmes need mechanisms to detect and respond to contextual changes, with budget flexibility and authorization to make adaptive decisions.
+
+5. **Accept differentiated expectations.** "Good" outcomes can be engineered through identified pathways; "high on all dimensions" cannot. Be explicit about priorities and design accordingly.
+
+## Contributions and Future Research
+
+This analysis advances development effectiveness research by demonstrating differentiated causal structures across outcome types, identifying EQUITY_GESI as effectively necessary for equity outcomes, revealing the importance of adaptive capacity, and showcasing AI-enhanced document extraction enabling medium-N QCA at scales previously infeasible.
+
+Future research should test whether these patterns generalize beyond FCDO's institutional context, employ fuzzy-set approaches to capture intensity variation, and explore factors distinguishing high from merely good performance.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
+
+# Appendix {.unnumbered}
+
+## A. Data Processing Overview
+
+The analysis uses R with the QCA package for single-step parsimonious qualitative comparative analysis. Key parameters:
+
+- **Data:** 312 programmes with complete BC+AR documentation (`fcdo_qca_rich_binary.csv`)
+- **Conditions:** 14 binary conditions calibrated using ≥0.67 thresholds
+- **Outcomes:** HIGH_PERFORMANCE, IMPACT_ACHIEVEMENT, SUSTAINABILITY, EQUITY_OUTCOMES
+- **Solution type:** Parsimonious (include="?")
+- **Thresholds:** incl.cut=0.85, n.cut=2 (rare outcomes), n.cut=3 (common outcomes)
+
+Replication materials available upon request.
+
+## B. Condition Definitions
+
+The 14 conditions used in the analysis are:
+
+| Condition | Description | Source |
+|-----------|-------------|--------|
+| STRATEGIC_AGENDA_CLARITY | Clear strategic objectives and theory of change | BC |
+| SHARED_GOVERNANCE | Inclusive governance with partner stakeholders | BC |
+| FUNDING_FLEXIBILITY | Flexible funding allowing adaptive reallocation | BC |
+| SELECTION_PROCEDURES | Competitive partner selection processes | BC |
+| OUTPUTS_ACCESSIBLE | Outputs reached intended beneficiaries | AR |
+| OUTPUTS_CAPACITY | Outputs built local capacity | AR |
+| LOCAL_EMBEDDED | Activities embedded in local systems | AR |
+| IMPACT_STRATEGY | Clear impact strategy during implementation | AR |
+| PARTNERSHIP_EQUITY | Equitable partnerships with local actors | AR |
+| EQUITY_LOCALISATION | Reached marginalized communities | AR |
+| EQUITY_GESI | Gender/social inclusion operationalized | AR |
+| FUNDING_LONGEVITY_ADAPTED | Duration extended beyond original plan | AR |
+| INSTABILITY_RESPONSE | Adapted to contextual instability | AR |
+| MEL_STRENGTHENED | M&E systems strengthened during implementation | AR |
+
+BC = Business Case; AR = Annual Review
+
+**Calibration:** All 14 conditions are binary-coded (1=present, 0=absent) using ≥0.67 thresholds on 6-point continuous scales from AI extraction. This follows Ragin's [-@ragin2008redesigning] recommendation that 0.67 represents the "more in than out" crossover point.
