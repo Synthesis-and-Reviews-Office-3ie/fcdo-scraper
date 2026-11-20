@@ -5,3 +5,11 @@ archive/
 *_files/
 *_cache/
 *.RData
+
+# Secrets, scraped source documents (1.2 GB, re-downloadable), logs, cloud-sync junk
+.env
+.env.*
+!.env.example
+documents/
+*.log
+desktop.ini

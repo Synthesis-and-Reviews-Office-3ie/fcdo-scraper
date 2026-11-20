@@ -1,0 +1,105 @@
+/*-- scss:defaults --*/
+
+// Pantone color palette
+$navy-primary: #012169;      // Pantone 280 - Deep Navy (headings, primary)
+$blue-light: #ABCAE9;        // Pantone 277 - Light Blue (backgrounds, accents)
+$cyan-accent: #0092BC;       // Pantone 313 - Cyan/Teal (links, highlights)
+
+$presentation-heading-color: $navy-primary;
+$link-color: $cyan-accent;
+$body-bg: #ffffff;
+$body-color: #333333;
+
+/*-- scss:rules --*/
+.reveal {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  font-weight: 600;
+  text-transform: none;
+  color: $navy-primary;
+}
+
+.reveal .slide-background-content {
+  background-size: cover;
+}
+
+.reveal .callout {
+  margin: 1em 0;
+}
+
+.reveal .callout-important {
+  border-left-color: $navy-primary;
+}
+
+.reveal .callout-note {
+  border-left-color: $cyan-accent;
+}
+
+.reveal .callout-tip {
+  border-left-color: $blue-light;
+}
+
+.reveal table {
+  font-size: 0.85em;
+}
+
+.reveal table thead th {
+  background-color: $navy-primary;
+  color: white;
+}
+
+.reveal table tbody tr:nth-child(even) {
+  background-color: rgba($blue-light, 0.3);
+}
+
+.reveal ul, .reveal ol {
+  margin-left: 0;
+}
+
+.reveal li {
+  margin-bottom: 0.5em;
+}
+
+.reveal .footer {
+    color: $navy-primary;
+    background-color: $blue-light;
+    display: block;
+    position: fixed;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    bottom: 0px !important; // Makes footer div flush with bottom of slide
+    width: 100%;
+    z-index: 2 !important; // Sets the footer div further down the z-index
+  }
+  
+.reveal .slide-logo {
+    margin-bottom: 6px !important; // Lowers logo more in line with rest of footer
+    z-index: 5 !important; // Keeps logo above footer div
+  }
+
+.reveal a {
+  color: $cyan-accent;
+}
+
+.reveal a:hover {
+  color: darken($cyan-accent, 15%);
+}
+
+// Only apply navy to strong on light backgrounds, not globally
+// Removed: .reveal strong { color: $navy-primary; } 
+// Inline styles will now work properly on dark background slides
+
+.reveal blockquote {
+  border-left: 4px solid $cyan-accent;
+  background-color: rgba($blue-light, 0.2);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+.change-note {
+  font-size: 14px;
+  font-family: 'IBM Plex Mono', monospace;
+  background-color: #D4FFE9;
+}

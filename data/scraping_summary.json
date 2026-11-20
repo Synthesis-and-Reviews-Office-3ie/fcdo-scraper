@@ -1,0 +1,18 @@
+{
+  "total_documents": 2515,
+  "downloaded": 2499,
+  "documents_by_type": {
+    "Annual Review": 1718,
+    "Business Case": 488,
+    "Addendum to Business Case": 305,
+    "Project Completion Review": 4
+  },
+  "documents_by_category": {
+    "business_case": 793,
+    "annual_review": 1722,
+    "other": 0
+  },
+  "programmes_with_documents": 501,
+  "programmes_with_both_types": 412,
+  "avg_docs_per_programme": 5.0199600798403194
+}

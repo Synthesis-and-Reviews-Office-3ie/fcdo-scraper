@@ -1,0 +1,5 @@
+"Outcome","Prevalence","N_Paths","Consistency","Coverage","Meets_Threshold"
+"HIGH_PERFORMANCE","15.7%",2,0.286,0.082,"No"
+"IMPACT_ACHIEVEMENT","79.5%",4,0.881,0.746,"Yes"
+"SUSTAINABILITY","69.2%",3,0.87,0.648,"Yes"
+"EQUITY_OUTCOMES","33.7%",3,0.987,0.743,"Yes"

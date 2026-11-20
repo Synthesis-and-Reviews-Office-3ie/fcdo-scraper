@@ -1,0 +1,5 @@
+"Outcome","Solution","N_Paths","Consistency","Coverage"
+"EQUITY_OUTCOMES","Conservative",8,1,0.467
+"EQUITY_OUTCOMES","Enhanced",3,0.987,0.743
+"EQUITY_OUTCOMES","Parsimonious",3,0.987,0.743
+"EQUITY_OUTCOMES","Intermediate",3,0.987,0.743

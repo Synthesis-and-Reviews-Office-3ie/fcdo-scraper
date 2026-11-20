@@ -1,0 +1,5 @@
+"Outcome","Solution","N_Paths","Consistency","Coverage"
+"SUSTAINABILITY","Conservative",8,0.983,0.264
+"SUSTAINABILITY","Enhanced",3,0.87,0.648
+"SUSTAINABILITY","Parsimonious",3,0.87,0.648
+"SUSTAINABILITY","Intermediate",3,0.87,0.648

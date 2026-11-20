@@ -1,0 +1,313 @@
+programme_id,programme_title,StrategicAgendaClarity,RiskAdaptiveness,SharedGovernance,FundingFlexibility,SelectionProcedures,EthicsSafety,OutputsAccessible,OutputsCapacity,LocalEmbedded,ImpactStrategy,PartnershipEquity,Infrastructure,EquityLocalisation,EquityGESI,FundingLongevity_ADAPTED,Transparency_IMPROVED,InstabilityResponse,MEL_STRENGTHENED,HIGH_PERFORMANCE,IMPACT_ACHIEVEMENT,SUSTAINABILITY,EQUITY_OUTCOMES
+GB-1-201733,Climate Public Private Partnership (CP3),0.67,0.67,0.33,0.67,0.33,0.0,0.33,0.33,0.0,0.67,0.33,0.0,0.0,0.0,0.67,1,0.67,0.67,0.6,0.67,0.67,0.0
+GB-1-111074,UNITAID (The International Drug Purchase Facility),0.67,0.67,1.0,0.67,0.33,0.33,0.67,0.33,0.33,1.0,0.67,0.0,0.67,0.67,0.0,1,1.0,0.67,0.6,1.0,0.33,0.67
+GB-1-201267,Joint Global Health Trials Scheme,0.67,0.67,0.67,0.67,1.0,0.67,0.33,0.33,0.67,1.0,0.33,0.0,0.0,0.0,0.67,0,1.0,0.67,0.6,1.0,0.67,0.0
+GB-1-201879,Ideas to Impact,0.67,0.67,0.33,1.0,0.67,0.0,0.33,0.0,0.33,0.33,0.0,0.0,0.0,0.0,0.67,0,1.0,0.67,0.6,0.33,0.33,0.0
+GB-1-202571,The Global Agriculture and Food Security Programme (GAFSP),1.0,1.0,1.0,1.0,0.67,0.33,0.33,0.67,0.33,0.67,0.33,0.0,0.67,0.67,0.67,0,0.67,0.67,0.6,0.67,0.67,0.67
+GB-1-202568,"Gender, Growth and Labour Markets in Low Income Countries (G2LM|LIC)",0.67,0.33,0.67,0.67,0.67,0.33,0.33,0.67,0.33,0.67,0.33,0.67,0.33,0.67,0.67,1,0.67,0.67,0.6,0.67,0.67,0.67
+GB-1-202604,Global Development Innovation Ventures,0.67,1.0,0.67,1.0,1.0,0.33,0.67,1.0,0.67,1.0,0.67,0.33,0.67,1.0,0.67,0,1.0,0.33,0.8,1.0,1.0,1.0
+GB-1-202745,Investments in Forests and Sustainable Land Use (IFSLU),0.67,0.67,0.67,0.67,0.33,0.0,0.67,0.67,0.33,1.0,0.67,0.0,0.33,0.0,0.67,1,1.0,0.67,0.6,1.0,1.0,0.33
+GB-1-202927,Innovative Ventures & Technologies for Development (INVENT),0.67,0.67,1.0,0.67,0.67,0.0,0.33,0.67,0.67,0.67,0.67,0.0,0.67,0.33,0.67,0,1.0,1.0,0.6,0.67,1.0,0.33
+GB-1-202939,Impact Programme,0.67,0.67,0.33,0.67,1.0,0.33,0.33,0.67,0.67,1.0,0.67,0.33,0.67,0.33,0.67,1,1.0,0.67,0.6,1.0,1.0,0.33
+GB-1-202960,Macroeconomic Research in Low Income Countries (MRLIC),0.67,0.33,0.33,0.67,0.0,0.0,0.67,0.67,0.0,1.0,0.33,0.0,0.0,0.33,0.67,1,1.0,1.0,0.8,1.0,1.0,0.33
+GB-1-203050,Jobs and Incomes for Women,0.67,0.67,0.67,0.67,0.33,0.33,0.67,0.67,0.67,1.0,0.33,0.33,0.33,1.0,0.67,1,0.67,0.67,0.6,1.0,1.0,1.0
+GB-1-203331,MIGA’s Conflict-Affected and Fragile Economies Facility (CAFEF),0.67,0.33,0.0,0.67,0.0,0.0,0.0,0.0,0.0,0.33,0.0,0.0,0.0,0.0,0.0,0,0.67,0.0,0.6,0.67,0.67,0.0
+GB-1-203444,British International Investment (BII) Programme of Support in ODA eligible countries,0.67,1.0,0.33,0.67,0.67,0.67,0.0,0.33,0.33,0.67,0.33,0.67,0.33,0.67,0.67,1,1.0,0.67,0.8,0.67,1.0,0.67
+GB-1-203529,Adolescence Research Programme GAGE,1.0,0.67,0.33,0.33,0.0,0.67,0.67,0.67,0.33,1.0,0.33,0.0,0.33,0.67,0.33,1,1.0,0.67,0.8,0.67,0.67,0.67
+GB-1-203551,Tackling Maternal and Child Undernutrition in Zambia (Phase II),1.0,1.0,0.67,1.0,1.0,0.33,0.33,0.67,0.67,0.67,0.33,0.0,0.33,0.33,0.0,0,0.67,0.33,0.6,0.67,0.33,0.33
+GB-1-203640,Investing in Human Capital through Partnerships Beyond Aid,0.67,0.67,0.67,0.33,0.33,0.0,0.33,0.67,0.67,0.67,0.67,0.0,0.67,0.67,0.0,1,0.67,0.67,0.2,0.67,0.33,0.67
+GB-1-203752,Anti-Corruption Evidence (ACE) Programme,0.67,0.67,0.33,0.67,0.67,0.33,0.67,0.67,0.67,1.0,0.67,0.0,0.67,0.67,0.67,0,1.0,0.67,0.8,1.0,1.0,0.67
+GB-1-203804,"Mobile for Development (M4D): Strategic Partnership for Inclusion, Innovation and Scale",1.0,0.67,0.67,0.67,1.0,0.67,0.67,0.67,0.33,1.0,0.33,0.0,0.67,0.67,0.67,0,0.67,0.67,0.8,1.0,1.0,0.67
+GB-1-203809,Disaster Risk Insurance – Global Parametrics,0.67,0.67,0.33,0.67,0.0,0.0,0.33,0.0,0.0,0.67,0.33,0.0,0.0,0.0,0.33,1,1.0,1.0,0.6,0.67,0.67,0.0
+GB-1-203911,India Infrastructure Equity Partnership Programme,0.67,0.33,1.0,0.67,1.0,0.33,0.33,0.67,0.67,1.0,0.67,1.0,0.67,0.67,0.67,0,1.0,0.67,0.8,1.0,1.0,0.67
+GB-1-203996,Improving the management of public funds for the benefit of people in Myanmar,0.67,0.67,0.33,0.67,0.33,0.0,0.33,0.67,0.67,1.0,0.67,0.0,0.67,0.0,0.67,0,1.0,0.67,0.6,1.0,1.0,0.0
+GB-1-204043,Commonwealth Scholarship and Fellowship Plan (CSFP) - 2024-2025 Corporate Plan,0.67,0.67,0.33,0.67,0.67,0.33,0.33,1.0,0.33,0.67,0.33,0.67,0.33,0.67,0.67,1,1.0,0.67,0.4,0.67,0.33,0.67
+GB-1-204133,UK Collaborative on Development Research (UKCDR),0.67,0.67,0.33,0.67,0.0,0.0,0.0,0.0,0.0,0.67,0.33,0.0,0.0,0.0,0.33,1,0.67,0.67,0.6,0.67,0.33,0.0
+GB-1-204153,Capacity for Economic Research and Policy in Africa (CERPA),1.0,0.67,1.0,0.67,0.33,0.33,0.67,0.67,0.67,0.67,0.33,0.0,0.33,0.33,0.0,1,0.67,0.67,0.2,0.67,0.33,0.0
+GB-1-204291,J-PAL Post-Primary Education Initiative (Phase II) / Learning for All Initiative (LAI),1.0,0.67,0.67,0.67,1.0,1.0,0.67,0.33,0.67,1.0,0.67,0.0,0.67,0.33,0.67,0,1.0,0.67,0.6,1.0,0.67,0.67
+GB-1-204324,FCDO-ESRC Joint Research Fund on Raising Learning Outcomes (RLO),1.0,0.67,0.67,0.67,1.0,0.33,0.33,0.67,0.33,0.67,0.33,0.0,0.33,0.0,0.33,0,0.33,0.67,0.8,0.67,0.67,0.0
+GB-1-204338,Sustainable Urban Economic Development Programme (SUED),1.0,1.0,0.67,1.0,0.67,0.33,0.0,0.0,0.33,0.33,0.0,0.0,0.0,0.0,0.67,0,0.67,0.0,0.2,0.33,0.33,0.0
+GB-1-204369,Corridors for Growth,0.67,0.67,0.0,0.0,0.33,0.0,0.33,0.67,0.67,0.67,0.33,1.0,0.33,0.0,0.67,1,1.0,1.0,0.4,0.67,0.67,0.0
+GB-1-204415,TRANSFORM: market-based solutions and behaviour change in low income households (Unilever partnership),1.0,0.67,1.0,0.67,1.0,0.67,0.0,0.33,0.0,0.33,0.33,0.0,0.0,0.0,0.33,0,0.67,0.0,0.6,0.0,0.67,0.0
+GB-1-204420,DFID - Bill and Melinda Gates Foundation (BMGF) Strategic Partnership on Agriculture and Food Systems for Nutrition,0.67,0.67,0.67,0.67,0.33,0.0,0.33,0.67,0.33,0.67,0.33,0.0,0.33,0.0,0.67,1,0.0,0.67,0.6,0.67,0.67,0.0
+GB-1-204477,Exiting Poverty in Rwanda (EPR),0.67,0.67,0.67,0.67,0.33,0.33,0.0,0.67,0.67,0.67,0.33,0.0,0.0,0.0,0.33,1,1.0,0.67,0.6,0.33,0.67,0.0
+GB-1-204605,"AAWAZ II: Inclusion, Accountability, and Preventing Modern Slavery Programme",1.0,0.67,0.67,0.67,0.67,0.33,0.67,0.33,0.67,0.67,0.33,0.0,0.33,0.67,0.33,0,1.0,0.0,0.6,0.67,0.67,0.67
+GB-1-204607,Sub-National Governance Programme II (SNG II),1.0,1.0,1.0,1.0,0.67,0.33,0.33,0.67,0.67,0.67,0.33,0.0,0.0,0.0,0.33,1,1.0,0.33,0.6,0.67,0.67,0.0
+GB-1-204712,Montserrat Capital Investment Programme for Resilient Economic Growth (CIPREG),0.67,0.67,0.67,0.67,0.33,0.0,0.0,0.33,0.67,0.33,0.33,1.0,0.0,0.0,0.67,0,0.67,0.0,0.2,0.33,0.33,0.0
+GB-1-204715,Trade and Investment Advocacy Fund (TAF2 Plus),0.67,0.67,0.0,0.67,0.67,0.0,0.33,1.0,0.33,1.0,0.67,0.0,0.67,0.33,0.33,0,1.0,0.67,0.8,1.0,0.67,0.33
+GB-1-204836,Data and Evidence to Tackle Extreme Poverty (DETEP),0.67,0.67,0.33,0.67,0.67,0.33,0.33,0.0,0.0,0.33,0.0,0.0,0.0,0.0,0.67,1,0.67,0.67,0.6,0.33,0.67,0.0
+GB-1-204837,BRILHO – Energy Africa Mozambique,0.67,0.67,0.33,0.67,0.67,0.0,0.67,1.0,0.67,1.0,0.67,0.33,0.67,0.33,0.67,1,1.0,0.67,0.8,1.0,1.0,0.67
+GB-1-204931,Transport Impact Evaluations with eight Multilateral Development Banks (ieConnect),0.67,0.67,0.33,0.67,0.33,0.33,0.67,1.0,0.67,1.0,0.67,0.33,0.67,1.0,0.67,1,1.0,0.67,0.8,1.0,1.0,1.0
+GB-1-204941,Sustainable Inclusive Livelihoods through Tea Production in Rwanda (SILTPR),0.67,0.67,0.67,1.0,0.33,0.33,0.67,1.0,1.0,1.0,0.67,1.0,1.0,0.33,0.67,1,1.0,0.67,0.6,1.0,1.0,0.33
+GB-1-204963,Digital Access Programme,0.67,0.67,0.33,0.67,0.33,0.0,0.67,0.67,0.67,1.0,0.67,0.33,0.67,0.33,0.0,1,1.0,0.67,0.8,1.0,0.67,0.33
+GB-1-204984,Climate Smart Development for Nepal,0.67,0.67,0.67,1.0,0.33,0.0,0.33,0.67,0.67,0.67,0.33,0.0,0.33,0.67,0.67,0,1.0,0.67,0.4,0.33,0.67,0.33
+GB-1-205055,Building sustainable anti-corruption action in Tanzania (BSAAT),1.0,0.67,0.33,0.67,0.33,0.0,0.33,0.67,0.33,0.67,0.33,0.0,0.33,0.0,0.0,1,1.0,0.33,0.6,0.67,0.33,0.0
+GB-1-205058,UK-Ghana Partnership for Jobs and Economic Transformation (JET),0.67,0.67,0.67,1.0,0.67,0.0,0.33,0.67,0.67,0.67,0.33,0.0,0.33,0.0,0.67,0,1.0,0.67,0.6,0.67,0.67,0.0
+GB-1-205061,Increasing renewable energy and energy efficiency in the Caribbean,0.67,0.67,1.0,0.67,0.67,0.33,0.33,0.67,0.33,0.67,0.33,0.67,0.0,0.0,0.67,0,0.67,0.67,0.2,0.67,0.67,0.0
+GB-1-205071,Central Asia South Asia (CASA-1000) Electricity Trade Project,0.67,0.67,0.33,0.33,0.0,0.33,0.33,0.0,0.33,0.33,0.33,1.0,0.0,0.33,1.0,1,1.0,1.0,0.6,0.67,0.67,0.33
+GB-1-205118,Commercial Agriculture for Smallholders and Agribusiness Programme (CASA),0.67,0.67,0.0,0.67,0.67,0.33,0.33,0.67,0.33,0.67,0.33,0.33,0.67,0.67,0.0,0,0.67,0.67,0.6,0.67,0.33,0.67
+GB-1-205157,UK Caribbean Infrastructure Fund (UKCIF),0.67,0.67,0.67,0.67,0.33,0.0,0.33,0.67,0.67,0.67,0.33,1.0,0.33,0.67,0.67,0,1.0,1.0,0.6,0.67,0.67,0.33
+GB-1-205173,Tackling Serious and Organised Corruption (TSOC),0.67,0.67,0.67,0.67,0.67,0.33,0.33,1.0,0.67,1.0,0.67,0.67,0.67,0.0,0.67,1,0.0,0.67,0.8,1.0,0.67,0.0
+GB-1-205176,Humanitarian Emergency Response Operations and Stabilisation Programme (HEROS),0.33,0.67,0.0,0.67,0.67,0.0,0.33,0.67,0.33,0.67,0.33,0.0,0.0,0.33,0.67,0,0.67,1.0,0.6,0.67,0.33,0.33
+GB-1-205188,Rehabilitation and Extension of Bo – Kenema Electricity Distribution System,0.67,0.67,0.33,0.33,0.0,0.0,0.0,0.33,0.67,0.67,0.33,0.33,0.0,0.0,1.0,1,1.0,1.0,0.2,0.0,0.33,0.0
+GB-1-205201,Jordan Compact Economic Opportunities Programme (JCEOP),0.67,0.67,0.33,0.67,0.33,0.0,0.67,0.67,0.67,1.0,0.67,1.0,0.67,0.67,0.67,0,1.0,0.67,0.6,1.0,0.67,0.67
+GB-1-205206,Uganda: Building Resilience and an Effective Emergency Refugee Response (BRAER),0.67,0.67,1.0,1.0,0.33,0.67,0.67,0.67,0.67,1.0,0.67,0.67,0.33,0.33,0.67,1,1.0,0.67,0.8,1.0,0.67,0.33
+GB-1-205219,International Growth Centre (IGC) Phase 3,0.67,0.67,0.33,0.67,1.0,0.33,0.67,0.67,0.67,1.0,0.33,0.0,0.33,0.33,0.67,1,1.0,0.67,0.6,1.0,0.67,0.33
+GB-1-205226,Invest Africa,0.67,0.67,0.33,0.67,0.0,0.33,0.33,0.67,0.67,0.67,0.33,0.0,0.33,0.67,0.33,1,1.0,0.67,0.8,0.67,0.67,0.67
+GB-1-205231,Centre for Disaster Protection,1.0,0.67,0.33,0.67,0.67,0.33,0.33,0.67,0.0,0.67,0.33,0.0,0.0,0.33,0.33,0,0.0,0.67,0.6,0.67,0.67,0.33
+GB-1-205238,Financial Sector Deepening Africa (FSDAfrica) and FSDAfrica Investments (FSDAi),1.0,1.0,1.0,1.0,0.67,0.33,0.67,1.0,1.0,1.0,0.67,0.33,1.0,1.0,0.67,1,1.0,0.67,0.6,1.0,1.0,1.0
+GB-1-205246,Girls and Out of School Children: Action for Learning (GOAL),0.67,0.67,0.67,0.67,0.33,0.33,0.33,0.67,0.67,0.67,0.33,0.67,0.33,0.67,0.67,1,1.0,1.0,0.2,0.33,0.33,0.67
+GB-1-205254,Shule Bora (Quality School),0.67,0.67,0.67,0.67,0.0,0.33,0.67,1.0,0.67,1.0,0.67,0.33,0.67,0.67,0.67,1,1.0,0.67,0.6,1.0,1.0,0.67
+GB-1-205271,"Developing and delivering agricultural technologies and knowledge to reduce poverty and hunger, and support adaptation to climate change",0.67,0.67,0.33,0.67,0.33,0.0,0.33,0.67,0.33,0.67,0.33,0.0,0.33,0.33,0.67,0,0.67,0.67,0.6,0.67,0.67,0.33
+GB-1-205288,Directorate for a Research and Innovation Hub on Technology for Education (EdTech Hub),1.0,0.67,0.67,1.0,1.0,0.33,1.0,0.67,0.67,1.0,0.67,0.33,0.67,1.0,0.67,0,1.0,0.67,0.6,1.0,0.67,1.0
+GB-GOV-1-300007,Public Financial Management Multi Donor Trust Fund – Phase II,0.67,0.67,0.67,0.67,0.33,0.0,0.33,0.67,0.67,0.67,0.67,0.0,0.33,0.67,0.33,0,1.0,0.67,0.6,0.67,0.67,0.67
+GB-GOV-1-300035,Transparency and Accountability to Improve Economic Development and Service Delivery (TRACTION),0.67,0.67,0.67,0.67,0.67,0.33,0.33,0.67,0.33,0.67,0.33,0.0,0.33,0.67,0.33,0,1.0,0.33,0.2,0.67,0.33,0.67
+GB-GOV-1-300049,"J-PAL Governance, Crime and Conflict Initiative (GCCI)",0.67,0.67,0.33,0.67,0.67,0.33,0.33,0.67,0.33,0.67,0.33,0.0,0.33,0.67,0.67,1,0.67,0.67,0.8,0.67,0.67,0.67
+GB-GOV-1-300050,"Support to the Palestinian Authority to Build Stability, Deliver Services and Promote Reform in the Occupied Palestinian Territories (Stability, Services and Reform Programme - SSRP)",0.67,0.67,0.0,0.33,0.33,0.0,0.0,0.0,0.0,0.33,0.0,0.0,0.0,0.0,0.67,1,0.67,0.0,0.6,0.67,0.33,0.0
+GB-GOV-1-300100,"X(Cross)Border Conflict - Evidence, Policy and Trends (XCEPT)",0.67,0.67,0.67,0.67,0.67,0.33,0.67,0.67,0.67,1.0,0.67,0.0,0.67,0.33,0.67,0,1.0,0.67,0.8,1.0,0.67,0.33
+GB-GOV-1-300113,Building Resilience and Adapting to Climate Change in Malawi (BRACC),1.0,1.0,0.67,1.0,0.67,0.33,0.33,0.33,0.67,0.67,0.33,0.33,0.0,0.0,0.33,0,1.0,0.33,0.6,0.67,0.67,0.0
+GB-GOV-1-300116,Productivity for Prosperity (P4P),0.67,0.67,0.33,0.67,0.33,0.0,0.67,0.67,0.67,1.0,0.67,0.0,0.33,0.0,0.67,1,1.0,0.67,0.6,0.67,0.67,0.0
+GB-GOV-1-300123,Modern Energy Cooking Services (MECS),1.0,1.0,0.33,1.0,0.67,0.33,0.67,1.0,0.67,1.0,0.67,0.67,0.67,0.67,0.67,1,1.0,0.67,0.8,1.0,1.0,0.67
+GB-GOV-1-300124,Sustainable Manufacturing and Environmental Pollution (SMEP),0.67,0.67,0.33,1.0,0.67,0.0,0.67,0.67,0.33,0.67,0.33,0.0,0.67,0.67,0.67,0,1.0,0.67,0.6,0.67,0.67,0.67
+GB-GOV-1-300125,Climate-Compatible Growth (CCG),1.0,0.67,0.33,0.67,0.67,0.33,0.33,0.67,0.33,0.67,0.33,0.0,0.33,0.0,0.33,0,0.67,0.67,0.6,0.67,0.67,0.0
+GB-GOV-1-300126,Climate Adaptation and Resilience research framework programme (CLARE),1.0,0.67,0.67,0.67,1.0,0.33,0.67,1.0,0.67,1.0,0.67,0.67,0.67,1.0,0.67,0,1.0,0.67,0.6,1.0,1.0,1.0
+GB-GOV-1-300128,ASEAN Catalytic Green Finance Facility (ACGF) - UK-ASEAN Green Recovery Accelerator Fund,0.67,0.67,0.67,0.67,0.33,0.33,0.33,0.67,0.67,1.0,0.33,0.67,0.33,0.67,0.67,1,1.0,0.67,0.8,0.67,1.0,0.67
+GB-GOV-1-300134,"Revenue Mobilisation, Investment and Trade Programme (ReMIT)",0.67,0.67,0.67,0.67,0.33,0.0,0.33,0.67,0.67,0.67,0.33,0.0,0.67,0.0,0.33,0,1.0,0.67,0.6,0.67,0.67,0.0
+GB-GOV-1-300139,PAMOJA – Kenya Integrated Refugee and Host Community Support Programme,0.67,1.0,0.33,1.0,0.67,0.33,0.67,0.67,1.0,1.0,0.67,0.33,0.67,1.0,0.67,1,1.0,0.67,0.6,1.0,1.0,1.0
+GB-GOV-1-300141,Sustainable Energy and Economic Development Programme (SEED),1.0,1.0,0.33,1.0,0.67,0.0,0.33,1.0,1.0,1.0,0.67,0.67,0.67,0.0,0.33,0,1.0,0.33,0.6,1.0,1.0,0.0
+GB-GOV-1-300143,Kenya Hunger Safety Net Programme Phase III (HSNP Phase III),1.0,1.0,1.0,1.0,1.0,0.67,0.33,0.67,0.67,0.67,0.33,0.0,0.67,0.33,0.33,0,1.0,0.33,0.6,0.67,0.67,0.33
+GB-GOV-1-300147,Reducing Insecurity and Violent Extremism in the Northern and Coastal regions of Kenya (RE-INVENT),0.67,0.67,0.67,0.67,0.33,0.0,0.67,1.0,0.67,1.0,0.67,1.0,0.67,1.0,0.67,0,1.0,0.67,0.6,1.0,1.0,1.0
+GB-GOV-1-300150,"Umoyo Wathu (Our Health): Delivering Universal Health Coverage (UHC) in Malawi through better quality, more accountable health services",1.0,0.67,1.0,0.67,0.33,0.0,0.33,0.33,0.67,0.33,0.33,0.0,0.0,0.33,0.0,0,0.67,0.67,0.2,0.33,0.33,0.0
+GB-GOV-1-300164,Climate Adaptation Water and Energy Infrastructure Programme (CAWEP),0.67,0.67,0.67,0.33,0.67,0.67,0.67,0.67,0.67,1.0,0.67,1.0,0.67,0.33,0.67,0,1.0,0.67,0.6,0.67,0.67,0.33
+GB-GOV-1-300180,African Cities Research Programme,0.67,0.67,0.33,0.67,0.67,0.0,0.67,1.0,0.67,1.0,0.67,0.0,0.67,0.33,0.67,1,1.0,0.67,0.6,0.67,0.67,0.33
+GB-GOV-1-300203,SPRING – Strengthening Peace and Resilience in Nigeria,0.67,1.0,0.67,1.0,0.67,0.33,0.0,0.67,0.33,0.33,0.33,0.0,0.33,0.0,0.0,0,0.67,0.33,0.6,0.0,0.33,0.0
+GB-GOV-1-300211,"Tax and Development: Equity, Efficiency and Accountable Governance",0.67,0.67,0.67,0.67,0.67,0.33,0.67,0.67,0.33,1.0,0.67,0.0,0.67,0.33,0.67,1,1.0,0.67,0.6,1.0,1.0,0.67
+GB-GOV-1-300212,Tax and Economic Governance (TEG) Programme,1.0,0.67,0.33,0.67,0.33,0.0,0.67,0.67,0.67,1.0,0.33,0.33,0.33,0.33,0.67,1,1.0,0.67,0.6,1.0,0.67,0.33
+GB-GOV-1-300252,Teacher Effectiveness and Equitable Access for all Children (TEACH) Programme in Zimbabwe,1.0,0.67,0.33,0.67,0.67,0.33,0.67,1.0,0.67,1.0,0.67,0.33,0.67,1.0,0.67,1,1.0,0.67,0.6,1.0,1.0,1.0
+GB-GOV-1-300257,Support to TradeMark East Africa – Strategy 2 (STS2),1.0,0.67,0.67,0.67,0.33,0.0,0.67,0.67,0.67,1.0,0.67,1.0,0.33,0.0,0.67,0,1.0,0.67,0.6,1.0,1.0,0.0
+GB-GOV-1-300281,AXE-FILLES - Accès et Égalité pour l'Éducation des Filles,0.67,0.67,0.67,0.67,0.67,0.33,0.33,0.33,0.67,0.67,0.33,0.33,0.33,0.67,0.0,0,0.67,0.0,0.33,0.33,0.33,0.33
+GB-GOV-1-300346,Health Systems Research Initiative (2017-2023),0.67,0.67,0.67,0.67,1.0,0.33,0.33,0.0,0.0,0.67,0.0,0.0,0.0,0.0,0.67,0,1.0,0.67,0.6,0.67,0.67,0.0
+GB-GOV-1-300351,Second phase of FCDO's Support to the Private Infrastructure Development Group (PIDG),0.67,0.67,0.33,0.67,0.33,0.33,0.33,0.67,0.67,1.0,0.67,1.0,0.67,0.33,0.67,1,1.0,0.67,0.8,1.0,1.0,0.33
+GB-GOV-1-300358,Global Security Rapid Analysis (GSRA),0.67,0.67,0.33,0.67,0.67,0.33,0.67,0.33,0.0,1.0,0.33,0.0,0.0,0.0,0.67,0,1.0,0.67,0.8,1.0,1.0,0.0
+GB-GOV-1-300370,Supporting Inclusive Growth in Somalia (SIGS),1.0,1.0,0.33,1.0,0.67,0.67,0.33,0.67,0.67,0.33,0.33,0.0,0.67,0.33,0.0,1,1.0,0.33,0.2,0.33,0.33,0.33
+GB-GOV-1-300379,Strengthening Public Financial Management in Tanzania,1.0,0.67,1.0,0.67,0.33,0.0,0.33,0.67,0.67,0.67,0.33,0.0,0.33,0.0,0.0,0,0.67,0.67,0.6,0.33,0.33,0.0
+GB-GOV-1-300381,Supporting the International Monetary Fund (SIMF),0.67,0.67,0.33,0.67,0.0,0.0,0.67,1.0,0.33,1.0,0.33,0.0,0.33,0.67,1.0,1,1.0,1.0,0.6,1.0,1.0,0.67
+GB-GOV-1-300396,FCDO Investment in the UN Development System to Achieve Agenda 2030,0.67,0.67,0.67,1.0,0.67,0.33,0.33,0.67,0.0,0.67,0.33,0.0,0.0,0.33,0.67,1,0.67,0.67,0.6,0.67,1.0,0.33
+GB-GOV-1-300397,Disability Inclusive Development (DID) Programme,1.0,0.67,0.67,0.33,0.33,0.67,1.0,1.0,0.67,1.0,0.67,0.33,0.67,1.0,0.67,1,1.0,0.67,0.6,1.0,1.0,1.0
+GB-GOV-1-300415,Scaling up Family Planning in Tanzania,0.67,1.0,0.33,0.67,0.67,0.33,0.33,0.67,0.33,0.67,0.33,0.0,0.0,0.33,0.67,0,1.0,0.67,0.6,0.67,0.33,0.33
+GB-GOV-1-300416,Partnership for Learning for All in Nigeria (PLANE),0.67,0.67,0.33,0.67,0.67,0.33,0.33,0.67,0.67,0.33,0.33,0.0,0.0,0.33,0.33,0,0.67,0.0,0.6,0.33,0.33,0.0
+GB-GOV-1-300418,UK-India Green Growth Equity Fund (GGEF),0.67,0.67,1.0,0.67,0.67,0.33,0.0,0.0,0.67,0.33,0.67,0.0,0.0,0.0,0.33,1,0.0,0.67,0.6,0.33,0.67,0.0
+GB-GOV-1-300421,UK-India Tech Start-up Fund,0.67,0.67,1.0,0.67,0.67,0.33,0.33,0.67,0.67,1.0,0.67,0.0,0.67,0.67,0.67,0,1.0,0.67,0.8,1.0,1.0,0.67
+GB-GOV-1-300429,Liberia Roads Development Programme (SECRAMP via LRTF),0.33,0.67,0.67,0.0,0.0,0.33,0.0,0.0,0.33,0.33,0.0,0.0,0.0,0.0,0.0,1,0.67,0.67,0.2,0.0,0.0,0.0
+GB-GOV-1-300435,Delivering Accelerated Family Planning in Pakistan (DAFPAK),0.67,0.67,0.33,0.67,0.33,0.0,0.67,0.67,0.67,1.0,0.67,0.33,0.67,0.67,1.0,0,1.0,0.67,0.8,1.0,0.67,0.67
+GB-GOV-1-300449,GIRLS’ EDUCATION SOUTH SUDAN 2 (GESS2) PROGRAMME,0.67,1.0,0.33,0.67,0.67,0.33,0.67,0.67,0.33,0.67,0.33,0.0,0.33,0.67,0.67,0,1.0,0.33,0.6,0.67,0.67,0.67
+GB-GOV-1-300451,Jordan Investment and Economic Reform Advisory Programme (JIERAP),0.67,0.67,0.67,0.67,0.33,0.0,0.33,1.0,0.67,1.0,0.67,0.67,0.67,0.67,0.67,1,1.0,0.67,0.6,1.0,0.67,0.67
+GB-GOV-1-300452,Global Finance Programme (GFP),0.67,0.67,0.33,0.67,0.67,0.0,0.33,0.67,0.33,0.67,0.33,0.0,0.0,0.0,0.67,1,1.0,1.0,0.8,0.67,1.0,0.0
+GB-GOV-1-300466,Modern Slavery – Supporting Global Action to End Modern Slavery,1.0,1.0,0.33,0.67,0.67,0.33,0.33,0.67,0.33,0.67,0.33,0.0,0.33,0.0,0.67,1,0.33,0.33,0.6,0.33,0.33,0.0
+GB-GOV-1-300467,Better Assistance in Crises (BASIC),0.67,0.67,0.33,0.67,0.67,0.33,0.33,0.33,0.67,0.67,0.33,0.0,0.33,0.33,0.0,0,0.67,0.67,0.2,0.33,0.33,0.33
+GB-GOV-1-300468,Gender-Responsive Social Protection (GSP),1.0,0.67,0.33,0.67,0.67,0.33,0.67,0.67,0.33,0.67,0.33,0.0,0.33,0.67,0.33,0,1.0,0.67,0.6,0.67,0.67,0.67
+GB-GOV-1-300484,Building an Evidence Base on Humanitarian Protection of People Affected by Conflict (BEPAC),0.67,0.67,0.33,0.67,0.67,0.67,1.0,0.67,0.67,1.0,0.67,0.0,0.67,0.33,0.67,0,0.67,0.67,0.6,0.67,1.0,0.33
+GB-GOV-1-300489,Africa Food Trade and Resilience Programme,0.67,0.67,0.67,0.67,0.67,0.0,0.33,0.67,0.67,0.67,0.67,0.0,0.33,0.33,0.67,0,0.67,0.67,0.6,0.67,0.67,0.33
+GB-GOV-1-300495,UK Support for Health in Nigeria,0.67,1.0,1.0,1.0,0.33,0.0,0.33,0.67,0.67,1.0,0.33,0.0,0.33,0.33,0.0,1,1.0,0.67,0.6,1.0,0.67,0.33
+GB-GOV-1-300529,Support to TradeMark East Africa – Strategy 2 (STS2),1.0,0.67,1.0,0.67,0.33,0.0,0.33,0.67,0.67,0.67,0.33,0.67,0.33,0.67,0.67,0,0.67,0.67,0.6,0.67,0.67,0.67
+GB-GOV-1-300539,Pioneer Outcomes Funds,1.0,1.0,0.67,0.67,0.67,0.33,0.33,0.33,0.33,0.67,0.33,0.0,0.0,0.33,0.0,0,0.67,0.33,0.6,0.67,0.33,0.33
+GB-GOV-1-300553,Tax Systems Transformation Programme (TSTP) / Tax Transformation Programme (TTP),0.67,0.67,0.33,0.67,0.67,0.0,0.33,0.67,0.67,0.67,0.33,0.67,0.33,0.0,0.0,0,1.0,0.67,0.6,0.67,0.33,0.0
+GB-GOV-1-300555,Land Facility (LF),0.67,1.0,0.33,1.0,0.67,0.0,0.67,1.0,0.67,1.0,0.67,0.33,1.0,1.0,0.67,1,1.0,0.67,0.6,1.0,1.0,1.0
+GB-GOV-1-300566,Green Cities and Infrastructure Programme (GCIP),0.67,0.33,0.0,0.67,0.33,0.0,0.67,1.0,0.67,1.0,0.67,0.0,0.67,0.67,0.67,1,1.0,1.0,0.6,1.0,1.0,0.67
+GB-GOV-1-300575,Data and Research in Education (DARE),1.0,1.0,0.67,1.0,0.67,0.33,0.33,0.67,0.33,0.33,0.33,0.0,0.33,0.33,0.67,0,0.67,0.0,0.2,0.33,0.33,0.33
+GB-GOV-1-300586,Mozambique/Democratic Transition – Waala,0.67,0.67,0.67,0.67,0.33,0.0,0.33,0.67,0.33,0.67,0.33,0.0,0.0,0.33,0.67,0,1.0,0.67,0.6,0.67,0.67,0.33
+GB-GOV-1-300588,Ethiopia Investment Advisory Facility (EIAF) Phase II,0.67,1.0,0.33,1.0,0.67,0.0,0.0,0.0,0.0,0.33,0.0,0.0,0.0,0.0,0.0,1,0.67,0.0,0.2,0.0,0.33,0.0
+GB-GOV-1-300597,UK Action to support Developing Countries Fighting Corruption (UKACT),0.67,0.33,0.0,0.67,0.33,0.0,0.0,0.0,0.0,0.67,0.0,0.0,0.0,0.0,0.0,0,0.67,1.0,0.6,0.67,0.33,0.0
+GB-GOV-1-300601,"Invest Salone: Private Sector Development, Trade and Job Creation in Sierra Leone",0.67,0.67,0.0,0.67,0.67,0.33,0.33,0.67,0.67,0.67,0.33,0.0,0.33,0.67,0.67,0,1.0,0.67,0.6,0.67,0.67,0.67
+GB-GOV-1-300602,UK Trade Partnerships (UKTP) Programme,0.67,0.67,0.33,0.67,0.33,0.0,0.67,0.67,0.33,0.33,0.33,0.33,0.33,0.33,0.67,0,1.0,0.67,0.6,0.33,0.67,0.33
+GB-GOV-1-300614,Support to the International Security Sector Advisory Team (ISSAT),0.67,0.67,0.67,0.67,0.0,0.0,0.33,0.67,0.33,0.67,0.33,0.0,0.0,0.0,0.67,1,1.0,0.67,0.6,0.67,0.67,0.0
+GB-GOV-1-300623,Strategic Impact Evaluation and Learning (SIEL) Programme,1.0,0.67,0.33,0.67,0.67,0.67,0.33,0.67,0.0,0.67,0.33,0.0,0.0,0.0,0.67,0,1.0,0.67,0.6,0.67,0.67,0.0
+GB-GOV-1-300632,Strengthening Impact Investing Markets for Agriculture (SIIMA),1.0,0.67,0.67,0.67,0.33,0.33,0.67,1.0,0.67,1.0,0.67,0.33,1.0,1.0,0.67,1,1.0,0.67,0.8,1.0,1.0,1.0
+GB-GOV-1-300635,Private Enterprise Programme Zambia Phase II (PEPZ2),1.0,0.67,0.67,0.67,0.33,0.0,0.33,0.33,0.67,0.67,0.33,0.0,0.33,0.33,0.0,0,0.67,0.67,0.6,0.67,0.33,0.33
+GB-GOV-1-300645,The Kenya Devolution Support Programme II,0.67,0.67,0.67,0.67,0.33,0.0,0.33,0.67,0.67,1.0,0.67,0.0,0.33,0.0,0.67,0,1.0,0.67,0.6,1.0,1.0,0.0
+GB-GOV-1-300654,Innovative Methods and Metrics for Agriculture and Nutrition Actions (IMMANA) Phase 2,1.0,0.67,0.67,0.67,0.67,0.33,0.67,1.0,0.67,1.0,0.67,0.33,0.67,0.67,0.67,1,0.0,0.67,0.6,1.0,1.0,0.67
+GB-GOV-1-300655,Supporting Pastoralism & Agriculture in Recurrent & Protracted Crises (SPARC),0.67,0.67,0.33,0.67,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.67,1.0,1.0,0.67,1,1.0,0.67,0.8,1.0,1.0,1.0
+GB-GOV-1-300667,Supporting Economic Empowerment and Development in the Occupied Palestinian Territories (SEED OPTs),1.0,1.0,0.67,1.0,0.67,0.33,0.33,0.67,0.33,0.67,0.33,0.67,0.67,0.67,0.67,0,1.0,0.67,0.6,0.67,0.67,0.67
+GB-GOV-1-300675,Low Carbon Development Initiative: Phase 2 (LCDI 2),0.67,0.67,0.67,0.67,0.67,0.33,0.33,0.33,0.67,0.67,0.33,0.0,0.0,0.33,0.67,0,0.67,0.0,0.6,0.67,0.67,0.33
+GB-GOV-1-300694,Seventh General Capital Increase for the African Development Bank (AfDB GCI-7),0.67,0.67,1.0,0.0,0.0,0.33,0.0,0.0,0.0,0.67,0.0,0.0,0.0,0.0,0.33,1,1.0,0.67,0.2,0.33,0.67,0.0
+GB-GOV-1-300695,World Bank Group 2019 International Finance Corporation (IFC) Capital Increases,0.67,0.67,0.33,0.67,0.0,0.0,0.0,0.0,0.33,0.67,0.33,0.0,0.33,0.0,0.67,1,1.0,0.67,0.6,0.67,0.67,0.0
+GB-GOV-1-300702,Accelerating Ethiopia’s Economic Transformation (ACCELERATE),0.67,1.0,1.0,1.0,0.33,0.0,0.33,0.67,0.67,0.67,0.33,0.0,0.33,0.67,0.67,1,1.0,0.67,0.6,0.67,0.67,0.67
+GB-GOV-1-300708,The Evidence Fund,0.67,0.67,0.33,0.67,0.67,0.33,0.67,0.67,0.67,1.0,0.67,0.0,0.33,0.33,0.67,0,1.0,0.67,0.6,1.0,0.67,0.33
+GB-GOV-1-300718,Unlocking Digital Impact for Development,0.67,0.67,0.33,0.67,0.33,0.0,0.33,0.33,0.0,0.67,0.33,0.0,0.0,0.0,0.67,1,0.67,0.0,0.6,0.67,0.67,0.0
+GB-GOV-1-300724,Water Resources Accountability in Pakistan (WRAP),0.67,0.67,0.33,0.67,0.67,0.0,0.33,0.67,0.67,0.67,0.33,0.0,0.0,0.0,0.33,0,1.0,0.67,0.6,0.67,0.33,0.0
+GB-GOV-1-300725,T-WASHII: Transforming Access to WASH and Nutrition Services in Mozambique,1.0,0.67,0.67,0.67,0.33,0.33,0.67,1.0,1.0,1.0,0.67,1.0,0.67,0.67,0.67,1,1.0,0.67,0.6,1.0,1.0,0.67
+GB-GOV-1-300727,ATscale – the Global Partnership for Assistive Technology,0.67,0.33,1.0,0.0,0.33,0.0,0.67,0.67,0.67,1.0,0.67,0.33,0.67,0.67,0.67,0,1.0,1.0,0.6,0.67,1.0,0.67
+GB-GOV-1-300728,Tackling global plant and animal health risks which threaten global food systems and health – in partnership with the Bill & Melinda Gates Foundation (BMGF),0.67,0.33,0.33,0.67,0.67,0.0,0.67,0.67,0.33,1.0,0.33,0.0,0.0,0.0,0.67,0,1.0,1.0,0.6,0.67,1.0,0.0
+GB-GOV-1-300739,Funding for polio eradication 2020-2024,0.67,0.67,0.67,1.0,0.0,0.33,0.33,0.67,0.33,0.67,0.33,0.0,0.0,0.33,0.0,0,0.67,0.67,0.6,0.67,0.33,0.0
+GB-GOV-1-300745,Digital Identity as an Enabler for Development – Identification for Development (ID4D),0.67,0.33,0.33,0.0,0.33,0.33,0.67,0.67,0.33,1.0,0.33,0.67,0.33,0.67,0.67,1,1.0,0.67,0.8,1.0,1.0,0.67
+GB-GOV-1-300750,Progressing Action on Resilient Systems for Nutrition through Innovation and Partnership (PARSNIP) / Child Wasting and Innovation Programme (CWIP),1.0,0.67,0.33,0.67,0.0,0.33,0.67,0.67,0.67,1.0,0.67,0.67,0.67,0.33,0.67,1,1.0,0.67,0.8,1.0,1.0,0.33
+GB-GOV-1-300755,Securing global wheat crops for food and nutritional security – in partnership with the Bill & Melinda Gates Foundation (BMGF),1.0,0.67,0.33,0.33,0.0,0.33,0.33,0.67,0.67,0.67,0.33,1.0,0.33,0.0,0.67,1,1.0,0.67,0.6,0.67,0.67,0.0
+GB-GOV-1-300767,Sierra Leone Secondary Education Improvement Programme (Phase 2) – SSEIP2,1.0,0.67,1.0,0.67,0.33,0.33,0.0,0.0,0.0,0.33,0.0,0.0,0.0,0.33,0.0,1,0.67,0.0,0.2,0.0,0.33,0.0
+GB-GOV-1-300777,Mozambique Agricultural Jobs and Climate-Resilient Investment Programme (MAJI),0.67,0.67,0.33,0.33,0.33,0.0,0.0,0.67,0.33,0.67,0.0,0.0,0.0,0.0,0.0,1,0.67,0.67,0.2,0.33,0.33,0.0
+GB-GOV-1-300781,Strengthening Research Institutions in Africa (SRIA),1.0,0.67,0.33,0.67,0.67,0.0,0.67,0.33,0.33,0.67,0.33,0.0,0.33,0.0,0.67,1,1.0,0.67,0.6,0.67,0.67,0.0
+GB-GOV-1-300783,DueDiligenceHub,0.67,0.67,0.0,0.67,0.67,0.0,0.33,0.33,0.0,0.33,0.33,0.0,0.0,0.0,0.0,0,0.0,0.67,0.0,0.33,0.0,0.0
+GB-GOV-1-300787,Ghana Revenue Programme (GRP),0.67,0.67,0.33,0.67,0.67,0.0,0.33,0.67,0.67,1.0,0.33,0.67,0.33,0.67,0.67,0,1.0,0.67,0.6,1.0,0.67,0.67
+GB-GOV-1-300797,Green Urban Growth in Somalia (GUG),1.0,0.67,0.33,0.67,0.0,0.33,0.0,0.0,0.33,0.33,0.0,0.67,0.0,0.0,0.0,1,0.33,0.0,0.2,0.33,0.0,0.0
+GB-GOV-1-300798,Building Resilience and Addressing Vulnerability to Emergencies in Pakistan Programme (BRAVE),0.67,0.67,0.33,0.0,0.33,0.33,0.67,1.0,0.67,1.0,0.67,0.67,0.67,1.0,1.0,1,1.0,0.67,0.6,1.0,1.0,1.0
+GB-GOV-1-300808,Africa Regional Climate and Nature Programme (ARCAN),0.67,0.67,0.33,0.33,0.33,0.0,0.33,0.67,0.33,0.67,0.33,0.0,0.0,0.0,0.0,0,0.67,0.0,0.6,0.67,0.33,0.0
+GB-GOV-1-300812,The Gateway for Growth (the Gateway),0.67,0.33,0.0,0.67,0.33,0.0,0.67,0.67,0.33,0.67,0.33,0.0,0.0,0.67,0.67,1,1.0,1.0,0.8,0.67,0.67,0.67
+GB-GOV-1-300814,UK-India Global Innovation Partnership programme (GIP),0.67,0.67,1.0,0.67,0.67,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0.33,0.33,0.0,0.0,0.0,0.0
+GB-GOV-1-300815,AT2030 – Life Changing Assistive Technology for All (Africa Scale-Up),0.67,0.67,0.33,0.67,0.33,0.33,0.67,1.0,0.67,1.0,0.67,1.0,0.67,0.67,0.67,1,1.0,0.67,0.8,1.0,1.0,0.67
+GB-GOV-1-300816,Health Resilience Fund (HRF) 2022–2025,0.67,0.33,0.0,0.0,0.0,0.0,0.33,0.0,0.67,0.67,0.33,0.0,0.33,0.0,0.0,1,0.67,1.0,0.2,0.33,0.33,0.0
+GB-GOV-1-300819,UK voluntary contributions to the OECD Development Assistance Committee in 2023 and 2024,0.67,0.33,0.33,0.67,0.0,0.0,0.33,0.33,0.0,0.67,0.33,0.0,0.0,0.33,0.67,1,0.0,0.67,0.6,0.67,0.67,0.33
+GB-GOV-1-300825,Support to Social Protection Programme 2 (SSPP2),1.0,1.0,0.67,0.67,0.33,0.33,0.67,0.67,0.67,0.33,0.33,0.0,0.67,0.33,0.0,1,0.67,0.33,0.0,0.33,0.33,0.33
+GB-GOV-1-300844,"Enabling Predictable, Quick and Effective Responses to Humanitarian Crises",0.67,1.0,0.67,1.0,0.33,0.0,0.67,1.0,0.67,1.0,0.67,0.33,0.67,0.33,0.33,1,1.0,0.67,0.6,1.0,0.67,0.67
+GB-GOV-1-300858,Somalia Monitoring Programme 3 (SMP3),0.67,0.67,0.33,0.67,0.67,0.33,0.67,1.0,0.33,0.67,0.33,0.0,0.0,0.33,0.67,0,1.0,0.67,0.6,0.67,0.67,0.33
+GB-GOV-1-300860,Somalia Security and Justice Programme Phase II (SSJPII),1.0,1.0,0.67,1.0,0.67,0.67,0.33,0.0,0.33,0.33,0.0,0.0,0.0,0.33,0.33,0,0.67,0.0,0.2,0.33,0.0,0.0
+GB-GOV-1-300862,FCDO Somalia Network: Public Resource Management in Somalia phase two (PREMIS2),0.67,0.67,0.33,0.67,0.0,0.0,0.33,0.67,0.33,0.67,0.33,0.67,0.0,0.0,0.67,1,1.0,0.67,0.6,0.67,0.33,0.0
+GB-GOV-1-300869,"UK investment in the Global Fund to Fight AIDS, Tuberculosis and Malaria 2023-2025",0.67,0.67,1.0,0.67,0.0,0.33,0.33,0.67,0.67,1.0,0.67,0.67,0.33,0.67,0.67,1,1.0,0.67,0.6,0.67,1.0,0.33
+GB-GOV-1-300886,"Shock Response Programme (SRP), Sahel Regional Programme",0.67,0.67,0.67,0.67,0.33,0.0,0.33,0.67,0.33,0.67,0.33,0.0,0.0,0.33,0.67,1,1.0,0.67,0.6,0.67,0.33,0.33
+GB-GOV-1-300889,Global Water Leadership in a Changing Climate (GWL),0.67,0.67,0.33,0.67,0.33,0.0,0.67,0.67,0.33,1.0,0.33,0.0,0.33,0.33,0.67,1,1.0,0.67,0.6,1.0,0.67,0.33
+GB-GOV-1-300890,Advancing gender equality through support to Women's Rights Organisations and Women’s Movements,1.0,1.0,0.67,1.0,0.67,0.67,0.33,0.67,0.67,0.67,0.67,0.0,1.0,1.0,0.33,1,0.67,0.33,0.6,0.33,0.67,0.67
+GB-GOV-1-300899,Programme d’Appui pour la Consolidation de la Stabilité en RDC (PACS),0.67,0.67,0.33,0.67,0.67,0.33,0.33,0.67,0.67,0.67,0.67,0.0,0.67,0.67,0.67,1,0.67,0.67,0.6,0.67,0.67,0.67
+GB-GOV-1-300903,UK Standards and Quality Partnership (UKSQP),0.67,0.33,0.0,0.67,0.0,0.0,0.67,1.0,0.67,1.0,0.67,0.0,0.67,1.0,1.0,1,1.0,0.67,0.8,1.0,0.67,1.0
+GB-GOV-1-300909,UK Support to the Multilateral Organisation Performance Assessment Network (MOPAN),0.67,0.33,0.67,0.33,1.0,0.33,0.33,0.0,0.0,0.67,0.33,0.0,0.0,0.33,0.33,0,1.0,0.67,0.6,0.67,0.67,0.0
+GB-GOV-1-300912,India/Climate and Energy: Investment in Green Enterprises (InGreen),0.67,0.67,0.67,0.67,0.67,0.33,0.0,0.0,0.33,0.33,0.33,0.0,0.0,0.33,0.0,1,0.67,0.67,0.2,0.0,0.33,0.0
+GB-GOV-1-300916,Somalia Stability Fund III (SSF III),0.67,1.0,0.33,1.0,0.0,0.0,0.67,0.67,0.67,1.0,0.67,0.33,0.67,0.67,0.33,1,1.0,0.67,0.6,1.0,0.67,0.67
+GB-GOV-1-300922,Girls in Rwanda Learn (GIRL/Umukobwa),1.0,0.67,0.0,0.67,0.33,0.0,0.33,0.67,0.67,0.67,0.33,0.0,0.0,0.67,0.33,1,0.33,0.0,0.2,0.33,0.33,0.33
+GB-GOV-1-300936,WhatWorks Hub for Global Education (WWGE),1.0,0.67,0.33,0.67,0.0,0.33,0.67,1.0,1.0,1.0,0.67,0.33,0.67,0.67,0.67,1,0.0,0.67,0.6,0.67,1.0,0.33
+GB-GOV-1-300943,Sahel Humanitarian Assistance and Protection Programme (SHAPP),0.67,1.0,0.67,1.0,0.67,0.67,0.33,0.67,0.67,0.67,0.67,0.0,0.67,0.33,0.67,0,1.0,0.67,0.6,0.67,0.67,0.33
+GB-GOV-1-300944,Asian Development Fund 13 Replenishment,0.67,0.67,0.67,0.67,0.0,0.0,0.33,0.0,0.33,0.67,0.33,0.0,0.33,0.67,0.67,1,1.0,0.67,0.6,0.67,0.67,0.67
+GB-GOV-1-300945,Caribbean Development Bank (CDB) Special Development Fund 10 (SDF10),0.67,0.67,0.67,0.67,0.33,0.0,0.33,0.67,0.67,0.67,0.33,0.0,0.33,0.33,0.67,0,0.67,0.67,0.2,0.33,0.33,0.33
+GB-GOV-1-300948,Fiscal Transparency and Accountability Initiative (FTAI),1.0,1.0,0.33,1.0,0.67,0.0,0.67,1.0,0.67,1.0,0.67,0.67,0.67,0.33,0.67,0,1.0,0.33,0.6,1.0,1.0,0.33
+GB-GOV-1-300949,"Tax Analysis in Developing Countries, Phase III (TaxDev III)",0.67,0.67,0.33,0.67,0.33,0.0,0.67,1.0,0.67,1.0,0.67,1.0,0.33,0.0,0.33,1,1.0,0.67,0.6,1.0,1.0,0.0
+GB-GOV-1-300955,Nepal Integrated Programme for Strengthening Security and Justice Phase Two (IPSSJ2),0.67,0.67,0.33,0.67,0.33,0.33,0.33,0.67,0.33,0.33,0.33,0.0,0.33,0.67,0.33,0,0.67,0.67,0.6,0.67,0.33,0.67
+GB-GOV-1-300958,20th Replenishment of the International Development Association (IDA20),0.67,1.0,0.33,0.67,0.0,0.33,0.33,0.67,0.33,0.67,0.33,0.0,0.33,0.0,0.67,1,1.0,0.67,0.6,0.67,0.67,0.33
+GB-GOV-1-300959,UK-South Africa Partnership to Harness an inclusive Demographic Dividend in Africa,0.67,0.67,0.67,0.67,0.33,0.67,0.33,0.67,0.33,0.67,0.33,0.0,0.33,0.67,0.67,0,1.0,0.67,0.6,0.67,0.33,0.67
+GB-GOV-1-300961,Effective Governance for Economic Development (EGED) in Central Asia,0.67,0.67,0.33,1.0,0.67,0.0,0.33,0.67,0.67,0.67,0.33,0.0,0.33,0.33,0.67,0,1.0,0.67,0.6,0.67,0.33,0.33
+GB-GOV-1-300973,UK-Jamaica Violence Prevention Partnership (VPP),1.0,0.67,0.67,0.67,0.33,0.0,0.33,0.67,1.0,0.67,0.67,1.0,0.67,0.33,0.67,1,0.0,0.67,0.6,0.67,0.67,0.33
+GB-GOV-1-300985,The South Africa-UK International Economic Partnership,0.67,0.67,1.0,0.67,0.67,0.0,0.67,0.67,0.67,0.67,0.67,0.67,0.33,0.0,0.67,1,1.0,0.67,0.2,0.67,0.67,0.0
+GB-GOV-1-300991,Bangladesh Climate and Environment Programme,1.0,0.67,1.0,0.67,0.33,0.0,0.67,0.67,0.67,0.67,0.33,0.0,0.33,0.33,0.33,0,1.0,0.67,0.2,0.67,0.67,0.33
+GB-GOV-1-301000,Climate Action for a Resilient Asia (CARA),0.67,0.67,0.67,1.0,0.33,0.0,0.33,0.67,0.67,0.33,0.33,0.0,0.67,0.33,0.33,1,1.0,0.67,0.6,0.33,0.67,0.33
+GB-GOV-1-301010,Nepal - Local Infrastructure Services Programme (LISP),1.0,0.67,1.0,0.67,0.33,0.33,0.67,0.67,0.67,0.67,0.67,1.0,0.67,0.33,0.33,1,1.0,0.67,0.6,0.67,0.67,0.33
+GB-GOV-1-301011,Wajibika,0.67,0.67,0.33,0.67,0.67,0.0,0.0,0.0,0.0,0.33,0.33,0.0,0.0,0.33,0.67,1,0.0,0.67,0.6,0.0,0.67,0.0
+GB-GOV-1-301013,Resilient Water Sanitation and Hygiene (WASH) and Emergency Preparedness Programme (RWEPP),1.0,0.67,0.67,0.67,0.33,0.33,0.67,1.0,1.0,0.67,0.67,0.67,0.67,0.33,0.67,1,1.0,0.67,0.8,0.67,0.67,0.67
+GB-GOV-1-301015,Climate Smart Jobs (CSJ),0.67,0.67,0.33,0.67,0.33,0.0,0.33,0.67,0.67,0.67,0.33,0.67,0.33,0.67,0.67,0,1.0,0.67,0.6,0.67,0.67,0.67
+GB-GOV-1-301050,Evaluation Quality Assurance and Learning Service 2 (EQUALS2),0.67,0.67,0.0,0.67,1.0,0.67,0.33,0.67,0.0,0.67,0.33,0.67,0.0,0.0,1.0,0,0.67,0.67,0.6,0.67,1.0,0.0
+GB-GOV-1-301051,Conflict Prevention and Peacebuilding Programme (C3P),0.67,0.67,0.33,0.67,0.33,0.0,0.67,1.0,0.67,1.0,0.67,0.0,0.67,1.0,0.67,0,1.0,1.0,0.6,1.0,0.67,1.0
+GB-GOV-1-301052,Education Quality Improvement Programme – Bangladesh (EQUIP-B),0.67,0.67,0.33,0.67,0.67,0.0,0.33,0.67,0.33,0.67,0.33,0.0,0.0,0.33,0.67,1,1.0,1.0,0.6,0.67,0.67,0.33
+GB-GOV-1-301054,Emergency Deployment Teams Programme (EDT2),0.67,0.67,0.0,0.67,0.67,0.0,0.33,0.67,0.33,0.67,0.33,0.67,0.33,0.0,0.67,1,1.0,0.67,0.6,0.67,0.67,0.0
+GB-GOV-1-301072,Humanitarian Enablers Programme (HEP),0.67,0.67,0.67,1.0,0.33,0.33,0.33,0.67,0.33,0.67,0.33,0.67,0.0,0.33,0.67,0,1.0,0.67,0.6,0.67,0.67,0.33
+GB-GOV-1-301074,"Start Fund III, A global response mechanism for providing life-saving humanitarian assistance through NGOs",0.67,1.0,1.0,1.0,0.67,0.33,0.67,1.0,1.0,0.67,1.0,0.67,1.0,0.67,0.67,1,1.0,0.67,0.6,0.67,1.0,1.0
+GB-GOV-1-301076,"Global Health - Nutrition Action for Systemic Change – improving outcomes for women, girls and children",0.67,0.67,0.33,0.67,0.67,0.0,0.67,0.67,0.33,1.0,0.33,0.0,0.33,0.33,1.0,1,1.0,1.0,0.8,1.0,0.67,0.33
+GB-GOV-1-301095,Global Mine Action Programme 3 (GMAP3),0.67,0.67,0.33,0.67,0.67,0.33,0.33,0.67,0.67,0.67,0.33,0.0,0.33,0.0,0.0,0,1.0,0.67,0.8,0.67,0.33,0.0
+GB-GOV-1-301102,Access to Medicine Index and Antimicrobial Resistance Benchmark (2021-25),0.67,0.33,0.0,0.67,0.0,0.33,0.67,0.0,0.33,1.0,0.33,0.33,0.0,0.33,0.67,0,0.67,0.67,0.6,1.0,1.0,0.33
+GB-GOV-1-301104,Transformative Economic Policy Programme (TEPP),0.67,0.67,0.67,1.0,0.67,0.0,0.33,0.67,0.67,1.0,0.67,0.33,0.67,0.0,0.67,1,1.0,0.67,0.6,1.0,0.67,0.0
+GB-GOV-1-301106,"Investing in Nature, Forests and Land Use (Inafolu)",0.67,0.67,1.0,0.33,0.0,0.0,0.33,0.67,0.67,0.67,0.33,0.0,0.67,0.0,1.0,1,1.0,0.0,0.6,0.33,0.67,0.0
+GB-GOV-1-301108,Young Lives (Rounds 6 and 7),0.67,0.67,0.33,0.33,0.0,0.33,0.67,0.33,0.67,0.67,0.33,0.0,0.0,0.33,0.67,0,1.0,0.67,0.6,1.0,0.67,0.33
+GB-GOV-1-301109,Strengthening Societal and Economic Resilience in Jordan (SSERJ),1.0,1.0,1.0,1.0,0.67,0.33,0.33,0.67,0.67,0.67,0.33,0.0,0.33,0.67,0.67,0,1.0,0.67,0.6,0.67,0.67,0.67
+GB-GOV-1-301112,Pitcairn Financial Aid 2023-2025,0.33,0.33,0.0,0.33,0.67,0.33,0.0,0.0,0.67,0.33,0.33,0.33,0.0,0.0,1.0,0,1.0,0.67,0.6,0.67,0.33,0.0
+GB-GOV-1-301120,"Bangladesh Collaborative, Accountable and Peaceful Politics (B-CAPP) Programme",0.67,0.67,0.67,0.33,0.67,0.33,0.67,0.67,0.67,1.0,0.67,0.0,0.67,0.33,0.67,1,1.0,0.67,0.6,1.0,0.67,0.67
+GB-GOV-1-301137,Affordability of Food and Finance in Yemen (AFFY),0.67,1.0,0.33,1.0,0.33,0.0,0.33,0.67,0.67,0.67,0.67,0.0,0.33,0.0,0.67,1,1.0,0.67,0.6,0.67,0.67,0.0
+GB-GOV-1-301140,Yemen Women and Children Programme,0.67,0.67,0.33,0.67,0.33,0.33,0.33,0.67,0.33,0.67,0.33,0.0,0.33,0.67,0.67,1,1.0,1.0,0.6,0.67,0.67,0.67
+GB-GOV-1-301141,Saving Lives in Sierra Leone Phase 3,0.67,0.67,0.33,0.33,0.0,0.0,0.33,0.67,0.67,0.67,0.33,0.0,0.33,0.0,0.67,1,0.67,1.0,0.2,0.33,0.33,0.0
+GB-GOV-1-301142,Pioneering a Holistic approach to Energy and Nature-based Options in MENA for Long-term stability – PHENOMENAL,0.67,0.33,0.33,0.33,0.33,0.0,0.33,0.67,0.67,1.0,0.67,0.67,0.67,1.0,0.67,1,1.0,1.0,0.2,1.0,1.0,1.0
+GB-GOV-1-301160,Small Island Developing States Capacity and Resilience (SIDAR),1.0,0.67,0.33,0.67,0.67,0.0,0.67,1.0,1.0,1.0,0.67,0.33,0.67,0.33,0.67,1,1.0,0.67,0.6,1.0,1.0,0.67
+GB-GOV-1-301191,Ethiopia–Human Rights and Peacebuilding Programme (HARP),1.0,1.0,1.0,1.0,1.0,1.0,0.33,0.67,0.67,0.67,0.33,0.0,0.67,0.67,0.67,0,1.0,0.0,0.2,0.67,0.33,0.67
+GB-GOV-1-301223,Building Peace and Stability in Iraq (BPSI),0.67,0.67,0.67,0.33,0.67,0.33,0.33,0.0,0.33,0.67,0.33,1.0,0.33,0.0,0.0,1,0.67,0.67,0.6,0.67,0.33,0.0
+GB-GOV-1-301237,Jordan Protection Programme (JPP): Support for Vulnerable Refugees and Jordanians,0.67,0.67,0.33,0.67,0.67,0.67,0.33,0.67,0.67,0.67,0.33,0.0,0.33,0.33,1.0,0,0.67,0.67,0.2,0.33,0.33,0.33
+GB-GOV-1-301240,Empowerment and Development for Girls Education (EDGE),0.67,0.67,0.33,0.67,0.33,0.33,0.67,1.0,0.67,0.67,0.33,1.0,0.67,0.33,1.0,0,0.67,0.67,0.4,0.67,0.67,0.33
+GB-GOV-1-301247,FCDO Kenya: Kenya Anti-Corruption Programme,0.67,0.33,0.33,0.67,0.0,0.0,0.67,1.0,0.67,1.0,0.67,0.33,0.67,0.33,1.0,1,1.0,1.0,0.6,1.0,1.0,0.33
+GB-GOV-1-301252,Justice and Stability in the Sahel (JASS) programme,0.67,1.0,0.33,0.67,0.33,0.33,0.67,1.0,1.0,1.0,0.67,0.67,1.0,1.0,0.67,1,1.0,0.67,0.6,1.0,1.0,1.0
+GB-GOV-1-301255,Demographic Transition in Iraq Programme (DTIP),0.67,0.67,0.67,0.67,0.33,0.33,0.33,0.67,0.33,0.67,0.33,0.0,0.0,0.33,0.67,0,1.0,0.67,0.6,0.33,0.33,0.33
+GB-GOV-1-301258,Tristan da Cunha – Provision of Technical Assistance and Essential Infrastructure 2023-5,0.67,0.67,0.33,0.67,0.33,0.0,0.33,1.0,0.67,0.67,0.67,0.67,0.67,0.0,1.0,1,0.67,0.67,0.6,0.67,0.67,0.0
+GB-GOV-1-301259,Data for Foundational Learning (Data4FL),0.67,0.33,0.33,0.0,0.33,0.0,0.67,1.0,0.67,1.0,0.67,0.67,0.67,0.33,1.0,1,1.0,0.67,0.8,1.0,1.0,0.67
+GB-GOV-1-301263,[Title Not Available - No Processable Documents],0.0,0.0,0.0,0.0,0.0,0.0,0.67,0.67,0.33,0.67,0.67,0.0,0.33,0.67,1.0,1,1.0,1.0,1.0,1.0,1.0,0.67
+GB-GOV-1-301267,Fighting Corruption Globally (FCG),0.67,0.67,0.0,0.67,0.33,0.0,0.33,0.67,0.33,0.67,0.33,0.0,0.0,0.0,0.67,1,0.67,0.67,0.6,0.67,0.67,0.0
+GB-GOV-1-301268,Global Environment Facility – Eighth Replenishment (GEF8),0.67,0.33,1.0,0.67,0.67,0.33,0.33,0.67,0.33,0.67,0.67,0.0,0.33,0.33,0.67,1,0.67,0.67,0.8,0.67,1.0,0.33
+GB-GOV-1-301270,Zambia Democratic Governance Programme (ZDGP),0.67,1.0,0.33,1.0,0.67,0.67,1.0,1.0,1.0,1.0,0.67,0.33,1.0,0.67,0.67,1,1.0,0.67,0.6,1.0,1.0,0.67
+GB-GOV-1-301282,Tackling Serious and Organised Crime in Ghana (SOCG),0.67,0.67,0.67,0.67,0.67,0.0,0.33,0.33,0.33,0.33,0.33,0.0,0.33,0.0,0.0,0,0.33,0.0,0.0,0.0,0.0,0.0
+GB-GOV-1-301303,Technical Assistance Facility for Disaster Resilient Infrastructure in Small Island Developing States (SIDS),0.67,0.67,1.0,1.0,0.33,0.0,0.33,0.33,0.33,0.33,0.33,0.0,0.0,0.0,0.0,1,0.33,0.0,0.2,0.33,0.33,0.0
+GB-GOV-1-301304,National Governance Programme (NGP),0.67,0.67,0.33,0.67,0.33,0.0,0.33,0.33,0.67,0.67,0.33,0.0,0.0,0.0,0.67,1,0.67,0.67,0.4,0.33,0.33,0.0
+GB-GOV-1-301311,Investing in the humanitarian capability of the International Committee of the Red Cross (ICRC),0.67,0.67,0.0,0.67,0.0,0.67,0.33,1.0,1.0,0.67,0.67,0.0,0.67,0.33,0.67,0,1.0,0.67,0.6,0.67,1.0,0.33
+GB-GOV-1-301321,Investments in Forests and Sustainable Land Use Phase 2 (IFSLU2),0.67,0.67,0.0,0.67,0.33,0.0,0.33,0.67,0.33,0.67,0.33,0.0,0.0,0.0,0.33,1,0.33,0.0,0.6,0.67,0.67,0.0
+GB-GOV-1-301326,Peace and Stability in Mozambique (PS) Programme,0.67,0.67,0.33,0.67,0.67,0.33,0.33,0.0,0.33,0.67,0.33,0.0,0.0,0.33,0.67,0,1.0,0.0,0.2,0.67,0.33,0.0
+GB-GOV-1-301328,Animal and Plant Health Innovation and Evidence Delivery Platform (APHID): Supporting global health security and increasing food system resilience by reducing animal and plant pest and disease threats,0.67,0.33,0.33,0.33,0.0,0.0,0.67,0.67,0.33,0.67,0.33,0.33,0.33,0.0,0.67,1,0.0,1.0,0.6,0.67,0.67,0.0
+GB-GOV-1-301362,Humanitarian Assistance and Resilience Programme (HARP),0.67,1.0,0.33,1.0,0.67,0.33,0.67,0.67,0.33,0.67,0.67,0.0,0.67,0.67,0.67,0,1.0,0.67,0.6,0.67,0.67,0.67
+GB-GOV-1-301363,Mozambique Humanitarian Response Programme (MHRP),0.67,1.0,0.33,1.0,0.67,0.67,0.33,0.67,0.33,0.67,0.33,0.0,0.0,0.67,0.67,0,1.0,0.67,0.6,0.67,0.33,0.67
+GB-GOV-1-301369,Indo-Pacific Humanitarian Mechanism (IPHM),0.67,0.67,0.33,0.67,0.67,0.0,0.33,0.0,0.33,0.67,0.33,0.33,0.0,0.67,1.0,0,1.0,1.0,0.6,0.67,0.67,0.67
+GB-GOV-1-301372,Essential Services for Maternal and Child Health programme in DRC [Services Essentiels de Santé Maternelle et Infantile en RDC (SEMI)],0.67,0.67,0.67,0.33,0.0,0.0,0.33,0.67,0.67,0.67,0.33,0.0,0.33,0.67,1.0,1,1.0,1.0,0.6,0.67,0.33,0.67
+GB-GOV-1-301373,Democracy Deepening in Mozambique programme (DD),1.0,0.67,0.33,0.67,0.67,0.33,0.33,0.67,0.67,0.67,0.33,0.0,0.67,0.67,0.67,0,1.0,0.33,0.6,0.67,0.67,0.67
+GB-GOV-1-301376,ODI Fellowship Scheme,0.67,0.33,0.33,0.33,0.67,0.67,0.33,1.0,0.67,0.67,0.33,0.0,0.33,0.0,0.67,1,1.0,1.0,0.6,0.67,0.67,0.0
+GB-GOV-1-301381,Africa Humanitarian Response Fund II (AHRFII),0.67,1.0,0.0,1.0,0.67,0.33,0.33,0.67,0.33,0.33,0.33,0.0,0.0,0.33,0.67,1,0.67,0.0,0.6,0.33,0.33,0.33
+GB-GOV-1-301406,"Climate, Environment and Nature (CLEAN) helpdesk",0.67,0.67,0.33,0.67,0.33,0.0,0.33,0.67,0.33,0.67,0.33,0.0,0.0,0.67,1.0,1,0.67,0.67,0.6,0.67,0.33,0.67
+GB-GOV-1-301408,South Sudan Peacebuilding Programme (SSPP),0.67,0.67,0.33,0.67,0.33,0.0,0.33,0.67,0.67,0.67,0.33,0.0,0.33,0.33,0.0,1,0.67,0.0,0.6,0.67,0.33,0.33
+GB-GOV-1-301437,12 for 12 Initiative (Girls’ Education Private Sector Partnership),0.67,0.33,0.33,0.67,0.67,0.0,0.67,1.0,0.67,0.67,0.67,0.33,0.67,1.0,0.67,1,1.0,0.67,0.6,0.67,0.67,1.0
+GB-GOV-1-301439,Sustainable Blue Economies Programme (SBE),0.67,0.67,0.33,0.67,0.33,0.0,0.33,0.67,0.33,0.67,0.33,0.0,0.33,0.33,0.67,0,0.67,0.67,0.6,0.67,0.67,0.33
+GB-GOV-1-301440,Transforming Access to Climate Finance Programme,0.67,0.67,0.33,0.33,0.33,0.0,0.33,0.67,0.33,0.33,0.33,0.0,0.0,0.0,0.67,0,0.67,0.67,0.6,0.33,0.33,0.0
+GB-GOV-1-301445,Sixteenth Replenishment of the African Development Fund and Climate Action Window,0.67,0.67,0.33,0.67,0.0,0.0,0.33,0.67,0.33,0.67,0.33,0.0,0.0,0.33,0.67,1,0.33,1.0,0.6,0.67,0.67,0.33
+GB-GOV-1-301448,Humanitarian Action and Recovery after Crisis programme (DRC),0.67,1.0,0.33,1.0,0.0,0.0,0.67,0.67,0.67,1.0,0.67,0.0,0.67,1.0,1.0,1,1.0,1.0,0.6,1.0,0.67,1.0
+GB-GOV-1-301450,Sudan Humanitarian Preparedness and Response (SHPR),0.67,1.0,0.33,1.0,0.33,0.33,0.33,0.67,0.67,0.67,0.67,0.0,0.67,0.33,0.67,1,1.0,0.67,0.4,0.67,0.33,0.33
+GB-GOV-1-301457,Western Balkans – Freedom and Resilience Programme,0.67,0.67,0.33,0.67,0.67,0.33,0.33,0.67,0.67,0.33,0.33,0.0,0.33,0.0,1.0,1,0.67,0.67,0.6,0.33,0.33,0.0
+GB-GOV-1-301472,Sudan Independent Monitoring & Analysis Programme (SIMAP),0.67,0.67,0.33,0.67,0.67,0.33,0.33,0.67,0.0,0.33,0.0,0.0,0.0,0.0,0.67,1,1.0,0.67,0.6,0.33,0.33,0.0
+GB-GOV-1-301476,Maternal and Newborn Health and Rights Programme,0.67,0.67,1.0,0.67,0.67,0.33,0.33,0.67,0.67,0.33,0.67,0.67,0.67,1.0,0.33,0,1.0,0.67,0.6,0.67,0.67,1.0
+GB-GOV-1-301477,Portfolio Risk Assurance Programme III (PRAP III),0.67,0.67,0.33,0.67,0.67,0.33,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0.67,0.0,0.2,0.0,0.33,0.0
+GB-GOV-1-301478,Multilateral Core/Sexual and Reproductive Health and Rights – ‘United Nations Population Fund (UNFPA) Core Funding 2022–2025’,1.0,1.0,1.0,1.0,0.0,0.67,0.33,0.67,0.67,1.0,0.33,0.0,0.0,0.67,0.67,0,1.0,0.67,0.6,0.67,0.67,0.67
+GB-GOV-1-301485,UK–South Africa Skills for Work Programme,0.67,0.67,0.33,0.67,0.67,0.0,0.0,0.0,0.0,0.33,0.0,0.0,0.0,0.0,0.67,0,0.67,0.67,0.6,0.33,0.33,0.0
+GB-GOV-1-301487,UK–South Africa Urban Resilience Programme,0.67,0.67,0.67,0.67,0.33,0.0,0.33,0.67,0.67,0.67,0.67,0.0,0.67,0.33,1.0,1,1.0,1.0,0.6,0.67,0.67,0.33
+GB-GOV-1-301495,UKPACT (Partnering for Accelerated Climate Transitions),0.67,0.67,0.33,0.67,0.67,0.0,0.33,0.67,0.67,0.67,0.33,0.0,0.33,0.33,0.67,1,1.0,0.33,0.4,0.67,0.67,0.33
+GB-GOV-1-301499,Urban Climate Action Programme,1.0,0.67,0.67,0.67,0.33,0.0,0.67,1.0,0.67,1.0,0.67,0.33,0.67,0.33,0.67,1,1.0,0.67,0.8,1.0,1.0,0.67
+GB-GOV-1-301502,Territorios Forestales Sostenibles (TEFOS),1.0,0.67,0.67,0.67,0.67,0.33,0.33,0.67,0.67,0.67,0.33,0.0,0.33,0.33,0.67,0,1.0,0.67,0.6,0.67,0.67,0.33
+GB-GOV-1-301503,Institutional Strengthening of Policy Implementation to Reduce Educational Disparities in the Early-Years’ Education (INSPIRED programme),0.67,0.67,0.33,0.67,0.67,0.33,0.33,0.67,0.67,0.67,0.33,0.67,0.33,0.33,0.67,1,1.0,0.67,0.6,0.67,0.33,0.33
+GB-GOV-1-301509,Reforming the United Nations System – Humanitarian (RUSH),0.67,0.67,0.33,0.67,0.0,0.33,0.33,0.67,0.67,1.0,0.67,0.67,0.67,0.67,1.0,1,1.0,0.67,0.6,1.0,1.0,0.67
+GB-GOV-1-301512,UK Support to Financing of Recovery from Economic Emergency in Ukraine (FREE Ukraine),0.67,0.67,0.33,0.67,0.0,0.0,0.0,0.0,0.0,0.67,0.0,0.0,0.0,0.0,1.0,0,1.0,0.67,0.8,1.0,1.0,0.0
+GB-GOV-1-301514,Investing in the humanitarian capability of the International Federation of Red Cross and Red Crescent Societies (IFRC) and British Red Cross (BRC) enabling quick and effective responses to humanitarian crises,0.67,1.0,0.33,1.0,0.0,0.67,0.67,1.0,0.67,0.67,0.33,0.67,0.33,0.33,0.67,1,1.0,0.67,0.6,0.67,0.67,0.33
+GB-GOV-1-301515,"FCDO Nigeria Portfolio Monitoring, Evaluation and Learning Programme (PMEL)",0.67,0.67,0.33,0.67,0.67,0.33,0.67,0.33,0.33,0.67,0.33,0.0,0.33,0.0,0.67,0,1.0,0.67,0.8,0.67,0.33,0.0
+GB-GOV-1-301516,UK Sustainable Infrastructure Programme (UKSIP),0.67,0.67,0.67,0.67,0.33,0.0,0.33,0.67,0.67,1.0,0.33,0.67,0.0,0.67,0.67,1,1.0,0.67,0.8,1.0,1.0,0.67
+GB-GOV-1-301526,Powering Sierra Leone’s Hospitals,1.0,1.0,0.67,0.67,0.33,0.33,0.33,0.67,0.67,1.0,0.67,1.0,0.33,0.0,0.67,1,1.0,0.67,0.8,1.0,1.0,0.33
+GB-GOV-1-301528,Priorities for Universal Health Coverage: Realising Cost-Effective Health Services for Everyone (PURCHASE),0.67,0.67,1.0,1.0,0.33,0.0,0.33,0.0,0.0,0.33,0.0,0.0,0.0,0.0,0.67,1,0.67,0.0,0.2,0.33,0.33,0.0
+GB-GOV-1-301529,WASH Systems for Health,1.0,0.67,0.67,0.33,0.67,0.33,0.67,0.67,0.67,0.67,0.67,0.33,0.67,0.33,0.67,0,1.0,0.33,0.4,0.67,0.67,0.33
+GB-GOV-1-301530,HealthSystemsConnect: Connecting UK experts with partner countries to enhance health diplomacy and strengthen health systems for all,0.67,0.67,0.33,0.67,0.33,0.0,0.33,0.67,0.33,0.33,0.33,0.0,0.0,0.0,1.0,0,0.0,0.67,0.2,0.33,0.33,0.0
+GB-GOV-1-301535,Iraq Catalytic Economic Diversification (ICED) Programme,0.67,0.67,0.33,0.67,0.67,0.0,0.67,0.67,0.33,0.67,0.33,0.0,0.0,0.0,0.0,0,0.67,0.67,0.2,0.33,0.33,0.0
+GB-GOV-1-301539,Education in Emergencies and Protracted Crises Phase III (EiEPC III),0.67,0.67,0.33,0.33,0.67,0.33,0.67,1.0,0.67,1.0,0.67,0.33,1.0,1.0,0.67,1,1.0,0.67,0.6,1.0,1.0,1.0
+GB-GOV-1-301542,Global Health Security Research & Development Programme,0.67,0.67,0.67,0.67,0.67,0.33,0.67,1.0,0.67,1.0,0.67,0.67,0.67,0.67,0.67,1,1.0,1.0,0.6,1.0,1.0,0.67
+GB-GOV-1-301546,Programme d’Appui à la Redevabilité et l’Inclusion (PARI) (Programme to support accountability and inclusion),0.67,0.67,0.33,0.67,0.33,0.0,0.67,1.0,0.67,0.67,0.67,0.0,0.67,1.0,1.0,1,1.0,1.0,0.6,0.67,0.67,1.0
+GB-GOV-1-301547,United Kingdom National Commission for UNESCO (UKNC),0.67,0.67,0.33,0.67,0.0,0.0,0.33,0.67,0.0,1.0,0.33,0.0,0.0,0.0,1.0,1,0.33,0.67,0.8,1.0,0.33,0.0
+GB-GOV-1-301549,Pioneering Climate Investments in India (PCII),0.67,0.67,0.67,0.67,0.67,0.33,0.0,0.0,0.0,0.33,0.0,0.0,0.0,0.0,0.0,0,0.67,0.67,0.2,0.0,0.33,0.0
+GB-GOV-1-301552,Supporting Health Emergency Response in DRC (SHER),0.33,0.67,0.33,0.67,0.0,0.0,0.33,0.67,0.67,1.0,0.33,0.67,0.0,0.33,1.0,1,1.0,1.0,0.6,0.67,0.33,0.33
+GB-GOV-1-301554,"Delivering the Agriculture Breakthrough: accelerating sustainable, climate resilient agri-tech and innovation in food systems for people, nature and climate",0.67,0.67,0.33,0.67,0.33,0.0,0.33,0.67,0.67,0.67,0.67,0.0,0.33,0.0,1.0,1,1.0,0.67,0.6,0.67,0.67,0.0
+GB-GOV-1-301559,Core Funding to the United Nations Special Purpose Trust Fund (UNSPTF) for the Resident Coordinator (RC) System,0.67,0.67,0.33,0.67,0.0,0.0,0.33,0.67,0.33,0.67,0.33,0.67,0.0,0.33,0.0,1,0.67,1.0,0.2,0.33,0.33,0.0
+GB-GOV-1-301568,South Sudan Humanitarian Assistance and Resilience Programme (SSHARP),0.67,1.0,0.33,1.0,0.67,0.33,0.33,0.0,0.67,0.67,0.33,0.0,0.33,0.33,0.67,1,1.0,0.67,0.6,0.67,0.33,0.33
+GB-GOV-1-301574,Core contribution to the United Nations Entity for Gender Equality and the Empowerment of Women (UN Women),0.67,0.67,0.67,1.0,0.0,0.33,0.33,0.33,0.33,0.67,0.0,0.0,0.0,0.67,0.67,1,0.67,1.0,0.6,0.67,0.33,0.67
+GB-GOV-1-301575,Security and Stabilisation Programme,0.67,0.67,0.33,0.67,0.67,0.33,0.33,0.33,0.0,0.67,0.33,0.0,0.0,0.0,0.67,0,0.67,0.0,0.2,0.33,0.33,0.0
+GB-GOV-1-301576,Preventing Sexual Violence in Conflict Initiative (PSVI) Programme,0.67,0.33,0.0,0.67,0.33,0.67,1.0,1.0,0.67,1.0,0.67,0.33,0.67,1.0,1.0,1,1.0,0.67,0.6,1.0,1.0,1.0
+GB-GOV-1-301579,Catalysing Private Finance for Adaptation and Resilience,0.67,0.67,0.67,0.67,0.33,0.0,0.33,0.67,0.33,0.67,0.33,0.0,0.33,0.0,1.0,1,0.67,0.67,0.2,0.67,0.67,0.0
+GB-GOV-1-301582,"Women and Girls Health: The Ending Preventable Deaths of Mothers, Babies and Children support programme",0.67,0.67,0.33,0.67,0.67,0.33,0.67,0.67,0.67,1.0,0.67,0.33,0.67,0.33,0.33,0,1.0,0.67,0.2,0.67,0.67,0.33
+GB-GOV-1-301594,Improving Essential Equipment and Infrastructure for aided Overseas Territories,0.67,0.67,0.33,0.67,0.33,0.0,0.0,0.33,0.67,0.33,0.67,0.67,0.0,0.0,1.0,1,1.0,0.67,0.6,0.67,0.33,0.0
+GB-GOV-1-301602,"Amplifying Women’s Rights Movements, Organisations and Girls’ Activism to End SGBV and Support Gender Equality in Sierra Leone (MOVE)",0.67,0.67,0.33,1.0,0.67,0.67,0.67,1.0,1.0,0.67,1.0,0.0,1.0,1.0,0.67,1,0.67,0.67,0.6,0.67,1.0,1.0
+GB-GOV-1-400006,Knowledge for Development and Diplomacy (K4DD),0.67,0.67,0.33,0.67,1.0,0.0,0.33,0.0,0.0,0.33,0.0,0.0,0.0,0.0,0.0,0,0.67,0.67,0.6,0.33,0.33,0.0
+GB-GOV-1-400012,UK Contribution to the Reserve Account of the IMF’s Resilience and Sustainability Trust (RST),0.33,0.67,0.33,0.0,0.0,0.0,0.0,0.33,0.0,0.67,0.33,0.0,0.0,0.0,0.67,1,1.0,1.0,0.6,0.67,0.67,0.0
+GB-GOV-1-400022,UK Humanitarian Support in the Occupied Palestinian Territories (FY2022-2026),0.33,0.67,0.33,1.0,0.67,0.33,0.33,0.0,0.67,0.67,0.33,0.0,0.33,0.0,1.0,0,1.0,1.0,0.2,0.67,0.33,0.0
+GB-GOV-1-400024,Ukraine Resilience and Energy Security (URES),0.67,1.0,0.67,1.0,0.67,0.33,0.67,0.67,1.0,1.0,0.67,1.0,0.67,0.33,0.67,1,1.0,0.67,0.8,1.0,0.67,0.33
+GB-GOV-1-400025,Data for Development - Unleashing the Data Dividend,0.67,0.67,0.33,0.67,0.33,0.0,0.33,0.67,0.33,0.67,0.33,0.0,0.0,0.33,0.67,1,0.67,0.67,0.6,0.67,0.67,0.33
+GB-GOV-1-400029,ASEAN-UK Women Peace and Security (WPS) Programme,0.67,0.67,0.33,0.67,0.33,0.0,0.67,1.0,0.67,1.0,0.67,0.33,0.67,1.0,1.0,1,0.33,1.0,0.8,1.0,1.0,1.0
+GB-GOV-1-400046,ASEAN Economic Integration Programme (EIP),0.67,0.67,0.33,0.67,0.67,0.0,0.33,0.67,0.33,0.67,0.33,0.0,0.0,0.0,0.67,1,0.33,1.0,0.6,0.33,0.67,0.0
+GB-GOV-1-400047,India-UK Economic Cooperation Programme (ODA),0.67,0.67,0.33,0.67,0.67,0.0,0.33,0.67,0.67,0.67,0.33,0.33,0.0,0.0,1.0,0,1.0,0.67,0.2,0.33,0.67,0.0
+GB-GOV-1-400053,UK-Central Asia Green Inclusive Growth Fund (GIG),0.67,0.67,0.0,0.67,0.0,0.0,0.0,0.33,0.67,0.67,0.33,0.0,0.33,0.33,0.0,1,0.67,0.67,0.6,0.33,0.33,0.33
+GB-GOV-1-400066,Chevening Scholarships Programme,0.67,0.67,0.33,0.33,0.67,0.33,0.67,0.33,0.33,0.67,0.33,0.67,0.0,0.0,0.67,1,0.0,0.67,0.8,0.67,1.0,0.0
+GB-GOV-1-400083,Rebuilding insurance markets in Ukraine,0.67,1.0,0.33,0.67,0.67,0.0,0.0,0.0,0.33,0.67,0.33,0.67,0.0,0.0,0.67,1,1.0,0.67,0.6,0.67,0.67,0.0
+GB-GOV-1-400093,Delivering Locally Led Adaptation Action (LIFE-AR) (Climate Change Adaptation and Resilience),1.0,0.67,1.0,0.67,0.33,0.0,0.33,0.67,0.67,0.67,0.67,0.0,0.67,0.67,0.67,1,0.67,0.67,0.2,0.33,0.67,0.33
+GB-GOV-1-400094,Race to Resilience (R2R),0.67,0.33,0.0,0.0,0.33,0.0,0.67,1.0,0.33,0.67,0.33,0.0,0.33,0.0,1.0,1,0.0,0.67,0.4,0.67,0.67,0.0
+GB-GOV-1-400095,Risk-informed Early Action Partnership (REAP),0.67,0.33,1.0,0.67,0.0,0.33,0.67,0.33,0.33,0.67,0.67,0.0,0.33,0.0,0.67,1,0.0,0.67,0.4,0.67,0.67,0.33
+GB-GOV-1-400099,UK Support to the Lifeline Embattled CSO Assistance Fund,0.33,0.67,0.0,0.67,0.33,0.33,0.0,0.0,0.0,0.67,0.0,0.0,0.0,0.0,0.67,0,1.0,1.0,0.6,0.67,0.33,0.0
+GB-GOV-1-400118,Climate Resilient Infrastructure for Basic Services (CRIBS): Health and Education,0.67,0.33,0.33,0.0,0.0,0.0,0.67,0.67,1.0,1.0,0.67,1.0,0.33,0.67,1.0,1,1.0,1.0,0.6,0.67,1.0,0.67
+GB-GOV-1-400124,BEJ Open Societies Enabling Fund (OSEF),0.67,0.67,0.33,0.67,0.67,0.33,0.67,0.67,0.67,1.0,0.67,0.0,0.67,0.67,1.0,1,1.0,0.67,0.6,0.67,0.67,0.67
+GB-GOV-1-400128,DIAL Nepal: Development Influencing And Learning in Nepal,0.67,0.67,0.33,0.67,0.33,0.33,0.33,0.33,0.67,0.67,0.33,0.0,0.33,0.33,1.0,1,0.0,0.67,0.6,0.67,0.33,0.33
+GB-GOV-1-400133,Promoting Women and Girls’ Education in ASEAN,0.67,0.67,1.0,0.33,0.33,0.0,0.33,0.67,0.33,0.67,0.33,0.0,0.33,0.67,0.0,0,0.67,0.67,0.6,0.67,0.33,0.67
+GB-GOV-1-400136,Growth Research Platform (GRP),0.67,0.67,0.33,0.67,1.0,0.33,0.67,0.33,0.33,1.0,0.33,0.0,0.0,0.0,0.67,1,0.67,0.67,0.6,0.67,0.67,0.0
+GB-GOV-1-400151,UK voluntary membership contribution to the International Solar Alliance (ISA) in 2023 and 2024,0.33,0.67,0.67,0.0,0.0,0.33,0.33,0.67,0.0,0.67,0.33,0.0,0.0,0.33,1.0,0,0.67,1.0,0.6,0.67,1.0,0.33
+GB-GOV-1-400154,Expertise to Support Economic Reform in Sierra Leone,0.67,0.67,0.33,0.67,0.67,0.33,0.33,0.33,0.67,0.67,0.33,0.0,0.33,0.33,1.0,0,0.67,0.67,0.2,0.67,0.67,0.33
+GB-GOV-1-400158,Food and Agriculture Organisation (FAO) - Early Action and Resilience Transformation in Humanitarianism (EARTH),0.67,0.67,0.0,0.67,0.0,0.0,0.33,0.67,0.33,0.67,0.33,0.67,0.0,0.0,0.0,1,0.67,1.0,0.6,0.67,0.33,0.0
+GB-GOV-1-400187,Portfolio evaluation of RED economic development research programmes,0.67,0.67,0.33,0.67,0.67,0.33,0.0,0.0,0.0,0.33,0.0,0.0,0.0,0.0,1.0,1,0.0,0.67,0.6,0.33,0.67,0.0
+GB-GOV-1-400191,"AI for Development: Responsible AI, Empowering People (AI4D)",1.0,0.67,0.67,0.33,0.33,0.33,0.67,1.0,0.67,1.0,0.67,0.33,0.67,1.0,0.67,1,0.33,0.67,0.8,1.0,1.0,1.0
+GB-GOV-1-400193,Climate & Health Research Programme (CHIRP),0.67,0.67,1.0,0.67,0.67,0.33,0.33,0.67,0.67,0.33,0.33,0.0,0.33,0.33,0.0,1,0.67,0.0,0.6,0.33,0.33,0.33
+GB-GOV-1-400194,Development & Open Societies – Support to Bond and the UK Alliance,0.67,0.67,0.0,0.67,0.0,0.33,0.67,0.67,0.33,1.0,0.67,0.0,0.33,0.33,1.0,0,1.0,1.0,0.8,1.0,0.67,0.33
+GB-GOV-1-400200,Support to TradeMark East Africa – Strategy 2 (STS2),1.0,0.67,0.67,0.67,0.0,0.0,0.33,0.67,0.67,0.67,0.67,1.0,0.67,0.67,0.67,0,1.0,0.67,0.6,0.67,1.0,0.67
+GB-GOV-1-400209,Global Compacts on Refugees and Migration Programme (GCP),0.67,0.67,0.67,0.67,0.33,0.0,0.33,0.67,0.67,0.67,0.67,0.0,0.67,0.67,0.67,0,1.0,0.67,0.6,0.67,0.67,0.67
+GB-GOV-1-400309,Trade Centre of Expertise – Evidence and Innovation Programme,0.67,0.67,0.33,0.67,0.67,0.0,0.0,0.0,0.0,0.33,0.0,0.0,0.0,0.0,0.0,0,0.67,0.0,0.6,0.0,0.33,0.0
+GB-GOV-1-400402,Supporting Namibia's sustainable growth & socio-economic development to alleviate poverty & improve livelihoods,0.33,0.67,0.67,0.67,0.67,0.67,0.33,0.33,0.67,0.67,0.67,0.33,0.67,0.33,0.67,0,1.0,1.0,0.8,0.67,0.33,0.33

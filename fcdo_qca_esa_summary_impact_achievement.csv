@@ -1,0 +1,5 @@
+"Outcome","Solution","N_Paths","Consistency","Coverage"
+"IMPACT_ACHIEVEMENT","Conservative",10,1,0.306
+"IMPACT_ACHIEVEMENT","Enhanced",4,0.881,0.746
+"IMPACT_ACHIEVEMENT","Parsimonious",4,0.881,0.746
+"IMPACT_ACHIEVEMENT","Intermediate",4,0.881,0.746

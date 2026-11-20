@@ -1,0 +1,5 @@
+"Outcome","Solution","N_Paths","Consistency","Coverage"
+"HIGH_PERFORMANCE","Conservative",2,1,0.082
+"HIGH_PERFORMANCE","Enhanced",2,0.286,0.082
+"HIGH_PERFORMANCE","Parsimonious",2,0.286,0.082
+"HIGH_PERFORMANCE","Intermediate",2,0.286,0.082
